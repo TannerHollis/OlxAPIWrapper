@@ -7,11 +7,11 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
 - Example Application Included
 
 ## Table of Contents
- - [Requirements](/#requirements)
- - [Using OlxAPIWrapper](/#using-olxapiwrapper)
-    - [Getting Started](/#getting-started)
-    - [Editting Equipment Values](/#editing-equipment-values)
- - [Supported Oneliner Equipment](/#supported-oneliner-equipment)
+ - [Requirements](#requirements)
+ - [Using OlxAPIWrapper](#using-olxapiwrapper)
+    - [Getting Started](#getting-started)
+    - [Editting Equipment Values](#editing-equipment-values)
+ - [Supported Oneliner Equipment](#supported-oneliner-equipment)
  - [TODO](/#todo)
 
 ## Requirements
