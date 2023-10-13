@@ -56,5 +56,8 @@
     <ClInclude Include="OlxAPI3WXFMRObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OlxAPIVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -9,6 +9,7 @@
 #include "OlxAPILineObj.h"
 #include "OlxAPIBusObj.h"
 #include "OlxAPIModelObj.h"
+#include "OlxAPIVersion.h"
 
 int replaceLineParameters(OlxAPIModelObj* model, string& csvFilePath, string& aspenOutputFilePath);
 
@@ -51,8 +52,8 @@ int main(int argc, char* argv[])
     if (cmdOptionExists(argv, argv + argc, "-v"))
     {
         // Get version info
-        char version[2000];
-        ret = OlxAPIVersionInfo(version);
+        string version;
+        ret = OlxAPIVersion::getVersion(&version);
 
         if (ret != OLXAPI_OK)
         {
@@ -61,7 +62,7 @@ int main(int argc, char* argv[])
         }
 
         // Print version info
-        std::cout << version << "\n";
+        std::cout << version << endl;
         return ret;
     }
 

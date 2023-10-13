@@ -175,6 +175,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClInclude Include="OlxAPIModelObj.h" />
     <ClInclude Include="OlxAPIObj.h" />
     <ClInclude Include="OlxAPI3WXFMRObj.h" />
+    <ClInclude Include="OlxAPIVersion.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
