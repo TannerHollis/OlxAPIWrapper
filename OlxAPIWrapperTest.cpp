@@ -4,8 +4,6 @@
 #include <iostream>
 #include <vector>
 
-#include "Windows.h"
-#include "olxapi/include/olxapi.h"
 #include "csv.h"
 
 #include "OlxAPILineObj.h"

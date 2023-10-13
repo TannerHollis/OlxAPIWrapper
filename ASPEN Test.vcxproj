@@ -160,7 +160,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ASPEN Test.cpp" />
+    <ClCompile Include="OlxAPIWrapperTest.cpp" />
     <ClCompile Include="OlxAPIBusObj.cpp" />
     <ClCompile Include="OlxAPILineObj.cpp" />
     <ClCompile Include="OlxAPIModelObj.cpp" />
