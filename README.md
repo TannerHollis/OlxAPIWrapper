@@ -63,8 +63,8 @@ if(ret == OLXAPI_OK) // Check write was successful
 |--|--|--|
 |Bus| ``` OlxAPIBusObj ``` | 100% |
 |Line| ``` OlxAPILineObj ``` | 100%|
-|2 Winding Transformer| ``` OlxAPIXFMRObj ``` |0%|
-|3 Winding Transformer| ``` OlxAPI3WXFMRObj ``` |100%|
+|2-Winding Transformer| ``` OlxAPIXFMRObj ``` |100%|
+|3-Winding Transformer| ``` OlxAPIXFMR3WObj ``` |100%|
 
 ### TODO
 
@@ -80,6 +80,7 @@ if(ret == OLXAPI_OK) // Check write was successful
 	 - [ ] Switch
 	 - [ ] Breaker
  - Implement fault capabilities
+	- Fault simulation capabilities with In-Service and OOS parameters
  - Implement protective devices
 	 - Overcurrent (Phase/Ground)
 	 - Distance (Phase/Ground)
