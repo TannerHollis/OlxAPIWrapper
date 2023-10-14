@@ -19,6 +19,7 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
  		- [OlxAPIGraphicsType2Obj](#olxapigraphicstype2obj)
   		- [OlxAPIGraphicsType3Obj](#olxapigraphicstype3obj)
  		- [OlxAPIGraphicsType4Obj](#olxapigraphicstype4obj)
+ - [Using the Example Application](#using-the-example-application)
  - [Supported Oneliner Equipment](#supported-oneliner-equipment)
  - [TODO](/#todo)
 
@@ -166,14 +167,44 @@ This graphics object is associated with the following devices and has the follow
 |Series Reactor| `OlxAPISeriesReactorObj` |100%|[`OlxAPIGraphicsType3Obj`](#olxapigraphicstype3obj)|
 |Shunt Capacitor| `OlxAPIShuntCapacitorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
 |Generator (Synchronous)| `OlxAPIGeneratorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
+[Back to top](#table-of-contents)
+## Using the Example Application
+The example application, when compiled, replaces cable lengths, types, and impedances via a lookup routine using the cable names, given that each cable has a unique name. 
 
+### Command Line Arguments
+```bash
+> ./OlxAPIWrapperTest.exe -i "../<input_model.olr>" -csv "../<input_csv.csv>" -o "./<output_model.olr>"
+```
+This directs the application to open the `input_model.olr` model file and use the `input_csv.csv` csv file to replace cable properties. If no `-o` is used, the model will be overwritten, therefore the output file is specified to prevent overwriting the same file.
+[Back to top](#table-of-contents)
+#### Other Arguments
+
+ - `-h` Display help
+ - `-v` Display the version of the OxlAPI c library.
+ - `-i` without `-csv` will simply print all lines and busses in the model.
+ - `-i`with `-csv` will overwrite cable properties in the same model
+	 - If cables are not found, they are skipped
+ - `-i` with `-csv` and `-o` will write cable properties to the `output_model.olr`
+	 - ASPEN Oneliner needs a full path for the `-i` but does not require a full path for the save, if no full path is provided, it will save in the same directory as the `-i` input model directory.
+
+[Back to top](#table-of-contents)
+### CSV Input File
+The CSV input file template is as follows
+|Name | Length | Type | R | X | R0 | X0 | G1| B1 | G2 | B2 | G10 | B10 | G20 | B20 |
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+|F11.1|5930|IWP 500|0.01875|0.02406|0.13957|0.05338|0|0.00114|0|0.00114|0|0.00114|0|0.00114|
+|F11.2|2320|IWP 500|0.00654|0.00839|0.04867|0.01861|0|0.0004|0|0.0004|0|0.0004|0|0.0004|
+|F11.3|1770|IWP 500|0.00594|0.00543|0.03197|0.01175|0|0.00021|0|0.00021|0|0.00021|0|0.00021|
+|F11.4|1274|IWP 500|0.01922|0.01758|0.10348|0.03803|0|0.00069|0|0.00069|0|0.00069|0|0.00069|
+|F11.5|6766|IWP 4/0|0.00991|0.00907|0.05335|0.01961|0|0.00035|0|0.00035|0|0.00035|0|0.00035|
+|F11.6|3304|IWP 4/0|0.01295|0.01185|0.06972|0.02563|0|0.00046|0|0.00046|0|0.00046|0|0.00046|
 [Back to top](#table-of-contents)
 ### TODO
 
  - Implement the following equipment
 	 - [x] Transmission Line
 	 - [x] Bus
-	 - [X] 2W Transformer
+	 - [x] 2W Transformer
 	 - [x] 3W Transformer
 	 - [x] Generator
 	 - [ ] Inverter-Based Resource

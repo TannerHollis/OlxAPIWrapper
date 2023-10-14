@@ -18,7 +18,6 @@ OlxAPIGeneratorObj::OlxAPIGeneratorObj(int handle) : OlxAPIObj(handle)
 	getOnDate();
 	getR((GeneratorImpedance)0);
 	getX((GeneratorImpedance)0);
-	setR(GeneratorImpedance::GEN_SUBTRANSIENT, 0.5);
 
 	gfxObj = new OlxAPIGraphicsType2Obj(handle, TC_GEN);
 }
