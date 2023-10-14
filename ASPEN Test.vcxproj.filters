@@ -36,6 +36,12 @@
     <ClCompile Include="OlxAPIXFMRObj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OlxAPISeriesReactorObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIShuntCapacitorObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h">
@@ -63,6 +69,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIXFMRObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPISeriesReactorObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIShuntCapacitorObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

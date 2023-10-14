@@ -6,10 +6,12 @@ OlxAPIModelObj::OlxAPIModelObj(string& filePath, bool readonly)
 
 	if (fileIsOpened)
 	{
-		loadMap(&busses, &nBusses, SY_nNObus, TC_BUS);
-		loadMap(&lines, &nLines, SY_nNOline, TC_LINE);
-		loadMap(&XFMRs, &nXFMRs, SY_nNOxfmr, TC_XFMR);
-		loadMap(&XFMRs3W, &nXFMRs3W, SY_nNOxfmr3, TC_XFMR3);
+		loadMap(&busses, SY_nNObus, TC_BUS);
+		loadMap(&lines, SY_nNOline, TC_LINE);
+		loadMap(&XFMRs, SY_nNOxfmr, TC_XFMR);
+		loadMap(&XFMRs3W, SY_nNOxfmr3, TC_XFMR3);
+		loadMap(&seriesReactors, SY_nNOseriescap, TC_SCAP);
+		loadMap(&shuntCapacitors, SY_nNOshuntUnit, TC_SHUNTUNIT);
 	}
 }
 
@@ -19,6 +21,8 @@ OlxAPIModelObj::~OlxAPIModelObj()
 	clearMap(&lines);
 	clearMap(&XFMRs);
 	clearMap(&XFMRs3W);
+	clearMap(&seriesReactors);
+	clearMap(&shuntCapacitors);
 	closeFile();
 }
 
@@ -98,6 +102,31 @@ vector<int> OlxAPIModelObj::get3WXFMRHandles()
 	return getHandles(&XFMRs3W);
 }
 
+OlxAPISeriesReactorObj* OlxAPIModelObj::getSeriesReactor(int handle)
+{
+	return seriesReactors[handle];
+}
+
+int OlxAPIModelObj::findSeriesReactorHandleByName(string& name)
+{
+	return findByName(&seriesReactors, name);
+}
+
+vector<int> OlxAPIModelObj::getSeriesReactorHandles()
+{
+	return getHandles(&seriesReactors);
+}
+
+OlxAPIShuntCapacitorObj* OlxAPIModelObj::getShuntCapacitor(int handle)
+{
+	return shuntCapacitors[handle];
+}
+
+vector<int> OlxAPIModelObj::getShuntCapacitorHandles()
+{
+	return getHandles(&shuntCapacitors);
+}
+
 template <typename T> vector<int> OlxAPIModelObj::getHandles(T* mapIn)
 {
 	vector<int> handles;
@@ -139,15 +168,16 @@ template <typename T> void OlxAPIModelObj::clearMap(T* mapIn)
 	mapIn->clear();
 }
 
-template <typename T> void OlxAPIModelObj::loadMap(map<int, T*>* mapIn, int* nObj, int objCountToken, int objToken)
+template <typename T> void OlxAPIModelObj::loadMap(map<int, T*>* mapIn, int objCountToken, int objToken)
 {
 	clearMap(mapIn);
 
 	// Get Number of lines
-	OlxAPIGetData(HND_SYS, objCountToken, nObj);
+	int nObj;
+	OlxAPIGetData(HND_SYS, objCountToken, &nObj);
 
 	int handle = 0;
-	for (uint16_t i = 0; i < *nObj; i++)
+	for (uint16_t i = 0; i < nObj; i++)
 	{
 		int ret = OlxAPIGetEquipment(objToken, &handle);
 

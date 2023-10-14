@@ -6,6 +6,8 @@
 #include "OlxAPIBusObj.h"
 #include "OlxAPIXFMRObj.h"
 #include "OlxAPIXFMR3WObj.h"
+#include "OlxAPISeriesReactorObj.h"
+#include "OlxAPIShuntCapacitorObj.h"
 
 #include <vector>
 #include <map>
@@ -40,6 +42,13 @@ public:
 	int find3WXFMRHandleByName(string& name);
 	vector<int> get3WXFMRHandles();
 
+	OlxAPISeriesReactorObj* getSeriesReactor(int handle);
+	int findSeriesReactorHandleByName(string& name);
+	vector<int> getSeriesReactorHandles();
+
+	OlxAPIShuntCapacitorObj* getShuntCapacitor(int handle);
+	vector<int> getShuntCapacitorHandles();
+
 private:
 	void openFile(string& filePath, bool readonly);
 	void closeFile();
@@ -47,22 +56,22 @@ private:
 	template <typename T> vector<int> getHandles(T* mapIn);
 	template <typename T> int findByName(T* mapIn, string& name);
 	template <typename T> void clearMap(T* mapIn);
-	template <typename T> void loadMap(map<int, T*>* mapIn, int* nObj, int objCountToken, int objToken);
+	template <typename T> void loadMap(map<int, T*>* mapIn, int objCountToken, int objToken);
 
 	string filePath;
 	bool fileIsOpened;
 
-	int nLines;
 	map<int, OlxAPILineObj*> lines;
 
-	int nBusses;
 	map<int, OlxAPIBusObj*> busses;
 
-	int nXFMRs;
 	map<int, OlxAPIXFMRObj*> XFMRs;
 
-	int nXFMRs3W;
 	map<int, OlxAPIXFMR3WObj*> XFMRs3W;
+
+	map<int, OlxAPISeriesReactorObj*> seriesReactors;
+
+	map<int, OlxAPIShuntCapacitorObj*> shuntCapacitors;
 };
 
 
