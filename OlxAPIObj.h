@@ -14,6 +14,8 @@ public:
 
 	int getHandle()	{ return handle; }
 
+	string getObjectIDString();
+
 protected:
 	int getIntParameter(int paramToken, int* data);
 	int setIntParameter(int paramToken, int* data);

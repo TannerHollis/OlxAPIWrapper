@@ -11,6 +11,7 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
  - [Using OlxAPIWrapper](#using-olxapiwrapper)
     - [Getting Started](#getting-started)
     - [Editting Equipment Values](#editing-equipment-values)
+	- [Get Unique Object String](#get-unique-formatted-object-id-string)
  - [Supported Oneliner Equipment](#supported-oneliner-equipment)
  - [TODO](/#todo)
 
@@ -21,8 +22,8 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
 - Be sure to have an open license seat before running. It must also be available on the local computer.
 - If there is a newer version of the library available and you want to use it, just swap out the `olxapi` folder files.
 
-# Using OlxAPIWrapper<a name="using-olxapiwrapper"></a>
-### Getting Started<a name="getting-started"></a>
+# Using OlxAPIWrapper
+### Getting Started
 
 It is very easy to start using, simply load an entire model using the ```OlxAPIModelObj``` class. All elements are loaded into this object and some objects are searchable via names, otherwise ```handle``` are used exclusively.
 
@@ -40,7 +41,7 @@ for(int = 0; i < lineHandles.size(); i++)
     cout << "Line Name: " << model.getLine(lineHandles[i])->getName() << endl; // Print line name
 }
 ```
-### Editing Equipment Values<a name="editing-equipment-values"></a>
+### Editing Equipment Values
 All elements editable within Oneliner are available to the user via unique ```get``` and ```set``` like used in the following:
 
 ```cpp
@@ -58,7 +59,23 @@ if(ret == OLXAPI_OK) // Check write was successful
 ...
 ```
 
-### Supported OneLiner Equipment<a name="supported-oneliner-equipment"></a>
+### Get Unique Formatted Object ID String
+All objects have a unique id that can be formatted into a string. This string is useful for reverse lookups, which return handles if successful.
+
+```cpp
+string filePath = "C:/.../Example.olr";
+bool readonly = true;
+OlxAPIModelObj model(filePath, readonly);
+
+vector<int> lineHandles = model.getLineHandles();
+
+for(int = 0; i < lineHandles.size(); i++)
+{
+    cout << model.getLine(lineHandles[i])->getObjectIDString() << endl; // Print line name
+}
+```
+
+### Supported OneLiner Equipment
 |ASPEN Equipment |OlxAPIWrapper Class | Implementation |
 |--|--|--|
 |Bus| ``` OlxAPIBusObj ``` | 100% |

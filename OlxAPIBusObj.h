@@ -2,8 +2,6 @@
 
 #include "OlxAPIObj.h"
 
-using namespace std;
-
 class OlxAPIBusObj : public OlxAPIObj
 {
 public:

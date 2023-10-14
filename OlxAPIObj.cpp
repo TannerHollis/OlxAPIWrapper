@@ -10,6 +10,13 @@ int OlxAPIObj::setObjMemo(string& memo)
 	return OlxAPISetObjMemo(handle, (char*)memo.c_str());
 }
 
+string OlxAPIObj::getObjectIDString()
+{
+	const char* idString;
+	idString = OlxAPIPrintObj1LPF(handle);
+	return string(idString);
+}
+
 int OlxAPIObj::getIntParameter(int paramToken, int* data)
 {
 	return OlxAPIGetData(handle, paramToken, data);

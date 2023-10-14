@@ -6,9 +6,8 @@
 
 #include "csv.h"
 
-#include "OlxAPILineObj.h"
-#include "OlxAPIBusObj.h"
 #include "OlxAPIModelObj.h"
+
 #include "OlxAPIVersion.h"
 
 int replaceLineParameters(OlxAPIModelObj* model, string& csvFilePath, string& aspenOutputFilePath);
