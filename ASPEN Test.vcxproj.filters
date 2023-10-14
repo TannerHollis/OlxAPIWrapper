@@ -75,6 +75,9 @@
     <ClCompile Include="OlxAPIObj.cpp">
       <Filter>Source Files\OlxAPIObjs</Filter>
     </ClCompile>
+    <ClCompile Include="OlxAPIVersion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h">
