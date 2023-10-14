@@ -165,7 +165,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClCompile Include="OlxAPILineObj.cpp" />
     <ClCompile Include="OlxAPIModelObj.cpp" />
     <ClCompile Include="OlxAPIObj.cpp" />
-    <ClCompile Include="OlxAPI3WXFMRObj.cpp" />
+    <ClCompile Include="OlxAPIXFMR3WObj.cpp" />
     <ClCompile Include="OlxAPIXFMRObj.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +175,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClInclude Include="OlxAPILineObj.h" />
     <ClInclude Include="OlxAPIModelObj.h" />
     <ClInclude Include="OlxAPIObj.h" />
-    <ClInclude Include="OlxAPI3WXFMRObj.h" />
+    <ClInclude Include="OlxAPIXFMR3WObj.h" />
     <ClInclude Include="OlxAPIVersion.h" />
     <ClInclude Include="OlxAPIXFMRObj.h" />
   </ItemGroup>

@@ -30,7 +30,7 @@
     <ClCompile Include="OlxAPIObj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OlxAPI3WXFMRObj.cpp">
+    <ClCompile Include="OlxAPIXFMR3WObj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OlxAPIXFMRObj.cpp">
@@ -56,7 +56,7 @@
     <ClInclude Include="OlxAPIObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OlxAPI3WXFMRObj.h">
+    <ClInclude Include="OlxAPIXFMR3WObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIVersion.h">

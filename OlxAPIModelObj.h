@@ -4,8 +4,8 @@
 
 #include "OlxAPILineObj.h"
 #include "OlxAPIBusObj.h"
-#include "OlxAPI3WXFMRObj.h"
 #include "OlxAPIXFMRObj.h"
+#include "OlxAPIXFMR3WObj.h"
 
 #include <vector>
 #include <map>
@@ -20,7 +20,7 @@ public:
 
 	~OlxAPIModelObj();
 
-	int saveFile(); //Save overwrite
+	int saveFile(); // Save overwrite
 	int saveFile(string& filePath); // Save as new file
 	bool isOpened();
 
@@ -36,7 +36,7 @@ public:
 	int findXFMRHandleByName(string& name);
 	vector<int> getXFMRHandles();
 
-	OlxAPI3WXFMRObj* get3WXFMR(int handle);
+	OlxAPIXFMR3WObj* get3WXFMR(int handle);
 	int find3WXFMRHandleByName(string& name);
 	vector<int> get3WXFMRHandles();
 
@@ -62,7 +62,7 @@ private:
 	map<int, OlxAPIXFMRObj*> XFMRs;
 
 	int nXFMRs3W;
-	map<int, OlxAPI3WXFMRObj*> XFMRs3W;
+	map<int, OlxAPIXFMR3WObj*> XFMRs3W;
 };
 
 

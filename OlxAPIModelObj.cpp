@@ -83,7 +83,7 @@ vector<int> OlxAPIModelObj::getXFMRHandles()
 	return getHandles(&XFMRs);
 }
 
-OlxAPI3WXFMRObj* OlxAPIModelObj::get3WXFMR(int handle)
+OlxAPIXFMR3WObj* OlxAPIModelObj::get3WXFMR(int handle)
 {
 	return XFMRs3W[handle];
 }

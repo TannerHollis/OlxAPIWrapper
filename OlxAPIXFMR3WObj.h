@@ -2,7 +2,7 @@
 
 #include "OlxAPIObj.h"
 
-class OlxAPI3WXFMRObj : public OlxAPIObj
+class OlxAPIXFMR3WObj : public OlxAPIObj
 {
 public:
 	typedef enum WindingImpedance
@@ -20,7 +20,7 @@ public:
 		GND_N = 3
 	} GroundingImpedance;
 
-	OlxAPI3WXFMRObj(int handle);
+	OlxAPIXFMR3WObj(int handle);
 
 	double getBaseMVA();
 	int setBaseMVA(double value);

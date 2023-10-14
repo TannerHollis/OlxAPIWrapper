@@ -1,6 +1,6 @@
-#include "OlxAPI3WXFMRObj.h"
+#include "OlxAPIXFMR3WObj.h"
 
-OlxAPI3WXFMRObj::OlxAPI3WXFMRObj(int handle) : OlxAPIObj(handle)
+OlxAPIXFMR3WObj::OlxAPIXFMR3WObj(int handle) : OlxAPIObj(handle)
 {
     getBaseMVA();
     getLTCCenterTap();
@@ -50,27 +50,27 @@ OlxAPI3WXFMRObj::OlxAPI3WXFMRObj(int handle) : OlxAPIObj(handle)
     getOnDate();
 }
 
-double OlxAPI3WXFMRObj::getBaseMVA() {
+double OlxAPIXFMR3WObj::getBaseMVA() {
     getDoubleParameter(X3_dBaseMVA, &dBaseMVA);
     return dBaseMVA;
 }
 
-int OlxAPI3WXFMRObj::setBaseMVA(double value) {
+int OlxAPIXFMR3WObj::setBaseMVA(double value) {
     dBaseMVA = value;
     return setDoubleParameter(X3_dBaseMVA, &dBaseMVA);
 }
 
-double OlxAPI3WXFMRObj::getLTCCenterTap() {
+double OlxAPIXFMR3WObj::getLTCCenterTap() {
     getDoubleParameter(X3_dLTCCenterTap, &dLTCCenterTap);
     return dLTCCenterTap;
 }
 
-int OlxAPI3WXFMRObj::setLTCCenterTap(double value) {
+int OlxAPIXFMR3WObj::setLTCCenterTap(double value) {
     dLTCCenterTap = value;
     return setDoubleParameter(X3_dLTCCenterTap, &dLTCCenterTap);
 }
 
-double OlxAPI3WXFMRObj::getR(WindingImpedance winding)
+double OlxAPIXFMR3WObj::getR(WindingImpedance winding)
 {
     switch (winding)
     {
@@ -90,7 +90,7 @@ double OlxAPI3WXFMRObj::getR(WindingImpedance winding)
     return -1;
 }
 
-int OlxAPI3WXFMRObj::setR(WindingImpedance winding, double value)
+int OlxAPIXFMR3WObj::setR(WindingImpedance winding, double value)
 {
     switch (winding)
     {
@@ -110,7 +110,7 @@ int OlxAPI3WXFMRObj::setR(WindingImpedance winding, double value)
     return OLXAPI_FAILURE;
 }
 
-double OlxAPI3WXFMRObj::getX(WindingImpedance winding)
+double OlxAPIXFMR3WObj::getX(WindingImpedance winding)
 {
     switch (winding)
     {
@@ -130,7 +130,7 @@ double OlxAPI3WXFMRObj::getX(WindingImpedance winding)
     return -1;
 }
 
-int OlxAPI3WXFMRObj::setX(WindingImpedance winding, double value)
+int OlxAPIXFMR3WObj::setX(WindingImpedance winding, double value)
 {
     switch (winding)
     {
@@ -150,7 +150,7 @@ int OlxAPI3WXFMRObj::setX(WindingImpedance winding, double value)
     return OLXAPI_FAILURE;
 }
 
-double OlxAPI3WXFMRObj::getR0(WindingImpedance winding)
+double OlxAPIXFMR3WObj::getR0(WindingImpedance winding)
 {
     switch (winding)
     {
@@ -170,7 +170,7 @@ double OlxAPI3WXFMRObj::getR0(WindingImpedance winding)
     return -1;
 }
 
-int OlxAPI3WXFMRObj::setR0(WindingImpedance winding, double value)
+int OlxAPIXFMR3WObj::setR0(WindingImpedance winding, double value)
 {
     switch (winding)
     {
@@ -189,7 +189,7 @@ int OlxAPI3WXFMRObj::setR0(WindingImpedance winding, double value)
     return OLXAPI_FAILURE;
 }
 
-double OlxAPI3WXFMRObj::getX0(WindingImpedance winding)
+double OlxAPIXFMR3WObj::getX0(WindingImpedance winding)
 {
     switch (winding)
     {
@@ -209,7 +209,7 @@ double OlxAPI3WXFMRObj::getX0(WindingImpedance winding)
     return -1;
 }
 
-int OlxAPI3WXFMRObj::setX0(WindingImpedance winding, double value)
+int OlxAPIXFMR3WObj::setX0(WindingImpedance winding, double value)
 {
     switch (winding)
     {
@@ -229,7 +229,7 @@ int OlxAPI3WXFMRObj::setX0(WindingImpedance winding, double value)
     return OLXAPI_FAILURE;
 }
 
-double OlxAPI3WXFMRObj::getGR(GroundingImpedance winding)
+double OlxAPIXFMR3WObj::getGR(GroundingImpedance winding)
 {
     switch (winding)
     {
@@ -253,7 +253,7 @@ double OlxAPI3WXFMRObj::getGR(GroundingImpedance winding)
     return -1;
 }
 
-int OlxAPI3WXFMRObj::setGR(GroundingImpedance winding, double value)
+int OlxAPIXFMR3WObj::setGR(GroundingImpedance winding, double value)
 {
     switch (winding)
     {
@@ -277,7 +277,7 @@ int OlxAPI3WXFMRObj::setGR(GroundingImpedance winding, double value)
     return OLXAPI_FAILURE;
 }
 
-double OlxAPI3WXFMRObj::getGX(GroundingImpedance winding)
+double OlxAPIXFMR3WObj::getGX(GroundingImpedance winding)
 {
     switch (winding)
     {
@@ -301,7 +301,7 @@ double OlxAPI3WXFMRObj::getGX(GroundingImpedance winding)
     return -1;
 }
 
-int OlxAPI3WXFMRObj::setGX(GroundingImpedance winding, double value)
+int OlxAPIXFMR3WObj::setGX(GroundingImpedance winding, double value)
 {
     switch (winding)
     {
@@ -325,77 +325,77 @@ int OlxAPI3WXFMRObj::setGX(GroundingImpedance winding, double value)
     return OLXAPI_FAILURE;
 }
 
-double OlxAPI3WXFMRObj::getB() {
+double OlxAPIXFMR3WObj::getB() {
     getDoubleParameter(X3_dB, &dB);
     return dB;
 }
 
-int OlxAPI3WXFMRObj::setB(double value) {
+int OlxAPIXFMR3WObj::setB(double value) {
     dB = value;
     return setDoubleParameter(X3_dB, &dB);
 }
 
-double OlxAPI3WXFMRObj::getB0() {
+double OlxAPIXFMR3WObj::getB0() {
     getDoubleParameter(X3_dB0, &dB0);
     return dB0;
 }
 
-int OlxAPI3WXFMRObj::setB0(double value) {
+int OlxAPIXFMR3WObj::setB0(double value) {
     dB0 = value;
     return setDoubleParameter(X3_dB0, &dB0);
 }
 
-double OlxAPI3WXFMRObj::getLTCStep() {
+double OlxAPIXFMR3WObj::getLTCStep() {
     getDoubleParameter(X3_dLTCstep, &dLTCstep);
     return dLTCstep;
 }
 
-int OlxAPI3WXFMRObj::setLTCStep(double value) {
+int OlxAPIXFMR3WObj::setLTCStep(double value) {
     dLTCstep = value;
     return setDoubleParameter(X3_dLTCstep, &dLTCstep);
 }
 
-double OlxAPI3WXFMRObj::getMaxTap() {
+double OlxAPIXFMR3WObj::getMaxTap() {
     getDoubleParameter(X3_dMaxTap, &dMaxTap);
     return dMaxTap;
 }
 
-int OlxAPI3WXFMRObj::setMaxTap(double value) {
+int OlxAPIXFMR3WObj::setMaxTap(double value) {
     dMaxTap = value;
     return setDoubleParameter(X3_dMaxTap, &dMaxTap);
 }
 
-double OlxAPI3WXFMRObj::getMaxVW() {
+double OlxAPIXFMR3WObj::getMaxVW() {
     getDoubleParameter(X3_dMaxVW, &dMaxVW);
     return dMaxVW;
 }
 
-int OlxAPI3WXFMRObj::setMaxVW(double value) {
+int OlxAPIXFMR3WObj::setMaxVW(double value) {
     dMaxVW = value;
     return setDoubleParameter(X3_dMaxVW, &dMaxVW);
 }
 
-double OlxAPI3WXFMRObj::getMinTap() {
+double OlxAPIXFMR3WObj::getMinTap() {
     getDoubleParameter(X3_dMinTap, &dMinTap);
     return dMinTap;
 }
 
-int OlxAPI3WXFMRObj::setMinTap(double value) {
+int OlxAPIXFMR3WObj::setMinTap(double value) {
     dMinTap = value;
     return setDoubleParameter(X3_dMinTap, &dMinTap);
 }
 
-double OlxAPI3WXFMRObj::getMinVW() {
+double OlxAPIXFMR3WObj::getMinVW() {
     getDoubleParameter(X3_dMinVW, &dMinVW);
     return dMinVW;
 }
 
-int OlxAPI3WXFMRObj::setMinVW(double value) {
+int OlxAPIXFMR3WObj::setMinVW(double value) {
     dMinVW = value;
     return setDoubleParameter(X3_dMinVW, &dMinVW);
 }
 
-double OlxAPI3WXFMRObj::getMVAn(int index) {
+double OlxAPIXFMR3WObj::getMVAn(int index) {
     switch (index)
     {
     case 0:
@@ -414,7 +414,7 @@ double OlxAPI3WXFMRObj::getMVAn(int index) {
     return 0;
 }
 
-int OlxAPI3WXFMRObj::setMVAn(int index, double value) {
+int OlxAPIXFMR3WObj::setMVAn(int index, double value) {
     switch (index)
     {
     case 0:
@@ -433,220 +433,220 @@ int OlxAPI3WXFMRObj::setMVAn(int index, double value) {
     return 0;
 }
 
-double OlxAPI3WXFMRObj::getTap1() {
+double OlxAPIXFMR3WObj::getTap1() {
     getDoubleParameter(X3_dTap1, &dTap1);
     return dTap1;
 }
 
-int OlxAPI3WXFMRObj::setTap1(double value) {
+int OlxAPIXFMR3WObj::setTap1(double value) {
     dTap1 = value;
     return setDoubleParameter(X3_dTap1, &dTap1);
 }
 
-double OlxAPI3WXFMRObj::getTap2() {
+double OlxAPIXFMR3WObj::getTap2() {
     getDoubleParameter(X3_dTap2, &dTap2);
     return dTap2;
 }
 
-int OlxAPI3WXFMRObj::setTap2(double value) {
+int OlxAPIXFMR3WObj::setTap2(double value) {
     dTap2 = value;
     return setDoubleParameter(X3_dTap2, &dTap2);
 }
 
-double OlxAPI3WXFMRObj::getTap3() {
+double OlxAPIXFMR3WObj::getTap3() {
     getDoubleParameter(X3_dTap2, &dTap2);
     return dTap2;
 }
 
-int OlxAPI3WXFMRObj::setTap3(double value) {
+int OlxAPIXFMR3WObj::setTap3(double value) {
     dTap3 = value;
     return setDoubleParameter(X3_dTap3, &dTap3);
 }
 
-int OlxAPI3WXFMRObj::getAuto() {
+int OlxAPIXFMR3WObj::getAuto() {
     getIntParameter(X3_nAuto, &nAuto);
     return nAuto;
 }
 
-int OlxAPI3WXFMRObj::setAuto(int value) {
+int OlxAPIXFMR3WObj::setAuto(int value) {
     nAuto = value;
     return setIntParameter(X3_nAuto, &nAuto);
 }
 
-int OlxAPI3WXFMRObj::getBus1Handle() {
+int OlxAPIXFMR3WObj::getBus1Handle() {
     getIntParameter(X3_nBus1Hnd, &nBus1Handle);
     return nBus1Handle;
 }
 
-int OlxAPI3WXFMRObj::getBus2Handle() {
+int OlxAPIXFMR3WObj::getBus2Handle() {
     getIntParameter(X3_nBus2Hnd, &nBus2Handle);
     return nBus2Handle;
 }
 
-int OlxAPI3WXFMRObj::getBus3Handle() {
+int OlxAPIXFMR3WObj::getBus3Handle() {
     getIntParameter(X3_nBus3Hnd, &nBus3Handle);
     return nBus3Handle;
 }
 
-int OlxAPI3WXFMRObj::getFicticiousBusNumber() {
+int OlxAPIXFMR3WObj::getFicticiousBusNumber() {
     getIntParameter(X3_nFictBusNo, &nFicticiousBusHandle);
     return nFicticiousBusHandle;
 }
 
-int OlxAPI3WXFMRObj::getInService() {
+int OlxAPIXFMR3WObj::getInService() {
     getIntParameter(X3_nInService, &nInService);
     return nInService;
 }
 
-int OlxAPI3WXFMRObj::setInService(int value) {
+int OlxAPIXFMR3WObj::setInService(int value) {
     nInService = value;
     return setIntParameter(X3_nInService, &nInService);
 }
 
-int OlxAPI3WXFMRObj::getLTCGanged() {
+int OlxAPIXFMR3WObj::getLTCGanged() {
     getIntParameter(X3_nLTCGanged, &nLTCGanged);
     return nLTCGanged;
 }
 
-int OlxAPI3WXFMRObj::setLTCGanged(int value) {
+int OlxAPIXFMR3WObj::setLTCGanged(int value) {
     nLTCGanged = value;
     return setIntParameter(X3_nLTCGanged, &nLTCGanged);
 }
 
-int OlxAPI3WXFMRObj::getRelayGroup1Handle() {
+int OlxAPIXFMR3WObj::getRelayGroup1Handle() {
     getIntParameter(X3_nRlyGr1Hnd, &nRlyGr1Handle);
     return nRlyGr1Handle;
 }
 
-int OlxAPI3WXFMRObj::getRelayGroup2Handle() {
+int OlxAPIXFMR3WObj::getRelayGroup2Handle() {
     getIntParameter(X3_nRlyGr2Hnd, &nRlyGr2Handle);
     return nRlyGr2Handle;
 }
 
-int OlxAPI3WXFMRObj::getRelayGroup3Handle() {
+int OlxAPIXFMR3WObj::getRelayGroup3Handle() {
     getIntParameter(X3_nRlyGr3Hnd, &nRlyGr3Handle);
     return nRlyGr3Handle;
 }
 
-int OlxAPI3WXFMRObj::getLTCSide()
+int OlxAPIXFMR3WObj::getLTCSide()
 {
     getIntParameter(X3_nLTCside, &nLTCside);
     return nLTCside;
 }
 
-int OlxAPI3WXFMRObj::setLTCSide(int value) {
+int OlxAPIXFMR3WObj::setLTCSide(int value) {
     nLTCside = value;
     return setIntParameter(X3_nLTCside, &nLTCside);
 }
 
-int OlxAPI3WXFMRObj::getLTCType()
+int OlxAPIXFMR3WObj::getLTCType()
 {
     getIntParameter(X3_nLTCtype, &nLTCtype);
     return nLTCtype;
 }
 
-int OlxAPI3WXFMRObj::setLTCType(int value) {
+int OlxAPIXFMR3WObj::setLTCType(int value) {
     nLTCtype = value;
     return setIntParameter(X3_nLTCtype, &nLTCtype);
 }
 
-string OlxAPI3WXFMRObj::getWinding1Cfg()
+string OlxAPIXFMR3WObj::getWinding1Cfg()
 {
     getStringParameter(X3_sCfg1, &sCfg1);
     return sCfg1;
 }
 
-int OlxAPI3WXFMRObj::setWinding1Cfg(string& value)
+int OlxAPIXFMR3WObj::setWinding1Cfg(string& value)
 {
     sCfg1 = value;
     return setStringParameter(X3_sCfg1, &sCfg1);
 }
 
-string OlxAPI3WXFMRObj::getWinding2Cfg()
+string OlxAPIXFMR3WObj::getWinding2Cfg()
 {
     getStringParameter(X3_sCfg2, &sCfg2);
     return sCfg2;
 }
 
-int OlxAPI3WXFMRObj::setWinding2Cfg(string& value)
+int OlxAPIXFMR3WObj::setWinding2Cfg(string& value)
 {
     sCfg2 = value;
     return setStringParameter(X3_sCfg2, &sCfg2);
 }
 
-string OlxAPI3WXFMRObj::getWinding3Cfg()
+string OlxAPIXFMR3WObj::getWinding3Cfg()
 {
     getStringParameter(X3_sCfg3, &sCfg3);
     return sCfg3;
 }
 
-int OlxAPI3WXFMRObj::setWinding3Cfg(string& value)
+int OlxAPIXFMR3WObj::setWinding3Cfg(string& value)
 {
     sCfg3 = value;
     return setStringParameter(X3_sCfg3, &sCfg3);
 }
 
-string OlxAPI3WXFMRObj::getWinding2CfgTest()
+string OlxAPIXFMR3WObj::getWinding2CfgTest()
 {
     getStringParameter(X3_sCfg2T, &sCfg2T);
     return sCfg2T;
 }
 
-int OlxAPI3WXFMRObj::setWinding2CfgTest(string& value)
+int OlxAPIXFMR3WObj::setWinding2CfgTest(string& value)
 {
     sCfg2T = value;
     return setStringParameter(X3_sCfg2T, &sCfg2T);
 }
 
-string OlxAPI3WXFMRObj::getWinding3CfgTest()
+string OlxAPIXFMR3WObj::getWinding3CfgTest()
 {
     getStringParameter(X3_sCfg3T, &sCfg3T);
     return sCfg3T;
 }
 
-int OlxAPI3WXFMRObj::setWinding3CfgTest(string& value)
+int OlxAPIXFMR3WObj::setWinding3CfgTest(string& value)
 {
     sCfg3T = value;
     return setStringParameter(X3_sCfg3T, &sCfg3T);
 }
 
-string OlxAPI3WXFMRObj::getCktID()
+string OlxAPIXFMR3WObj::getCktID()
 {
     getStringParameter(X3_sID, &sID);
     return sID;
 }
 
-string OlxAPI3WXFMRObj::getName()
+string OlxAPIXFMR3WObj::getName()
 {
     getStringParameter(X3_sName, &sName);
     return sName;
 }
 
-int OlxAPI3WXFMRObj::setName(string& value)
+int OlxAPIXFMR3WObj::setName(string& value)
 {
     sName = value;
     return setStringParameter(X3_sName, &sName);
 }
 
-string OlxAPI3WXFMRObj::getOffDate()
+string OlxAPIXFMR3WObj::getOffDate()
 {
     getStringParameter(X3_sOffDate, &sOffDate);
     return sOffDate;
 }
 
-int OlxAPI3WXFMRObj::setOffDate(string& value)
+int OlxAPIXFMR3WObj::setOffDate(string& value)
 {
     sOffDate = value;
     return setStringParameter(X3_sOffDate, &sOffDate);
 }
 
-string OlxAPI3WXFMRObj::getOnDate()
+string OlxAPIXFMR3WObj::getOnDate()
 {
     getStringParameter(X3_sOnDate, &sOnDate);
     return sOnDate;
 }
 
-int OlxAPI3WXFMRObj::setOnDate(string& value)
+int OlxAPIXFMR3WObj::setOnDate(string& value)
 {
     sOnDate = value;
     return setStringParameter(X3_sOnDate, &sOnDate);
