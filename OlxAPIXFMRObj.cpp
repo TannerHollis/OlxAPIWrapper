@@ -40,6 +40,12 @@ OlxAPIXFMRObj::OlxAPIXFMRObj(int handle) : OlxAPIObj(handle)
     getName();
     getOffDate();
     getOnDate();
+    gfxObj = new OlxAPIGraphicsType3Obj(handle, TC_XFMR);
+}
+
+OlxAPIXFMRObj::~OlxAPIXFMRObj()
+{
+    delete gfxObj;
 }
 
 double OlxAPIXFMRObj::getB() {

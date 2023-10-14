@@ -1,11 +1,13 @@
 #pragma once
 
 #include "OlxAPIObj.h"
+#include "OlxAPIGraphicsType1Obj.h"
 
 class OlxAPIBusObj : public OlxAPIObj
 {
 public:
 	OlxAPIBusObj(int handle);
+	~OlxAPIBusObj();
 
 	double getKVNominal();
 
@@ -43,6 +45,8 @@ public:
 
 	string getName();
 	int setName(string& value);
+
+	OlxAPIGraphicsType1Obj* gfxObj;
 
 private:
 	double dKVNominal;

@@ -1,4 +1,5 @@
 
+
 # OlxAPIWrapper
 
 This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15.7 ([Latest version](https://github.com/aspeninc/TestBenchOlxAPI/tree/master)).
@@ -12,8 +13,12 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
     - [Getting Started](#getting-started)
     - [Editting Equipment Values](#editing-equipment-values)
 	- [Get Unique Object String](#get-unique-formatted-object-id-string)
+	- [Graphics Objects*](#edit-graphics-object-values)
+		- [OlxAPIGraphicsType1Obj](#olxapigraphicstype1obj)
  - [Supported Oneliner Equipment](#supported-oneliner-equipment)
  - [TODO](/#todo)
+
+**Experimental feature. May ruin Oneliner graphics display. Use with caution.*
 
 ## Requirements
 
@@ -75,15 +80,35 @@ for(int = 0; i < lineHandles.size(); i++)
 }
 ```
 
+### Edit Graphics Object Values
+This is current under development, but this will allow the user to get positions of graphics objects within the model. Similar to other API objects, there are `get` and `set` for each graphics object value.
+
+#### OlxAPIGraphicsType1Obj
+This graphics object is associated with the following devices and has the following properties:
+
+**Associated Devices**: `OlxAPIBusObj`
+
+` OlxAPIGraphicsType1Obj* gfxObj = bus->gfxObj;`
+
+|Property|Description|Data Type| Get Example | Set Example|
+|--|--|--|--|--|
+|`size`|Sets the length of the bus|`int`|`getSize();`| `setSize(10);`|
+|`angle`|Sets the bus orientation (0-horizontal, 1-vertical)|`int`|`getAngle();`| `setAngle(1);`|
+|`x`|Sets the x position of the bus|`int`|`getX();`| `setX(10);`|
+|`y`|Sets the y position of the bus|`int`|`getY();`| `setY(10);`|
+|`nameX`|Sets the x position of the display name |`int`|`getNameX();`| `setNameX(10);`|
+|`nameY`|Sets the y position of the display name|`int`|`getNameY();`| `getNameY(10);`|
+
+
 ### Supported OneLiner Equipment
-|ASPEN Equipment |OlxAPIWrapper Class | Implementation |
-|--|--|--|
-|Bus| ``` OlxAPIBusObj ``` | 100% |
-|Line| ``` OlxAPILineObj ``` | 100%|
-|2-Winding Transformer| ``` OlxAPIXFMRObj ``` |100%|
-|3-Winding Transformer| ``` OlxAPIXFMR3WObj ``` |100%|
-|Series Reactor| ``` OlxAPISeriesReactorObj ``` |100%|
-|Shunt Capacitor| ``` OlxAPIShuntCapacitorObj ``` |100%|
+|ASPEN Equipment |OlxAPIWrapper Class | Implementation | Graphics Object|
+|--|--|--|--|
+|Bus| `OlxAPIBusObj` | 100% |`OlxAPIGraphicsType1Obj`|
+|Line| `OlxAPILineObj` | 100%|`OlxAPIGraphicsType5Obj`|
+|2-Winding Transformer| `OlxAPIXFMRObj` |100%|`OlxAPIGraphicsType3Obj`|
+|3-Winding Transformer| `OlxAPIXFMR3WObj` |100%|`OlxAPIGraphicsType4Obj`|
+|Series Reactor| `OlxAPISeriesReactorObj` |100%|`OlxAPIGraphicsType3Obj`|
+|Shunt Capacitor| `OlxAPIShuntCapacitorObj` |100%|`OlxAPIGraphicsType2Obj`|
 
 ### TODO
 
@@ -106,6 +131,7 @@ for(int = 0; i < lineHandles.size(); i++)
 	 - Distance (Phase/Ground)
 	 - Recloser Relay (Phase/Ground)
 	 - Fuse
+ - Graphics Objects (Experimental)
  - Implement Adding/Removing Equipment
 	 - Requires a lot of trial and error, likely to never be implemented
 

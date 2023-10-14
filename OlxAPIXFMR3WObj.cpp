@@ -48,6 +48,12 @@ OlxAPIXFMR3WObj::OlxAPIXFMR3WObj(int handle) : OlxAPIObj(handle)
     getName();
     getOffDate();
     getOnDate();
+    gfxObj = new OlxAPIGraphicsType4Obj(handle, TC_XFMR3);
+}
+
+OlxAPIXFMR3WObj::~OlxAPIXFMR3WObj()
+{
+    delete gfxObj;
 }
 
 double OlxAPIXFMR3WObj::getBaseMVA() {

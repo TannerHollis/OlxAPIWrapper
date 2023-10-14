@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 #include "csv.h"
 
@@ -154,4 +155,7 @@ void displayModelObjects(OlxAPIModelObj* model)
             cout << "Line Name : " << line->getName() << "\tBus 1: " << model->getBus(line->getBus1Handle())->getName() << "\tBus 2: " << model->getBus(line->getBus2Handle())->getName() << endl;
         }
     }
+
+    string outputFile("test.olr"); // Output to open file's directory and save as..
+    model->saveFile(outputFile);
 }

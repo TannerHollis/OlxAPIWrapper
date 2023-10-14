@@ -1,11 +1,13 @@
 #pragma once
 
 #include "OlxAPIObj.h"
+#include "OlxAPIGraphicsType2Obj.h"
 
 class OlxAPIShuntCapacitorObj : public OlxAPIObj
 {
 public:
 	OlxAPIShuntCapacitorObj(int handle);
+	~OlxAPIShuntCapacitorObj();
 
 	double getB();
 	int setB(double value);
@@ -27,6 +29,8 @@ public:
 	int getShuntHandle();
 
 	string getCktID();
+
+	OlxAPIGraphicsType2Obj* gfxObj;
 
 private:
 	double dB;

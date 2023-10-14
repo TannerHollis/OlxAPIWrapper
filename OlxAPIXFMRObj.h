@@ -1,6 +1,7 @@
 #pragma once
 
 #include "OlxAPIObj.h"
+#include "OlxAPIGraphicsType3Obj.h"
 
 class OlxAPIXFMRObj : public OlxAPIObj
 {
@@ -13,6 +14,7 @@ public:
 	} GroundingImpedance;
 
 	OlxAPIXFMRObj(int handle);
+	~OlxAPIXFMRObj();
 
 	double getB();
 	int setB(double value);
@@ -140,6 +142,8 @@ public:
 
 	string getOnDate();
 	int setOnDate(string& value);
+
+	OlxAPIGraphicsType3Obj* gfxObj;
 
 private:
 	double dB;

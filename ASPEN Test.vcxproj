@@ -160,6 +160,11 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="OlxAPIGraphicsObj.cpp" />
+    <ClCompile Include="OlxAPIGraphicsType1Obj.cpp" />
+    <ClCompile Include="OlxAPIGraphicsType2Obj.cpp" />
+    <ClCompile Include="OlxAPIGraphicsType3Obj.cpp" />
+    <ClCompile Include="OlxAPIGraphicsType4Obj.cpp" />
     <ClCompile Include="OlxAPISeriesReactorObj.cpp" />
     <ClCompile Include="OlxAPIShuntCapacitorObj.cpp" />
     <ClCompile Include="OlxAPIWrapperTest.cpp" />
@@ -174,6 +179,11 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h" />
     <ClInclude Include="csv.h" />
     <ClInclude Include="OlxAPIBusObj.h" />
+    <ClInclude Include="OlxAPIGraphicsObj.h" />
+    <ClInclude Include="OlxAPIGraphicsType1Obj.h" />
+    <ClInclude Include="OlxAPIGraphicsType2Obj.h" />
+    <ClInclude Include="OlxAPIGraphicsType3Obj.h" />
+    <ClInclude Include="OlxAPIGraphicsType4Obj.h" />
     <ClInclude Include="OlxAPILineObj.h" />
     <ClInclude Include="OlxAPIModelObj.h" />
     <ClInclude Include="OlxAPIObj.h" />

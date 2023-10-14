@@ -10,6 +10,12 @@ OlxAPIShuntCapacitorObj::OlxAPIShuntCapacitorObj(int handle) : OlxAPIObj(handle)
     getOnline();
     getShuntHandle();
     getCktID();
+    gfxObj = new OlxAPIGraphicsType2Obj(handle, TC_SHUNTUNIT);
+}
+
+OlxAPIShuntCapacitorObj::~OlxAPIShuntCapacitorObj()
+{
+    delete gfxObj;
 }
 
 double OlxAPIShuntCapacitorObj::getB()

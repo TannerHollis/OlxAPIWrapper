@@ -1,5 +1,7 @@
 #include "OlxAPIBusObj.h"
 
+#include "OlxAPIGraphicsObj.h"
+
 OlxAPIBusObj::OlxAPIBusObj(int handle) : OlxAPIObj(handle)
 {
 	getKVNominal();
@@ -15,6 +17,12 @@ OlxAPIBusObj::OlxAPIBusObj(int handle) : OlxAPIObj(handle)
 	getComment();
 	getLocation();
 	getName();
+	gfxObj = new OlxAPIGraphicsType1Obj(handle, TC_BUS);
+}
+
+OlxAPIBusObj::~OlxAPIBusObj()
+{
+	delete gfxObj;
 }
 
 double OlxAPIBusObj::getKVNominal()

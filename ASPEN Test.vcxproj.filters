@@ -42,6 +42,21 @@
     <ClCompile Include="OlxAPIShuntCapacitorObj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType1Obj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType2Obj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType3Obj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType4Obj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h">
@@ -75,6 +90,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIShuntCapacitorObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType1Obj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType2Obj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType3Obj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType4Obj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
