@@ -1,5 +1,6 @@
 #include "OlxAPILineObj.h"
 
+
 OlxAPILineObj::OlxAPILineObj(int handle) : OlxAPIObj(handle)
 {
 	getR();
@@ -25,7 +26,14 @@ OlxAPILineObj::OlxAPILineObj(int handle) : OlxAPIObj(handle)
 	getOffDate();
 	getOnDate();
 	getType();
-	//getRatings(); // Current does not work, throwing errors all over town
+	getRatings();
+
+	gfxObj = new OlxAPIGraphicsType5Obj(handle, TC_LINE);
+}
+
+OlxAPILineObj::~OlxAPILineObj()
+{
+	delete gfxObj;
 }
 
 double OlxAPILineObj::getB1()
@@ -282,13 +290,12 @@ int OlxAPILineObj::setType(string& value)
 
 double* OlxAPILineObj::getRatings()
 {
-	//getParameter(LN_vdRating, &dRatings);
+	getDoubleArrayParameter(LN_vdRating, dRatings, 4);
 	return dRatings;
 }
 
 int OlxAPILineObj::setRatings(double* value)
 {
-	//memcpy(&dRatings[0], value, sizeof(double) * 4);
-	//return setParameter(LN_vdRating, dRatings);
-	return 0;
+	memcpy(dRatings, value, 4);
+	return setDoubleArrayParameter(LN_vdRating, dRatings, 4);
 }

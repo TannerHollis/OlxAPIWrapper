@@ -155,13 +155,31 @@ This graphics object is associated with the following devices and has the follow
 |`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
 |`text3X`|Sets the x position of the display text near bus 3|`int`|`getText3X();`| `setText3X(10);`|
 |`text3Y`|Sets the y position of the display text near bus 3|`int`|`getText3Y();`| `getText3Y(10);`|
+#### OlxAPIGraphicsType5Obj
+This graphics object is associated with the following devices and has the following properties:
 
+**Associated Devices**: `OlxAPILineObj`
+
+` OlxAPIGraphicsType5Obj* gfxObj = line->gfxObj;`
+
+|Property|Description|Data Type| Get Example | Set Example|
+|--|--|--|--|--|
+|`segments`|Sets the number of segments (2, if tertiary winding is no *kinks* are present. Otherwise, use with caution. A *kink* controls the use of points 3 and 4).|`int`|`getNSegments();`| `setNSegments(1);`|
+|`pointsX`|Sets the x position of a segment point. Maximum of 6 points (5 segments).|`int`|`getPointX(0);`| `setPointX(0,10);`|
+|`pointsY`|Sets the y position of a segment point. Maximum of 6 points (5 segments)|`int`|`getPointY(0);`| `setPointY(0,10);`|
+|`addPoint`*|Inserts a point after the index provided |`int`|| `addPoint(0, 0, 100, 100, 100);`|
+|`removePoint`*|Inserts a point at the index provided |`int`|| `removePoint(0);`|
+|`text1X`|Sets the x position of the display text near bus 1 |`int`|`getText1X();`| `setText1X(10);`|
+|`text1Y`|Sets the y position of the display text near bus 1|`int`|`getText1Y();`| `getText1Y(10);`|
+|`text2X`|Sets the x position of the display text near bus 2|`int`|`getText2X();`| `setText2X(10);`|
+|`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
+**Do not use. Will corrupt surrounding data.*
 [Back to top](#table-of-contents)
 ### Supported OneLiner Equipment
 |ASPEN Equipment |OlxAPIWrapper Class | Implementation | Graphics Object|
 |--|--|--|--|
 |Bus| `OlxAPIBusObj` | 100% |[`OlxAPIGraphicsType1Obj`](#olxapigraphicstype1obj)|
-|Line| `OlxAPILineObj` | 100%|`OlxAPIGraphicsType5Obj`|
+|Line| `OlxAPILineObj` | 100%|[`OlxAPIGraphicsType5Obj`](#olcapigraphicstype5obj)|
 |2-Winding Transformer| `OlxAPIXFMRObj` |100%|[`OlxAPIGraphicsType3Obj`](#olxapigraphicstype3obj)|
 |3-Winding Transformer| `OlxAPIXFMR3WObj` |100%|[`OlxAPIGraphicsType4Obj`](#olxapigraphicstype4obj)|
 |Series Reactor| `OlxAPISeriesReactorObj` |100%|[`OlxAPIGraphicsType3Obj`](#olxapigraphicstype3obj)|

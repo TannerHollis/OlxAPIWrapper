@@ -22,6 +22,11 @@ int OlxAPIGraphicsObj::setData(int offset, int value)
     return ret;
 }
 
+int OlxAPIGraphicsObj::setDatabuffer(int* buffer)
+{
+    return OlxAPISetObjGraphicData(handle, buffer);
+}
+
 OlxAPIGraphicsObj::GraphicsObjType OlxAPIGraphicsObj::getGraphicsObjType(int objType)
 {
     switch (objType)

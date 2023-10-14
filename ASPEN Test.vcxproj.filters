@@ -13,62 +13,71 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\OlxGraphicsObjs">
+      <UniqueIdentifier>{a1eb9fbc-7914-4a85-8bd0-5c2c773131ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OlxAPIObjs">
+      <UniqueIdentifier>{cc2743e1-90cf-4e65-bc7e-9e4ad7455dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OlxAPIObjs">
+      <UniqueIdentifier>{883a7345-15f8-4af8-a4a3-83ce168bbaa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OlxGraphicsObjs">
+      <UniqueIdentifier>{bfab6844-731d-4818-a436-226ef69f52cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OlxAPIWrapperTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OlxAPILineObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OlxAPIBusObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="OlxAPIModelObj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OlxAPIObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OlxAPIXFMR3WObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OlxAPIXFMRObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OlxAPISeriesReactorObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OlxAPIShuntCapacitorObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="OlxAPIGraphicsObj.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OlxGraphicsObjs</Filter>
     </ClCompile>
     <ClCompile Include="OlxAPIGraphicsType1Obj.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OlxGraphicsObjs</Filter>
     </ClCompile>
     <ClCompile Include="OlxAPIGraphicsType2Obj.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OlxGraphicsObjs</Filter>
     </ClCompile>
     <ClCompile Include="OlxAPIGraphicsType3Obj.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OlxGraphicsObjs</Filter>
     </ClCompile>
     <ClCompile Include="OlxAPIGraphicsType4Obj.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OlxGraphicsObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType5Obj.cpp">
+      <Filter>Source Files\OlxGraphicsObjs</Filter>
     </ClCompile>
     <ClCompile Include="OlxAPIGeneratorObj.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\OlxAPIObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPISeriesReactorObj.cpp">
+      <Filter>Source Files\OlxAPIObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIShuntCapacitorObj.cpp">
+      <Filter>Source Files\OlxAPIObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIXFMR3WObj.cpp">
+      <Filter>Source Files\OlxAPIObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIBusObj.cpp">
+      <Filter>Source Files\OlxAPIObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIXFMRObj.cpp">
+      <Filter>Source Files\OlxAPIObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPILineObj.cpp">
+      <Filter>Source Files\OlxAPIObjs</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIObj.cpp">
+      <Filter>Source Files\OlxAPIObjs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OlxAPILineObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OlxAPIBusObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIModelObj.h">
@@ -77,41 +86,50 @@
     <ClInclude Include="csv.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OlxAPIObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OlxAPIXFMR3WObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="OlxAPIVersion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OlxAPIXFMRObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OlxAPISeriesReactorObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OlxAPIShuntCapacitorObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="OlxAPIGraphicsObj.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OlxGraphicsObjs</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIGraphicsType1Obj.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OlxGraphicsObjs</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIGraphicsType2Obj.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OlxGraphicsObjs</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIGraphicsType3Obj.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OlxGraphicsObjs</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIGraphicsType4Obj.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OlxGraphicsObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType5Obj.h">
+      <Filter>Header Files\OlxGraphicsObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPILineObj.h">
+      <Filter>Header Files\OlxAPIObjs</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIGeneratorObj.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OlxAPIObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPISeriesReactorObj.h">
+      <Filter>Header Files\OlxAPIObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIXFMR3WObj.h">
+      <Filter>Header Files\OlxAPIObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIShuntCapacitorObj.h">
+      <Filter>Header Files\OlxAPIObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIBusObj.h">
+      <Filter>Header Files\OlxAPIObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIXFMRObj.h">
+      <Filter>Header Files\OlxAPIObjs</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIObj.h">
+      <Filter>Header Files\OlxAPIObjs</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

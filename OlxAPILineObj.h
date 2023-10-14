@@ -1,11 +1,13 @@
 #pragma once
 
 #include "OlxAPIObj.h"
+#include "OlxAPIGraphicsType5Obj.h"
 
 class OlxAPILineObj : public OlxAPIObj
 {
 public:
 	OlxAPILineObj(int handle);
+	~OlxAPILineObj();
 
 	double getB1();
 	int setB1(double value);
@@ -71,6 +73,8 @@ public:
 
 	double* getRatings();
 	int setRatings(double* value);
+
+	OlxAPIGraphicsType5Obj* gfxObj;
 
 private:
 	double dB1;

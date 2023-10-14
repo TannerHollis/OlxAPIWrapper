@@ -251,7 +251,6 @@ double OlxAPIGeneratorObj::getX(GeneratorImpedance impedance)
 
 int OlxAPIGeneratorObj::setX(GeneratorImpedance impedance, double value)
 {
-	double** data;
 	getDoubleArrayParameter(GU_vdX, dX, 5);
 	switch (impedance)
 	{

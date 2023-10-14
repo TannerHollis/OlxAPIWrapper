@@ -42,6 +42,7 @@ public:
 protected:
     int getData(int offset);
     int setData(int offset, int value);
+    int setDatabuffer(int* buffer);
 
     int data[500];
 

@@ -166,6 +166,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClCompile Include="OlxAPIGraphicsType2Obj.cpp" />
     <ClCompile Include="OlxAPIGraphicsType3Obj.cpp" />
     <ClCompile Include="OlxAPIGraphicsType4Obj.cpp" />
+    <ClCompile Include="OlxAPIGraphicsType5Obj.cpp" />
     <ClCompile Include="OlxAPISeriesReactorObj.cpp" />
     <ClCompile Include="OlxAPIShuntCapacitorObj.cpp" />
     <ClCompile Include="OlxAPIWrapperTest.cpp" />
@@ -186,6 +187,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClInclude Include="OlxAPIGraphicsType2Obj.h" />
     <ClInclude Include="OlxAPIGraphicsType3Obj.h" />
     <ClInclude Include="OlxAPIGraphicsType4Obj.h" />
+    <ClInclude Include="OlxAPIGraphicsType5Obj.h" />
     <ClInclude Include="OlxAPILineObj.h" />
     <ClInclude Include="OlxAPIModelObj.h" />
     <ClInclude Include="OlxAPIObj.h" />
