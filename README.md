@@ -16,6 +16,8 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
 	- [Graphics Objects](#edit-graphics-object-values)
 		- [OlxAPIGraphicsType1Obj](#olxapigraphicstype1obj)
  		- [OlxAPIGraphicsType2Obj](#olxapigraphicstype2obj)
+  		- [OlxAPIGraphicsType3Obj](#olxapigraphicstype3obj)
+ 		- [OlxAPIGraphicsType4Obj](#olxapigraphicstype4obj)
  - [Supported Oneliner Equipment](#supported-oneliner-equipment)
  - [TODO](/#todo)
 
@@ -30,9 +32,7 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
 
 # Using OlxAPIWrapper
 ### Getting Started
-
 It is very easy to start using, simply load an entire model using the ```OlxAPIModelObj``` class. All elements are loaded into this object and some objects are searchable via names, otherwise ```handle``` are used exclusively.
-
 ```cpp
 #include "OlxAPIModelObj.h"
 ...
@@ -47,6 +47,7 @@ for(int = 0; i < lineHandles.size(); i++)
     cout << "Line Name: " << model.getLine(lineHandles[i])->getName() << endl; // Print line name
 }
 ```
+[Back to top](#table-of-contents)
 ### Editing Equipment Values
 All elements editable within Oneliner are available to the user via unique ```get``` and ```set``` like used in the following:
 
@@ -64,7 +65,7 @@ if(ret == OLXAPI_OK) // Check write was successful
     cout << "Successful write to cable: " << cable << endl;
 ...
 ```
-
+[Back to top](#table-of-contents)
 ### Get Unique Formatted Object ID String
 All objects have a unique id that can be formatted into a string. This string is useful for reverse lookups, which return handles if successful.
 
@@ -80,7 +81,7 @@ for(int = 0; i < lineHandles.size(); i++)
     cout << model.getLine(lineHandles[i])->getObjectIDString() << endl; // Print line name
 }
 ```
-
+[Back to top](#top)
 ### Edit Graphics Object Values
 This is current under development, but this will allow the user to get positions of graphics objects within the model. Similar to other API objects, there are `get` and `set` for each graphics object value.
 
@@ -100,6 +101,7 @@ This graphics object is associated with the following devices and has the follow
 |`nameX`|Sets the x position of the display name |`int`|`getNameX();`| `setNameX(10);`|
 |`nameY`|Sets the y position of the display name|`int`|`getNameY();`| `getNameY(10);`|
 
+[Back to top](#table-of-contents)
 #### OlxAPIGraphicsType2Obj
 This graphics object is associated with the following devices and has the following properties:
 
@@ -114,6 +116,7 @@ This graphics object is associated with the following devices and has the follow
 |`textX`|Sets the x position of the display text |`int`|`getTextX();`| `setTextX(10);`|
 |`textY`|Sets the y position of the display text |`int`|`getTextY();`| `getTextY(10);`|
 
+[Back to top](#table-of-contents)
 #### OlxAPIGraphicsType3Obj
 This graphics object is associated with the following devices and has the following properties:
 
@@ -131,6 +134,7 @@ This graphics object is associated with the following devices and has the follow
 |`text2X`|Sets the x position of the display text near bus 2|`int`|`getText2X();`| `setText2X(10);`|
 |`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
 
+[Back to top](#table-of-contents)
 #### OlxAPIGraphicsType4Obj
 This graphics object is associated with the following devices and has the following properties:
 
@@ -150,6 +154,7 @@ This graphics object is associated with the following devices and has the follow
 |`text3X`|Sets the x position of the display text near bus 3|`int`|`getText3X();`| `setText3X(10);`|
 |`text3Y`|Sets the y position of the display text near bus 3|`int`|`getText3Y();`| `getText3Y(10);`|
 
+[Back to top](#table-of-contents)
 ### Supported OneLiner Equipment
 |ASPEN Equipment |OlxAPIWrapper Class | Implementation | Graphics Object|
 |--|--|--|--|
@@ -160,6 +165,7 @@ This graphics object is associated with the following devices and has the follow
 |Series Reactor| `OlxAPISeriesReactorObj` |100%|[`OlxAPIGraphicsType3Obj`](#olxapigraphicstype3obj)|
 |Shunt Capacitor| `OlxAPIShuntCapacitorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
 
+[Back to top](#table-of-contents)
 ### TODO
 
  - Implement the following equipment
@@ -185,3 +191,4 @@ This graphics object is associated with the following devices and has the follow
  - Implement Adding/Removing Equipment
 	 - Requires a lot of trial and error, likely to never be implemented
 
+[Back to top](#table-of-contents)
