@@ -160,6 +160,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="OlxAPIGeneratorObj.cpp" />
     <ClCompile Include="OlxAPIGraphicsObj.cpp" />
     <ClCompile Include="OlxAPIGraphicsType1Obj.cpp" />
     <ClCompile Include="OlxAPIGraphicsType2Obj.cpp" />
@@ -179,6 +180,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h" />
     <ClInclude Include="csv.h" />
     <ClInclude Include="OlxAPIBusObj.h" />
+    <ClInclude Include="OlxAPIGeneratorObj.h" />
     <ClInclude Include="OlxAPIGraphicsObj.h" />
     <ClInclude Include="OlxAPIGraphicsType1Obj.h" />
     <ClInclude Include="OlxAPIGraphicsType2Obj.h" />

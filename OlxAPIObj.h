@@ -26,6 +26,9 @@ protected:
 	int getStringParameter(int paramToken, string* data);
 	int setStringParameter(int paramToken, string* data);
 
+	int getDoubleArrayParameter(int paramToken, double* data, int length);
+	int setDoubleArrayParameter(int paramToken, double* data, int length);
+
 private:
 	int handle;
 };

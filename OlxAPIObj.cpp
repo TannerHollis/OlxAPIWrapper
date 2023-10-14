@@ -62,3 +62,26 @@ int OlxAPIObj::setStringParameter(int paramToken, string* data)
 
 	return OlxAPIPostData(handle);
 }
+
+int OlxAPIObj::getDoubleArrayParameter(int paramToken, double* data, int length)
+{
+	double* buffer = (double*)malloc(GETDATABUFLEN * sizeof(double));
+	int ret = OlxAPIGetData(handle, paramToken, buffer);
+	if (ret != OLXAPI_OK)
+		return ret;
+
+	memcpy(data, buffer, sizeof(double) * length);
+	free(buffer);
+	return ret;
+}
+
+int OlxAPIObj::setDoubleArrayParameter(int paramToken, double* data, int length)
+{
+	double buffer[SETDATABUFLEN_DOUBLE];
+	memcpy(&buffer, data, sizeof(double) * length);
+	int ret = OlxAPISetData(handle, paramToken, &buffer);
+	if (ret == OLXAPI_OK)
+		return ret;
+
+	return OlxAPIPostData(handle);
+}

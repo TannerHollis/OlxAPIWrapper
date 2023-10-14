@@ -12,6 +12,7 @@ OlxAPIModelObj::OlxAPIModelObj(string& filePath, bool readonly)
 		loadMap(&XFMRs3W, SY_nNOxfmr3, TC_XFMR3);
 		loadMap(&seriesReactors, SY_nNOseriescap, TC_SCAP);
 		loadMap(&shuntCapacitors, SY_nNOshuntUnit, TC_SHUNTUNIT);
+		loadMap(&generators, SY_nNOgen, TC_GENUNIT);
 	}
 }
 
@@ -23,6 +24,7 @@ OlxAPIModelObj::~OlxAPIModelObj()
 	clearMap(&XFMRs3W);
 	clearMap(&seriesReactors);
 	clearMap(&shuntCapacitors);
+	clearMap(&generators);
 	closeFile();
 }
 
@@ -125,6 +127,16 @@ OlxAPIShuntCapacitorObj* OlxAPIModelObj::getShuntCapacitor(int handle)
 vector<int> OlxAPIModelObj::getShuntCapacitorHandles()
 {
 	return getHandles(&shuntCapacitors);
+}
+
+OlxAPIGeneratorObj* OlxAPIModelObj::getGenerator(int handle)
+{
+	return generators[handle];
+}
+
+vector<int> OlxAPIModelObj::getGeneratorHandles()
+{
+	return getHandles(&generators);
 }
 
 template <typename T> vector<int> OlxAPIModelObj::getHandles(T* mapIn)

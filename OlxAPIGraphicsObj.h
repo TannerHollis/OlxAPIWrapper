@@ -28,12 +28,12 @@ class OlxAPIGraphicsObj
 public:
     typedef enum GraphicsObjType
     {
-        GFXOBJ_TYPE_0 = 0, // TC_BUS
-        GFXOBJ_TYPE_1 = 1, // TC_GEN, TC_GENW3, TC_GENW4, TC_CCGEN, TC_LOAD, TC_SHUNT, TC_SVD
-        GFXOBJ_TYPE_2 = 2, // TC_XFMR, TC_PS, TC_SCAP, TC_SWITCH, TC_DCLINE2
-        GFXOBJ_TYPE_3 = 3, // TC_XFMR3
-        GFXOBJ_TYPE_4 = 4, // TC_LINE, TC_SCAP* already in Type 2
-        GFXOBJ_TYPE_5 = 5, // TC_SYS
+        GFXOBJ_TYPE_1 = 0, // TC_BUS
+        GFXOBJ_TYPE_2 = 1, // TC_GEN, TC_GENW3, TC_GENW4, TC_CCGEN, TC_LOAD, TC_SHUNT, TC_SVD
+        GFXOBJ_TYPE_3 = 2, // TC_XFMR, TC_PS, TC_SCAP, TC_SWITCH, TC_DCLINE2
+        GFXOBJ_TYPE_4 = 3, // TC_XFMR3
+        GFXOBJ_TYPE_5 = 4, // TC_LINE, TC_SCAP* already in Type 2
+        GFXOBJ_TYPE_6 = 5, // TC_SYS
         GFXOBJ_TYPE_UNKNOWN = 99
     }GraphicsObjType;
 

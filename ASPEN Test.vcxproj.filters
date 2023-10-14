@@ -57,6 +57,9 @@
     <ClCompile Include="OlxAPIGraphicsType4Obj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OlxAPIGeneratorObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h">
@@ -105,6 +108,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="OlxAPIGraphicsType4Obj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGeneratorObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

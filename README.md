@@ -1,5 +1,6 @@
 
 
+
 # OlxAPIWrapper
 
 This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15.7 ([Latest version](https://github.com/aspeninc/TestBenchOlxAPI/tree/master)).
@@ -83,7 +84,7 @@ for(int = 0; i < lineHandles.size(); i++)
 ```
 [Back to top](#top)
 ### Edit Graphics Object Values
-This is current under development, but this will allow the user to get positions of graphics objects within the model. Similar to other API objects, there are `get` and `set` for each graphics object value.
+This is currently under development, but this will allow the user to get positions of graphics objects within the model. Similar to other API objects, there are `get` and `set` for each graphics object value.
 
 #### OlxAPIGraphicsType1Obj
 This graphics object is associated with the following devices and has the following properties:
@@ -105,7 +106,7 @@ This graphics object is associated with the following devices and has the follow
 #### OlxAPIGraphicsType2Obj
 This graphics object is associated with the following devices and has the following properties:
 
-**Associated Devices**: `OlxAPIShuntCapacitorObj`
+**Associated Devices**: `OlxAPIShuntCapacitorObj`, `OlxAPIGeneratorObj`
 
 ` OlxAPIGraphicsType2Obj* gfxObj = shuntCapacitor->gfxObj;`
 
@@ -164,6 +165,7 @@ This graphics object is associated with the following devices and has the follow
 |3-Winding Transformer| `OlxAPIXFMR3WObj` |100%|[`OlxAPIGraphicsType4Obj`](#olxapigraphicstype4obj)|
 |Series Reactor| `OlxAPISeriesReactorObj` |100%|[`OlxAPIGraphicsType3Obj`](#olxapigraphicstype3obj)|
 |Shunt Capacitor| `OlxAPIShuntCapacitorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
+|Generator (Synchronous)| `OlxAPIGeneratorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
 
 [Back to top](#table-of-contents)
 ### TODO
@@ -173,10 +175,10 @@ This graphics object is associated with the following devices and has the follow
 	 - [x] Bus
 	 - [X] 2W Transformer
 	 - [x] 3W Transformer
-	 - [ ] Generator
+	 - [x] Generator
 	 - [ ] Inverter-Based Resource
-	 - [X] Shunt Capacitor/Reactor
-	 - [X] Series Capacitor/Reactor
+	 - [x] Shunt Capacitor/Reactor
+	 - [x] Series Capacitor/Reactor
 	 - [ ] Load ( Load Flow )
 	 - [ ] Switch
 	 - [ ] Breaker

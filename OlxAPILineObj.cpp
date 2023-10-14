@@ -22,8 +22,8 @@ OlxAPILineObj::OlxAPILineObj(int handle) : OlxAPIObj(handle)
 	getRelayGroup2Handle();
 	getCktID();
 	getLengthUnit();
-	getOutOfServiceDate();
-	getInServiceDate();
+	getOffDate();
+	getOnDate();
 	getType();
 	//getRatings(); // Current does not work, throwing errors all over town
 }
@@ -244,25 +244,25 @@ int OlxAPILineObj::setLengthUnit(string& value)
 	return setStringParameter(LN_sLengthUnit, &sLengthUnit);
 }
 
-string OlxAPILineObj::getOutOfServiceDate()
+string OlxAPILineObj::getOffDate()
 {
 	getStringParameter(LN_sOffDate, &sOffDate);
 	return sOffDate;
 }
 
-int OlxAPILineObj::setOutOfServiceDate(string& value)
+int OlxAPILineObj::setOffDate(string& value)
 {
 	sOffDate = value;
 	return setStringParameter(LN_sOffDate, &sOffDate);
 }
 
-string OlxAPILineObj::getInServiceDate()
+string OlxAPILineObj::getOnDate()
 {
 	getStringParameter(LN_sOnDate, &sOnDate);
 	return sOnDate;
 }
 
-int OlxAPILineObj::setInServiceDate(string& value)
+int OlxAPILineObj::setOnDate(string& value)
 {
 	sOnDate = value;
 	return setStringParameter(LN_sOnDate, &sOnDate);

@@ -60,11 +60,11 @@ public:
 	string getLengthUnit();
 	int setLengthUnit(string& value);
 
-	string getOutOfServiceDate();
-	int setOutOfServiceDate(string& value);
+	string getOffDate();
+	int setOffDate(string& value);
 
-	string getInServiceDate();
-	int setInServiceDate(string& value);
+	string getOnDate();
+	int setOnDate(string& value);
 
 	string getType();
 	int setType(string& value);

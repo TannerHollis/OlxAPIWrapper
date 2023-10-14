@@ -8,6 +8,7 @@
 #include "OlxAPIXFMR3WObj.h"
 #include "OlxAPISeriesReactorObj.h"
 #include "OlxAPIShuntCapacitorObj.h"
+#include "OlxAPIGeneratorObj.h"
 
 #include <vector>
 #include <map>
@@ -49,6 +50,9 @@ public:
 	OlxAPIShuntCapacitorObj* getShuntCapacitor(int handle);
 	vector<int> getShuntCapacitorHandles();
 
+	OlxAPIGeneratorObj* getGenerator(int handle);
+	vector<int> getGeneratorHandles();
+
 private:
 	void openFile(string& filePath, bool readonly);
 	void closeFile();
@@ -72,6 +76,8 @@ private:
 	map<int, OlxAPISeriesReactorObj*> seriesReactors;
 
 	map<int, OlxAPIShuntCapacitorObj*> shuntCapacitors;
+
+	map<int, OlxAPIGeneratorObj*> generators;
 };
 
 
