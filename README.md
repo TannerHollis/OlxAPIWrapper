@@ -13,8 +13,9 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
     - [Getting Started](#getting-started)
     - [Editting Equipment Values](#editing-equipment-values)
 	- [Get Unique Object String](#get-unique-formatted-object-id-string)
-	- [Graphics Objects*](#edit-graphics-object-values)
+	- [Graphics Objects](#edit-graphics-object-values)
 		- [OlxAPIGraphicsType1Obj](#olxapigraphicstype1obj)
+ 		- [OlxAPIGraphicsType2Obj](#olxapigraphicstype2obj)
  - [Supported Oneliner Equipment](#supported-oneliner-equipment)
  - [TODO](/#todo)
 
@@ -99,16 +100,65 @@ This graphics object is associated with the following devices and has the follow
 |`nameX`|Sets the x position of the display name |`int`|`getNameX();`| `setNameX(10);`|
 |`nameY`|Sets the y position of the display name|`int`|`getNameY();`| `getNameY(10);`|
 
+#### OlxAPIGraphicsType2Obj
+This graphics object is associated with the following devices and has the following properties:
+
+**Associated Devices**: `OlxAPIShuntCapacitorObj`
+
+` OlxAPIGraphicsType2Obj* gfxObj = shuntCapacitor->gfxObj;`
+
+|Property|Description|Data Type| Get Example | Set Example|
+|--|--|--|--|--|
+|`x`|Sets the x position of the device|`int`|`getX();`| `setX(10);`|
+|`y`|Sets the y position of the device|`int`|`getY();`| `setY(10);`|
+|`textX`|Sets the x position of the display text |`int`|`getTextX();`| `setTextX(10);`|
+|`textY`|Sets the y position of the display text |`int`|`getTextY();`| `getTextY(10);`|
+
+#### OlxAPIGraphicsType3Obj
+This graphics object is associated with the following devices and has the following properties:
+
+**Associated Devices**: `OlxAPIXFMRObj`,`OlxAPISeriesReactorObj`
+
+` OlxAPIGraphicsType3Obj* gfxObj = xfmr->gfxObj;`
+
+|Property|Description|Data Type| Get Example | Set Example|
+|--|--|--|--|--|
+|`segments`|Sets the number of segments (1, if connected between two busses without a *kink*, or 3, if a *kink* is present).|`int`|`getNSegments();`| `setNSegments(1);`|
+|`pointsX`|Sets the x position of a segment point. Maximum of 4 points (3 segments).|`int`|`getPointX(0);`| `setPointX(0,10);`|
+|`pointsY`|Sets the y position of a segment point. Maximum of 4 points (3 segments)|`int`|`getPointY(0);`| `setPointY(0,10);`|
+|`text1X`|Sets the x position of the display text near bus 1 |`int`|`getText1X();`| `setText1X(10);`|
+|`text1Y`|Sets the y position of the display text near bus 1|`int`|`getText1Y();`| `getText1Y(10);`|
+|`text2X`|Sets the x position of the display text near bus 2|`int`|`getText2X();`| `setText2X(10);`|
+|`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
+
+#### OlxAPIGraphicsType4Obj
+This graphics object is associated with the following devices and has the following properties:
+
+**Associated Devices**: `OlxAPIXFMR3WObj`
+
+` OlxAPIGraphicsType4Obj* gfxObj = xfmr3w->gfxObj;`
+
+|Property|Description|Data Type| Get Example | Set Example|
+|--|--|--|--|--|
+|`segments`|Sets the number of segments (2, if tertiary winding is no *kinks* are present. Otherwise, use with caution. A *kink* controls the use of points 3 and 4).|`int`|`getNSegments();`| `setNSegments(1);`|
+|`pointsX`|Sets the x position of a segment point. Maximum of 6 points (5 segments).|`int`|`getPointX(0);`| `setPointX(0,10);`|
+|`pointsY`|Sets the y position of a segment point. Maximum of 6 points (5 segments)|`int`|`getPointY(0);`| `setPointY(0,10);`|
+|`text1X`|Sets the x position of the display text near bus 1 |`int`|`getText1X();`| `setText1X(10);`|
+|`text1Y`|Sets the y position of the display text near bus 1|`int`|`getText1Y();`| `getText1Y(10);`|
+|`text2X`|Sets the x position of the display text near bus 2|`int`|`getText2X();`| `setText2X(10);`|
+|`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
+|`text3X`|Sets the x position of the display text near bus 3|`int`|`getText3X();`| `setText3X(10);`|
+|`text3Y`|Sets the y position of the display text near bus 3|`int`|`getText3Y();`| `getText3Y(10);`|
 
 ### Supported OneLiner Equipment
 |ASPEN Equipment |OlxAPIWrapper Class | Implementation | Graphics Object|
 |--|--|--|--|
-|Bus| `OlxAPIBusObj` | 100% |`OlxAPIGraphicsType1Obj`|
+|Bus| `OlxAPIBusObj` | 100% |[`OlxAPIGraphicsType1Obj`](#olxapigraphicstype1obj)|
 |Line| `OlxAPILineObj` | 100%|`OlxAPIGraphicsType5Obj`|
-|2-Winding Transformer| `OlxAPIXFMRObj` |100%|`OlxAPIGraphicsType3Obj`|
-|3-Winding Transformer| `OlxAPIXFMR3WObj` |100%|`OlxAPIGraphicsType4Obj`|
-|Series Reactor| `OlxAPISeriesReactorObj` |100%|`OlxAPIGraphicsType3Obj`|
-|Shunt Capacitor| `OlxAPIShuntCapacitorObj` |100%|`OlxAPIGraphicsType2Obj`|
+|2-Winding Transformer| `OlxAPIXFMRObj` |100%|[`OlxAPIGraphicsType3Obj`](#olxapigraphicstype3obj)|
+|3-Winding Transformer| `OlxAPIXFMR3WObj` |100%|[`OlxAPIGraphicsType4Obj`](#olxapigraphicstype4obj)|
+|Series Reactor| `OlxAPISeriesReactorObj` |100%|[`OlxAPIGraphicsType3Obj`](#olxapigraphicstype3obj)|
+|Shunt Capacitor| `OlxAPIShuntCapacitorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
 
 ### TODO
 
@@ -131,7 +181,7 @@ This graphics object is associated with the following devices and has the follow
 	 - Distance (Phase/Ground)
 	 - Recloser Relay (Phase/Ground)
 	 - Fuse
- - Graphics Objects (Experimental)
+ - Finish Graphics Objects
  - Implement Adding/Removing Equipment
 	 - Requires a lot of trial and error, likely to never be implemented
 
