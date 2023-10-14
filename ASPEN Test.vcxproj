@@ -166,6 +166,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClCompile Include="OlxAPIModelObj.cpp" />
     <ClCompile Include="OlxAPIObj.cpp" />
     <ClCompile Include="OlxAPI3WXFMRObj.cpp" />
+    <ClCompile Include="OlxAPIXFMRObj.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h" />
@@ -176,6 +177,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\*.dll" "$(TargetDir)"</Comman
     <ClInclude Include="OlxAPIObj.h" />
     <ClInclude Include="OlxAPI3WXFMRObj.h" />
     <ClInclude Include="OlxAPIVersion.h" />
+    <ClInclude Include="OlxAPIXFMRObj.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

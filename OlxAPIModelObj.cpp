@@ -6,16 +6,19 @@ OlxAPIModelObj::OlxAPIModelObj(string& filePath, bool readonly)
 
 	if (fileIsOpened)
 	{
-		loadBusses();
-		loadLines();
-		load3WXFMRs();
+		loadMap(&busses, &nBusses, SY_nNObus, TC_BUS);
+		loadMap(&lines, &nLines, SY_nNOline, TC_LINE);
+		loadMap(&XFMRs, &nXFMRs, SY_nNOxfmr, TC_XFMR);
+		loadMap(&XFMRs3W, &nXFMRs3W, SY_nNOxfmr3, TC_XFMR3);
 	}
 }
 
 OlxAPIModelObj::~OlxAPIModelObj()
 {
-	clearBusses();
-	clearLines();
+	clearMap(&busses);
+	clearMap(&lines);
+	clearMap(&XFMRs);
+	clearMap(&XFMRs3W);
 	closeFile();
 }
 
@@ -30,6 +33,11 @@ int OlxAPIModelObj::saveFile(string& filePath)
 	return OlxAPISaveDataFile((char*)filePath.c_str());
 }
 
+bool OlxAPIModelObj::isOpened()
+{
+	return fileIsOpened;
+}
+
 OlxAPILineObj* OlxAPIModelObj::getLine(int handle)
 {
 	return lines[handle];
@@ -37,31 +45,12 @@ OlxAPILineObj* OlxAPIModelObj::getLine(int handle)
 
 int OlxAPIModelObj::findLineHandleByName(string& name)
 {
-	map<int, OlxAPILineObj*>::iterator it = lines.begin();
-	while (it != lines.end())
-	{
-		int handle = it->first;
-		string lineName = it->second->getName();
-
-		if (lineName == name)
-			return handle;
-
-		it++;
-	}
-	return -1;
+	return findByName(&lines, name);
 }
 
 vector<int> OlxAPIModelObj::getLineHandles()
 {
-	vector<int> lineHandles;
-	map<int, OlxAPILineObj*>::iterator it = lines.begin();
-	while (it != lines.end())
-	{
-		int handle = it->first;
-		lineHandles.push_back(handle);
-		it++;
-	}
-	return lineHandles;
+	return getHandles(&lines);
 }
 
 OlxAPIBusObj* OlxAPIModelObj::getBus(int handle)
@@ -71,8 +60,61 @@ OlxAPIBusObj* OlxAPIModelObj::getBus(int handle)
 
 int OlxAPIModelObj::findBusHandleByName(string& name)
 {
-	map<int, OlxAPIBusObj*>::iterator it = busses.begin();
-	while (it != busses.end())
+	return findByName(&busses, name);
+}
+
+vector<int> OlxAPIModelObj::getBusHandles()
+{
+	return getHandles(&busses);
+}
+
+OlxAPIXFMRObj* OlxAPIModelObj::getXFMR(int handle)
+{
+	return XFMRs[handle];
+}
+
+int OlxAPIModelObj::findXFMRHandleByName(string& name)
+{
+	return findByName(&XFMRs, name);
+}
+
+vector<int> OlxAPIModelObj::getXFMRHandles()
+{
+	return getHandles(&XFMRs);
+}
+
+OlxAPI3WXFMRObj* OlxAPIModelObj::get3WXFMR(int handle)
+{
+	return XFMRs3W[handle];
+}
+
+int OlxAPIModelObj::find3WXFMRHandleByName(string& name)
+{
+	return findByName(&XFMRs3W, name);
+}
+
+vector<int> OlxAPIModelObj::get3WXFMRHandles()
+{
+	return getHandles(&XFMRs3W);
+}
+
+template <typename T> vector<int> OlxAPIModelObj::getHandles(T* mapIn)
+{
+	vector<int> handles;
+	typename T::iterator it = mapIn->begin();
+	while (it != mapIn->end())
+	{
+		int handle = it->first;
+		handles.push_back(handle);
+		it++;
+	}
+	return handles;
+}
+
+template <typename T> int OlxAPIModelObj::findByName(T* mapIn, string& name)
+{
+	typename T::iterator it = mapIn->begin();
+	while (it != mapIn->end())
 	{
 		int handle = it->first;
 		string busName = it->second->getName();
@@ -85,23 +127,38 @@ int OlxAPIModelObj::findBusHandleByName(string& name)
 	return -1;
 }
 
-vector<int> OlxAPIModelObj::getBusHandles()
+template <typename T> void OlxAPIModelObj::clearMap(T* mapIn)
 {
-	vector<int> busHandles;
-	map<int, OlxAPIBusObj*>::iterator it = busses.begin();
-	while (it != busses.end())
+	typename T::iterator it = mapIn->begin();
+	while (it != mapIn->end())
 	{
 		int handle = it->first;
-		busHandles.push_back(handle);
+		delete it->second;
 		it++;
 	}
-	return busHandles;
+	mapIn->clear();
 }
 
-bool OlxAPIModelObj::isOpened()
+template <typename T> void OlxAPIModelObj::loadMap(map<int, T*>* mapIn, int* nObj, int objCountToken, int objToken)
 {
-	return fileIsOpened;
+	clearMap(mapIn);
+
+	// Get Number of lines
+	OlxAPIGetData(HND_SYS, objCountToken, nObj);
+
+	int handle = 0;
+	for (uint16_t i = 0; i < *nObj; i++)
+	{
+		int ret = OlxAPIGetEquipment(objToken, &handle);
+
+		if (ret != OLXAPI_OK)
+			continue;
+
+		mapIn->insert({ handle, new T(handle) });
+	}
 }
+
+
 
 void OlxAPIModelObj::openFile(string& filePath, bool readonly)
 {
@@ -126,102 +183,3 @@ void OlxAPIModelObj::closeFile()
 			fileIsOpened = false;
 	}
 }
-
-void OlxAPIModelObj::loadBusses()
-{
-	clearBusses();
-
-	// Get Number of lines
-	OlxAPIGetData(HND_SYS, SY_nNObus, &nBusses);
-
-	int handle = 0;
-	for (uint16_t bus = 0; bus < nBusses; bus++)
-	{
-		int ret = OlxAPIGetEquipment(TC_BUS, &handle);
-
-		if (ret != OLXAPI_OK)
-			continue;
-
-		busses.insert(pair<int, OlxAPIBusObj*>(handle, new OlxAPIBusObj(handle)));
-	}
-}
-
-void OlxAPIModelObj::clearBusses()
-{
-	map<int, OlxAPIBusObj*>::iterator it = busses.begin();
-	while (it != busses.end())
-	{
-		int handle = it->first;
-		OlxAPIBusObj* bus = it->second;
-		delete bus;
-		it++;
-	}
-
-	busses.clear();
-}
-
-void OlxAPIModelObj::loadLines()
-{
-	clearLines();
-
-	// Get Number of lines
-	OlxAPIGetData(HND_SYS, SY_nNOline, &nLines);
-
-	int handle = 0;
-	for (uint16_t line = 0; line < nLines; line++)
-	{
-		int ret = OlxAPIGetEquipment(TC_LINE, &handle);
-
-		if (ret != OLXAPI_OK)
-			continue;
-
-		lines.insert(pair<int, OlxAPILineObj*>(handle, new OlxAPILineObj(handle)));
-	}
-}
-
-void OlxAPIModelObj::clearLines()
-{
-	map<int, OlxAPILineObj*>::iterator it = lines.begin();
-	while (it != lines.end())
-	{
-		int handle = it->first;
-		OlxAPILineObj* line = it->second;
-		delete line;
-		it++;
-	}
-	lines.clear();
-}
-
-void OlxAPIModelObj::load3WXFMRs()
-{
-	clear3WXFMRs();
-
-	// Get Number of lines
-	OlxAPIGetData(HND_SYS, SY_nNOxfmr3, &nXFMRs3W);
-
-	int handle = 0;
-	for (uint16_t xfmr = 0; xfmr < nXFMRs3W; xfmr++)
-	{
-		int ret = OlxAPIGetEquipment(TC_XFMR3, &handle);
-
-		if (ret != OLXAPI_OK)
-			continue;
-
-		XFMRs3W.insert(pair<int, OlxAPI3WXFMRObj*>(handle, new OlxAPI3WXFMRObj(handle)));
-	}
-}
-
-void OlxAPIModelObj::clear3WXFMRs()
-{
-	map<int, OlxAPI3WXFMRObj*>::iterator it = XFMRs3W.begin();
-	while (it != XFMRs3W.end())
-	{
-		int handle = it->first;
-		OlxAPI3WXFMRObj* xfmr = it->second;
-		delete xfmr;
-		it++;
-	}
-	lines.clear();
-}
-
-

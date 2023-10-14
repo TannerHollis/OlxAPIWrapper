@@ -71,7 +71,7 @@ if(ret == OLXAPI_OK) // Check write was successful
  - Implement the following equipment
 	 - [x] Transmission Line
 	 - [x] Bus
-	 - [ ] 2W Transformer
+	 - [X] 2W Transformer
 	 - [x] 3W Transformer
 	 - [ ] Generator
 	 - [ ] Shunt Capacitor/Reactor
