@@ -65,6 +65,8 @@ if(ret == OLXAPI_OK) // Check write was successful
 |Line| ``` OlxAPILineObj ``` | 100%|
 |2-Winding Transformer| ``` OlxAPIXFMRObj ``` |100%|
 |3-Winding Transformer| ``` OlxAPIXFMR3WObj ``` |100%|
+|Series Reactor| ``` OlxAPISeriesReactorObj ``` |100%|
+|Shunt Capacitor| ``` OlxAPIShuntCapacitorObj ``` |100%|
 
 ### TODO
 
@@ -74,8 +76,9 @@ if(ret == OLXAPI_OK) // Check write was successful
 	 - [X] 2W Transformer
 	 - [x] 3W Transformer
 	 - [ ] Generator
-	 - [ ] Shunt Capacitor/Reactor
-	 - [ ] Series Capacitor/Reactor
+	 - [ ] Inverter-Based Resource
+	 - [X] Shunt Capacitor/Reactor
+	 - [X] Series Capacitor/Reactor
 	 - [ ] Load ( Load Flow )
 	 - [ ] Switch
 	 - [ ] Breaker
