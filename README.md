@@ -1,6 +1,3 @@
-
-
-
 # OlxAPIWrapper
 
 This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15.7 ([Latest version](https://github.com/aspeninc/TestBenchOlxAPI/tree/master)).
@@ -19,6 +16,7 @@ This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15
  		- [OlxAPIGraphicsType2Obj](#olxapigraphicstype2obj)
   		- [OlxAPIGraphicsType3Obj](#olxapigraphicstype3obj)
  		- [OlxAPIGraphicsType4Obj](#olxapigraphicstype4obj)
+ - [Documentation](https://tannerhollis.github.io/OlxAPIWrapper/)
  - [Using the Example Application](#using-the-example-application)
  - [Supported Oneliner Equipment](#supported-oneliner-equipment)
  - [TODO](/#todo)
