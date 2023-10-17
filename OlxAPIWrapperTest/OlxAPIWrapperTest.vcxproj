@@ -149,11 +149,6 @@
   <ItemGroup>
     <ClCompile Include="OlxAPIWrapperTest.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ASPEN Test.vcxproj">
-      <Project>{56b7fd90-c98a-4167-80e6-47c5b3779a95}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

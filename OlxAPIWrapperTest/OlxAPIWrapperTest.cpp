@@ -154,14 +154,6 @@ void displayModelObjects(OlxAPIModelObj* model)
             OlxAPILineObj* line = model->getLine(lineHandles[i]);
             cout << "Line Name : " << line->getName() << "\tBus 1: " << model->getBus(line->getBus1Handle())->getName() << "\tBus 2: " << model->getBus(line->getBus2Handle())->getName() << endl;
             int type = line->getEquipmentType();
-
-            OlxAPIFault fault(line->getEquipmentHandle());
-            //int lineType = OlxAPIEquipmentType(line->getEquipmentHandle());
-            //cout << OlxAPIPrintObj1LPF(line->getHandle()) << endl;
-            //cout << OlxAPIPrintObj1LPF(line->getEquipmentHandle()) << endl;
-            fault.setCloseInFault(false);
-            fault.setFaultConnection1LG(OlxAPIFault::FLT_1LG_A);
-            int ret = fault.runFault();
         }
     }
 
@@ -171,16 +163,7 @@ void displayModelObjects(OlxAPIModelObj* model)
         for (int i = 0; i < (int)xfmrHandles.size(); i++)
         {
             OlxAPIXFMRObj* xfmr = model->getXFMR(xfmrHandles[i]);
-            cout << "Line Name : " << xfmr->getName() << "\tBus 1: " << model->getBus(xfmr->getBus1Handle())->getName() << "\tBus 2: " << model->getBus(xfmr->getBus2Handle())->getName() << endl;
-            int type = xfmr->getEquipmentType();
-
-            OlxAPIFault fault(xfmr->getEquipmentHandle());
-            //int lineType = OlxAPIEquipmentType(xfmr->getEquipmentHandle());
-            //cout << OlxAPIPrintObj1LPF(xfmr->getHandle()) << endl;
-            //cout << OlxAPIPrintObj1LPF(xfmr->getEquipmentHandle()) << endl;
-            fault.setCloseInFault(false);
-            fault.setFaultConnection1LG(OlxAPIFault::FLT_1LG_A);
-            int ret = fault.runFault();
+            cout << "XFMR Name : " << xfmr->getName() << "\tBus 1: " << model->getBus(xfmr->getBus1Handle())->getName() << "\tBus 2: " << model->getBus(xfmr->getBus2Handle())->getName() << endl;
         }
     }
 

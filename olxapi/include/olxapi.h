@@ -452,6 +452,7 @@
 #define PS_nControlMode 331
 #define PS_nRlyGr1Hnd 332
 #define PS_nRlyGr2Hnd 333
+#define PS_nZCorrectNO 334
 #define SC_sName 101
 #define SC_sID 102
 #define SC_sOnDate 103

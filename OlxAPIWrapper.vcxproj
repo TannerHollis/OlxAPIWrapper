@@ -184,7 +184,6 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\hasp_rt.exe" "$(TargetDir)"</
     <ClCompile Include="OlxAPIXFMRObj.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Program Files (x86)\ASPEN\1LPFv15\OlxAPI\VSC++\olxapi.h" />
     <ClInclude Include="csv.h" />
     <ClInclude Include="OlxAPIBranchObj.h" />
     <ClInclude Include="OlxAPIBusObj.h" />
@@ -204,6 +203,7 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\hasp_rt.exe" "$(TargetDir)"</
     <ClInclude Include="OlxAPIXFMR3WObj.h" />
     <ClInclude Include="OlxAPIVersion.h" />
     <ClInclude Include="OlxAPIXFMRObj.h" />
+    <ClInclude Include="olxapi\include\olxapi.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
