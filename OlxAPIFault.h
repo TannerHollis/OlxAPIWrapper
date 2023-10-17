@@ -1,6 +1,9 @@
 #pragma once
 
 #include "olxapi/include/olxapi.h"
+#include "OlxAPIBusObj.h"
+#include "OlxAPIBranchObj.h"
+#include "OlxAPIFaultResult.h"
 
 class OlxAPIFault
 {
@@ -24,6 +27,10 @@ public:
 	} FaultConnection;
 
 	OlxAPIFault(int devHandle);
+	OlxAPIFault(OlxAPIBusObj* bus);
+	OlxAPIFault(OlxAPIBranchObj* bus);
+
+	~OlxAPIFault();
 
 	int runFault();
 
@@ -43,9 +50,20 @@ public:
 
 	void setFaultConnectionLL(FaultConnection connection);
 
+	OlxAPIFaultResult* getResult(int index)
+	{
+		if (index > nResults || index < 0)
+			return nullptr;
+		else
+			return &results[index];
+	}
+
+	int getNResults();
+
 private:
 	int devHandle;
-	int fltHandle;
+	int fltHandleMin;
+	int fltHandleMax;
 
 	union {
 		struct
@@ -110,5 +128,8 @@ private:
 	} outageOptions;
 
 	int clearPrevious; // 0 - do not clear, 1 - clear previous faults
+
+	int nResults;
+	OlxAPIFaultResult* results;
 };
 

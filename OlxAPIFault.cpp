@@ -4,7 +4,8 @@ OlxAPIFault::OlxAPIFault(int devHandle)
 {
 	// Store faulted device handle
 	this->devHandle = devHandle;
-	this->fltHandle = -1; // No fault run
+	this->fltHandleMin = -1; // No fault run
+	this->fltHandleMax = -1; // No fault run
 
 	// Create zero terminated outage list
 	nOutages = 0;
@@ -17,11 +18,31 @@ OlxAPIFault::OlxAPIFault(int devHandle)
 	faultOptions = {};
 	outageOptions = {};
 	clearPrevious = 0;
+	
+	nResults = 0;
+	results = nullptr;
+}
+
+OlxAPIFault::OlxAPIFault(OlxAPIBusObj* bus) : OlxAPIFault(bus->getHandle())
+{
+	// Default constructor gets called for a bus fault
+}
+
+OlxAPIFault::OlxAPIFault(OlxAPIBranchObj* branch) : OlxAPIFault(branch->getHandle())
+{
+	// Default constructor gets called for a "branch" fault
+}
+
+OlxAPIFault::~OlxAPIFault()
+{
+	if (nResults > 0)
+		free(results);
 }
 
 int OlxAPIFault::runFault()
 {
-	return OlxAPIDoFault(devHandle,
+	int ret = OlxAPIGetData(HND_SC, FT_nNOfaults, &fltHandleMin);
+	fltHandleMax = OlxAPIDoFault(devHandle,
 		faultConnections._fltConns,
 		faultOptions._fltOpts,
 		outageOptions._outageOpts,
@@ -29,6 +50,23 @@ int OlxAPIFault::runFault()
 		faultResistance.r,
 		faultResistance.x,
 		clearPrevious);
+
+	if (nResults > 0)
+	{
+		free(results);		
+	}
+
+	nResults = fltHandleMax - fltHandleMin;
+	if (nResults > 0)
+	{
+		results = (OlxAPIFaultResult*)malloc(sizeof(OlxAPIFaultResult) * nResults);
+		for (int i = 0; i < nResults; i++)
+		{
+			results[i] = OlxAPIFaultResult(fltHandleMax - i);
+		}
+	}
+
+	return nResults;
 }
 
 void OlxAPIFault::setCloseInFault(bool withOutage)
@@ -86,4 +124,9 @@ void OlxAPIFault::setFaultConnection2LG(FaultConnection connection)
 void OlxAPIFault::setFaultConnectionLL(FaultConnection connection)
 {
 	faultConnections.fltll = connection;
+}
+
+int OlxAPIFault::getNResults()
+{
+	return nResults;
 }

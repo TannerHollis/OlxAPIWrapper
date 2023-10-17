@@ -1,0 +1,9 @@
+<map id="OlxAPIFault" name="OlxAPIFault">
+<area shape="rect" id="Node000001" title=" " alt="" coords="48,299,251,816"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,112,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,74,104,282,98,283,62,75"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,5,163,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,74,152,282,147,282,147,74"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="245,5,296,75"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="271,75,262,166,244,275,242,283,237,282,239,274,257,165,266,74"/>
+</map>

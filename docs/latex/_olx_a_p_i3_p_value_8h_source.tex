@@ -1,0 +1,37 @@
+\doxysection{Olx\+API3\+PValue.\+h}
+\hypertarget{_olx_a_p_i3_p_value_8h_source}{}\label{_olx_a_p_i3_p_value_8h_source}\mbox{\hyperlink{_olx_a_p_i3_p_value_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ M\_PI\ 3.141592653589793238}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_olx_a_p_i3_p_value}{OlxAPI3PValue}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i3_p_value}{OlxAPI3PValue}}(\textcolor{keywordtype}{double}*\ real,\ \textcolor{keywordtype}{double}*\ imag);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ complex<double>\ \mbox{\hyperlink{class_olx_a_p_i3_p_value_a1da1f54191f9c0cc852c4a3c3d773ccb}{getPosSeq}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ complex<double>\ \mbox{\hyperlink{class_olx_a_p_i3_p_value_a149a285581cd0d04ebf790c855c311c2}{getNegSeq}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ complex<double>\ \mbox{\hyperlink{class_olx_a_p_i3_p_value_afb18f7d9fec702c1fe112267f3fbc289}{getZeroSeq}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ complex<double>\ \mbox{\hyperlink{class_olx_a_p_i3_p_value_a2f813be1029160f862fe26bba8a4a779}{getA}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ complex<double>\ \mbox{\hyperlink{class_olx_a_p_i3_p_value_ab63cecd544291ddc6aa127b0815f0c1b}{getB}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ complex<double>\ \mbox{\hyperlink{class_olx_a_p_i3_p_value_a255a624a6019688f99d5c29c89db9a77}{getC}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{const}\ complex<double>\ alpha\ =\ complex<double>(1.0,\ 2.0\ /\ 3.0\ *\ \mbox{\hyperlink{_olx_a_p_i3_p_value_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\_PI}});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ complex<double>\ phase[3];}
+\DoxyCodeLine{00034\ \ \ \ \ complex<double>\ sequence[3];}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+
+\end{DoxyCode}

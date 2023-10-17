@@ -1,6 +1,6 @@
 #include "OlxAPILineObj.h"
 
-OlxAPILineObj::OlxAPILineObj(int handle) : OlxAPIBranchObj(handle)
+OlxAPILineObj::OlxAPILineObj(int handle) : OlxAPIObj(handle)
 {
 	getR();
 	getX();

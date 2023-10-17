@@ -1,0 +1,239 @@
+\doxysection{Olx\+APIModel\+Obj Class Reference}
+\hypertarget{class_olx_a_p_i_model_obj}{}\label{class_olx_a_p_i_model_obj}\index{OlxAPIModelObj@{OlxAPIModelObj}}
+
+
+{\ttfamily \#include $<$Olx\+APIModel\+Obj.\+h$>$}
+
+
+
+Collaboration diagram for Olx\+APIModel\+Obj\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_olx_a_p_i_model_obj__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_model_obj_ab86b410fdd3197723f3f55fabe4ef2de}{Olx\+APIModel\+Obj}} (string \&file\+Path, bool readonly)
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_model_obj_a5de949a39e547ccd38ad4d7ee955b65e}{\texorpdfstring{$\sim$}{\string~}\+Olx\+APIModel\+Obj}} ()
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf}{save\+File}} ()
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa58045fc9a7acde2c21d6ac666c01339}{save\+File}} (string \&file\+Path)
+\item 
+bool \mbox{\hyperlink{class_olx_a_p_i_model_obj_a26f5af64a25cd3d30e7e57ce616380b8}{is\+Opened}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_line_obj}{Olx\+APILine\+Obj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_aae8cc0a1b79764b36679f67e5fd79334}{get\+Line}} (int handle)
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_a641b87ccdf99998c9bca7b2e9c2a7842}{find\+Line\+Handle\+By\+Name}} (string \&name)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a277e6d8e4be16e806e590f163cf7359c}{get\+Line\+Handles}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_bus_obj}{Olx\+APIBus\+Obj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_a970ceaac65450aca4f4203410bbada9d}{get\+Bus}} (int handle)
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_a9bd3711982b2d352ca5bf5313ee2a67a}{find\+Bus\+Handle\+By\+Name}} (string \&name)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_abdac212869b032b82443f84e44857696}{get\+Bus\+Handles}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_x_f_m_r_obj}{Olx\+APIXFMRObj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5ab48a6404d002f85321749927f1acfa}{get\+XFMR}} (int handle)
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_a6ed406f3a70331532b17d901e2d50543}{find\+XFMRHandle\+By\+Name}} (string \&name)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a4d9347322674d607cc32baf09dc9361b}{get\+XFMRHandles}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_x_f_m_r3_w_obj}{Olx\+APIXFMR3\+WObj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_a1d5f6b9b8be75ddb965737a77b80e859}{get3\+WXFMR}} (int handle)
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_a81354b804ca76b67914ab16493a1d7f4}{find3\+WXFMRHandle\+By\+Name}} (string \&name)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5bab1fdd0dd79375d20ea600accd22ab}{get3\+WXFMRHandles}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_series_reactor_obj}{Olx\+APISeries\+Reactor\+Obj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_a8bd66ac9e38c2a12ff39d8d0dc4b806f}{get\+Series\+Reactor}} (int handle)
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_ac8769081fe02a689ba5368cc3c943da5}{find\+Series\+Reactor\+Handle\+By\+Name}} (string \&name)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_acafeee96831a883942a159fedeed6fb1}{get\+Series\+Reactor\+Handles}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_shunt_capacitor_obj}{Olx\+APIShunt\+Capacitor\+Obj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa5c7bd8e46d42ea76bb0d3ad77ebf5ba}{get\+Shunt\+Capacitor}} (int handle)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa5de7b796443a0cf0e44afe559215266}{get\+Shunt\+Capacitor\+Handles}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_generator_obj}{Olx\+APIGenerator\+Obj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a}{get\+Generator}} (int handle)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86219c7237e35c1b}{get\+Generator\+Handles}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_olx_a_p_i_model_obj_ab86b410fdd3197723f3f55fabe4ef2de}\label{class_olx_a_p_i_model_obj_ab86b410fdd3197723f3f55fabe4ef2de} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!OlxAPIModelObj@{OlxAPIModelObj}}
+\index{OlxAPIModelObj@{OlxAPIModelObj}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{OlxAPIModelObj()}{OlxAPIModelObj()}}
+{\footnotesize\ttfamily Olx\+APIModel\+Obj\+::\+Olx\+APIModel\+Obj (\begin{DoxyParamCaption}\item[{string \&}]{file\+Path,  }\item[{bool}]{readonly }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a5de949a39e547ccd38ad4d7ee955b65e}\label{class_olx_a_p_i_model_obj_a5de949a39e547ccd38ad4d7ee955b65e} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!````~OlxAPIModelObj@{\texorpdfstring{$\sim$}{\string~}OlxAPIModelObj}}
+\index{````~OlxAPIModelObj@{\texorpdfstring{$\sim$}{\string~}OlxAPIModelObj}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OlxAPIModelObj()}{\string~OlxAPIModelObj()}}
+{\footnotesize\ttfamily Olx\+APIModel\+Obj\+::\texorpdfstring{$\sim$}{\string~}\+Olx\+APIModel\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_olx_a_p_i_model_obj_a81354b804ca76b67914ab16493a1d7f4}\label{class_olx_a_p_i_model_obj_a81354b804ca76b67914ab16493a1d7f4} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!find3WXFMRHandleByName@{find3WXFMRHandleByName}}
+\index{find3WXFMRHandleByName@{find3WXFMRHandleByName}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{find3WXFMRHandleByName()}{find3WXFMRHandleByName()}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::find3\+WXFMRHandle\+By\+Name (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a9bd3711982b2d352ca5bf5313ee2a67a}\label{class_olx_a_p_i_model_obj_a9bd3711982b2d352ca5bf5313ee2a67a} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!findBusHandleByName@{findBusHandleByName}}
+\index{findBusHandleByName@{findBusHandleByName}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{findBusHandleByName()}{findBusHandleByName()}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::find\+Bus\+Handle\+By\+Name (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a641b87ccdf99998c9bca7b2e9c2a7842}\label{class_olx_a_p_i_model_obj_a641b87ccdf99998c9bca7b2e9c2a7842} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!findLineHandleByName@{findLineHandleByName}}
+\index{findLineHandleByName@{findLineHandleByName}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{findLineHandleByName()}{findLineHandleByName()}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::find\+Line\+Handle\+By\+Name (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_ac8769081fe02a689ba5368cc3c943da5}\label{class_olx_a_p_i_model_obj_ac8769081fe02a689ba5368cc3c943da5} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!findSeriesReactorHandleByName@{findSeriesReactorHandleByName}}
+\index{findSeriesReactorHandleByName@{findSeriesReactorHandleByName}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{findSeriesReactorHandleByName()}{findSeriesReactorHandleByName()}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::find\+Series\+Reactor\+Handle\+By\+Name (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a6ed406f3a70331532b17d901e2d50543}\label{class_olx_a_p_i_model_obj_a6ed406f3a70331532b17d901e2d50543} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!findXFMRHandleByName@{findXFMRHandleByName}}
+\index{findXFMRHandleByName@{findXFMRHandleByName}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{findXFMRHandleByName()}{findXFMRHandleByName()}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::find\+XFMRHandle\+By\+Name (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a1d5f6b9b8be75ddb965737a77b80e859}\label{class_olx_a_p_i_model_obj_a1d5f6b9b8be75ddb965737a77b80e859} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!get3WXFMR@{get3WXFMR}}
+\index{get3WXFMR@{get3WXFMR}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{get3WXFMR()}{get3WXFMR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_x_f_m_r3_w_obj}{Olx\+APIXFMR3\+WObj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get3\+WXFMR (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a5bab1fdd0dd79375d20ea600accd22ab}\label{class_olx_a_p_i_model_obj_a5bab1fdd0dd79375d20ea600accd22ab} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!get3WXFMRHandles@{get3WXFMRHandles}}
+\index{get3WXFMRHandles@{get3WXFMRHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{get3WXFMRHandles()}{get3WXFMRHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get3\+WXFMRHandles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a970ceaac65450aca4f4203410bbada9d}\label{class_olx_a_p_i_model_obj_a970ceaac65450aca4f4203410bbada9d} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getBus@{getBus}}
+\index{getBus@{getBus}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getBus()}{getBus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_bus_obj}{Olx\+APIBus\+Obj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get\+Bus (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_abdac212869b032b82443f84e44857696}\label{class_olx_a_p_i_model_obj_abdac212869b032b82443f84e44857696} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getBusHandles@{getBusHandles}}
+\index{getBusHandles@{getBusHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getBusHandles()}{getBusHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+Bus\+Handles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a}\label{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getGenerator@{getGenerator}}
+\index{getGenerator@{getGenerator}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getGenerator()}{getGenerator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_generator_obj}{Olx\+APIGenerator\+Obj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get\+Generator (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86219c7237e35c1b}\label{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86219c7237e35c1b} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getGeneratorHandles@{getGeneratorHandles}}
+\index{getGeneratorHandles@{getGeneratorHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getGeneratorHandles()}{getGeneratorHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+Generator\+Handles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_aae8cc0a1b79764b36679f67e5fd79334}\label{class_olx_a_p_i_model_obj_aae8cc0a1b79764b36679f67e5fd79334} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getLine@{getLine}}
+\index{getLine@{getLine}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getLine()}{getLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_line_obj}{Olx\+APILine\+Obj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get\+Line (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a277e6d8e4be16e806e590f163cf7359c}\label{class_olx_a_p_i_model_obj_a277e6d8e4be16e806e590f163cf7359c} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getLineHandles@{getLineHandles}}
+\index{getLineHandles@{getLineHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getLineHandles()}{getLineHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+Line\+Handles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a8bd66ac9e38c2a12ff39d8d0dc4b806f}\label{class_olx_a_p_i_model_obj_a8bd66ac9e38c2a12ff39d8d0dc4b806f} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getSeriesReactor@{getSeriesReactor}}
+\index{getSeriesReactor@{getSeriesReactor}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getSeriesReactor()}{getSeriesReactor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_series_reactor_obj}{Olx\+APISeries\+Reactor\+Obj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get\+Series\+Reactor (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_acafeee96831a883942a159fedeed6fb1}\label{class_olx_a_p_i_model_obj_acafeee96831a883942a159fedeed6fb1} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getSeriesReactorHandles@{getSeriesReactorHandles}}
+\index{getSeriesReactorHandles@{getSeriesReactorHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getSeriesReactorHandles()}{getSeriesReactorHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+Series\+Reactor\+Handles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_aa5c7bd8e46d42ea76bb0d3ad77ebf5ba}\label{class_olx_a_p_i_model_obj_aa5c7bd8e46d42ea76bb0d3ad77ebf5ba} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getShuntCapacitor@{getShuntCapacitor}}
+\index{getShuntCapacitor@{getShuntCapacitor}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getShuntCapacitor()}{getShuntCapacitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_shunt_capacitor_obj}{Olx\+APIShunt\+Capacitor\+Obj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get\+Shunt\+Capacitor (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_aa5de7b796443a0cf0e44afe559215266}\label{class_olx_a_p_i_model_obj_aa5de7b796443a0cf0e44afe559215266} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getShuntCapacitorHandles@{getShuntCapacitorHandles}}
+\index{getShuntCapacitorHandles@{getShuntCapacitorHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getShuntCapacitorHandles()}{getShuntCapacitorHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+Shunt\+Capacitor\+Handles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a5ab48a6404d002f85321749927f1acfa}\label{class_olx_a_p_i_model_obj_a5ab48a6404d002f85321749927f1acfa} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getXFMR@{getXFMR}}
+\index{getXFMR@{getXFMR}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getXFMR()}{getXFMR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_x_f_m_r_obj}{Olx\+APIXFMRObj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get\+XFMR (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a4d9347322674d607cc32baf09dc9361b}\label{class_olx_a_p_i_model_obj_a4d9347322674d607cc32baf09dc9361b} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getXFMRHandles@{getXFMRHandles}}
+\index{getXFMRHandles@{getXFMRHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getXFMRHandles()}{getXFMRHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+XFMRHandles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a26f5af64a25cd3d30e7e57ce616380b8}\label{class_olx_a_p_i_model_obj_a26f5af64a25cd3d30e7e57ce616380b8} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!isOpened@{isOpened}}
+\index{isOpened@{isOpened}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{isOpened()}{isOpened()}}
+{\footnotesize\ttfamily bool Olx\+APIModel\+Obj\+::is\+Opened (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf}\label{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::save\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_olx_a_p_i_model_obj_aa58045fc9a7acde2c21d6ac666c01339}\label{class_olx_a_p_i_model_obj_aa58045fc9a7acde2c21d6ac666c01339} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!saveFile@{saveFile}}
+\index{saveFile@{saveFile}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::save\+File (\begin{DoxyParamCaption}\item[{string \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_olx_a_p_i_model_obj_8h}{Olx\+APIModel\+Obj.\+h}}\item 
+\mbox{\hyperlink{_olx_a_p_i_model_obj_8cpp}{Olx\+APIModel\+Obj.\+cpp}}\end{DoxyCompactItemize}

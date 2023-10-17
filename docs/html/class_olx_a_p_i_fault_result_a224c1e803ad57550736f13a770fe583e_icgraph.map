@@ -1,0 +1,21 @@
+<map id="OlxAPIFaultResult::getDoubleParameter" name="OlxAPIFaultResult::getDoubleParameter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="190,272,329,315"/>
+<area shape="rect" id="Node000002" href="$class_olx_a_p_i_fault_result.html#a30468b00bcc80b3511babbbb14215ce8" title=" " alt="" coords="5,5,142,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,258,230,215,208,163,178,109,140,62,126,51,129,47,144,58,182,106,213,160,235,213,251,257"/>
+<area shape="rect" id="Node000003" href="$class_olx_a_p_i_fault_result.html#a01bc2a29ab0e85be67767bf37ee62bae" title=" " alt="" coords="5,72,142,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,260,198,194,171,160,140,129,124,117,127,113,143,125,175,156,202,191,243,257"/>
+<area shape="rect" id="Node000004" href="$class_olx_a_p_i_fault_result.html#aea4ba20a1f0e4cd6b910e6bfc93a62f0" title=" " alt="" coords="5,139,142,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="224,263,185,229,140,196,121,184,124,180,143,191,188,225,227,259"/>
+<area shape="rect" id="Node000005" href="$class_olx_a_p_i_fault_result.html#ac3f9b826aaa80211a2e9fde86baccf0e" title=" " alt="" coords="5,205,142,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="183,269,134,251,136,246,185,264"/>
+<area shape="rect" id="Node000006" href="$class_olx_a_p_i_fault_result.html#ab1d4129b32c7ae446643ed9aaecb1c66" title=" " alt="" coords="5,272,142,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="174,296,142,296,142,291,174,291"/>
+<area shape="rect" id="Node000007" href="$class_olx_a_p_i_fault_result.html#aaf150ed0a36af1322f183220273a01c2" title=" " alt="" coords="5,339,142,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="185,323,136,341,134,336,183,318"/>
+<area shape="rect" id="Node000008" href="$class_olx_a_p_i_fault_result.html#a90416ff396059393d6e0f4263b3fa38d" title=" " alt="" coords="5,405,142,448"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="227,327,188,362,143,396,124,407,121,402,140,391,185,358,224,323"/>
+<area shape="rect" id="Node000009" href="$class_olx_a_p_i_fault_result.html#af84ddd6f9e4a98430ef1723306b1ea1b" title=" " alt="" coords="5,472,142,515"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="243,330,202,395,175,430,143,462,127,474,124,469,140,458,171,427,198,392,238,327"/>
+<area shape="rect" id="Node000010" href="$class_olx_a_p_i_fault_result.html#a14c52e233e1771cbe8be3d38b1c4bedc" title=" " alt="" coords="5,539,142,581"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="251,330,235,374,213,426,182,480,144,529,129,540,126,536,140,525,178,477,208,424,230,372,246,328"/>
+</map>

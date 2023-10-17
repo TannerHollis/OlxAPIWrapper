@@ -1,0 +1,44 @@
+\doxysection{Olx\+APIGraphics\+Type1\+Obj.\+h}
+\hypertarget{_olx_a_p_i_graphics_type1_obj_8h_source}{}\label{_olx_a_p_i_graphics_type1_obj_8h_source}\mbox{\hyperlink{_olx_a_p_i_graphics_type1_obj_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_graphics_obj_8h}{OlxAPIGraphicsObj.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj}{OlxAPIGraphicsType1Obj}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_obj}{OlxAPIGraphicsObj}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ TC\_BUS:\ size,\ angle,\ x,\ y,\ nameX,\ nameY,\ hideID}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ \ \ !!!when\ size\ is\ Zero,\ the\ bus\ had\ never\ been\ placed\ on\ the\ 1\ -\/\ line\ and}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ therefore\ the\ rest\ of\ the\ data\ are\ just\ junk}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ when\ size\ is\ negative,\ the\ bus\ is\ not\ displayed\ on\ the\ 1\ -\/\ line(hidden)}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_afe88bfb8b0a66e029bfe20dbf1d4579e}{OlxAPIGraphicsType1Obj}}(\textcolor{keywordtype}{int}\ handle,\ \textcolor{keywordtype}{int}\ objType)\ :\ \mbox{\hyperlink{class_olx_a_p_i_graphics_obj}{OlxAPIGraphicsObj}}(handle,\ objType)}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ nothing...}}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a612c0fc2c391b3ac7a328b035afee252}{getSize}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a93f99d1854eb1a794060d7c747c38048}{setSize}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_aa359d011207d30dc697323fa5a0ae805}{getAngle}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a1ae34f6a6faf22f2de44cb0b5a78d051}{setAngle}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a752cd3b521e6e9be1ffff8a0dac00121}{getX}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a2e1d8dfcd6555ddff6e81c25e999fcf8}{setX}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a549bb6119fa9e77cca308651636623af}{getY}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a3220dab169cd55a3ca1c092d5d0cb42d}{setY}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_abcc9da87da937ceae02b18f3a9ed005b}{getNameX}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_ac938ae37807ebeb0a69cadd7d4cc6f17}{setNameX}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_ad2b32e267709d34bf5f3ce7e33514848}{getNameY}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a2d74ebbffb4e33dcae0d3ed9c5f618bb}{setNameY}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_a0dc6a374b55e62c543c556ebde3d8836}{getHideID}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_graphics_type1_obj_af70393c961e395299360a347da5b91a5}{setHideID}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

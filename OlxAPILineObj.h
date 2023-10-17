@@ -1,9 +1,10 @@
 #pragma once
 
+#include "OlxAPIObj.h"
 #include "OlxAPIBranchObj.h"
 #include "OlxAPIGraphicsType5Obj.h"
 
-class OlxAPILineObj : public OlxAPIBranchObj
+class OlxAPILineObj : public OlxAPIObj
 {
 public:
 	OlxAPILineObj(int handle);

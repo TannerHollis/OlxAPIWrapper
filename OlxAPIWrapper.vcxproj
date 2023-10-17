@@ -164,8 +164,10 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\hasp_rt.exe" "$(TargetDir)"</
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="OlxAPI3PValue.cpp" />
     <ClCompile Include="OlxAPIBranchObj.cpp" />
     <ClCompile Include="OlxAPIFault.cpp" />
+    <ClCompile Include="OlxAPIFaultResult.cpp" />
     <ClCompile Include="OlxAPIGeneratorObj.cpp" />
     <ClCompile Include="OlxAPIGraphicsObj.cpp" />
     <ClCompile Include="OlxAPIGraphicsType1Obj.cpp" />
@@ -185,9 +187,11 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\hasp_rt.exe" "$(TargetDir)"</
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="csv.h" />
+    <ClInclude Include="OlxAPI3PValue.h" />
     <ClInclude Include="OlxAPIBranchObj.h" />
     <ClInclude Include="OlxAPIBusObj.h" />
     <ClInclude Include="OlxAPIFault.h" />
+    <ClInclude Include="OlxAPIFaultResult.h" />
     <ClInclude Include="OlxAPIGeneratorObj.h" />
     <ClInclude Include="OlxAPIGraphicsObj.h" />
     <ClInclude Include="OlxAPIGraphicsType1Obj.h" />

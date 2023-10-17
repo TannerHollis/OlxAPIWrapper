@@ -1,0 +1,19 @@
+<map id="OlxAPIObj" name="OlxAPIObj">
+<area shape="rect" id="Node000001" title=" " alt="" coords="583,5,763,331"/>
+<area shape="rect" id="Node000002" href="$class_olx_a_p_i_branch_obj.html" title=" " alt="" coords="5,432,169,693"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="569,194,478,220,376,259,324,284,274,312,226,344,183,381,160,405,141,434,137,431,156,402,179,377,223,340,271,308,322,279,374,254,477,215,567,189"/>
+<area shape="rect" id="Node000003" href="$class_olx_a_p_i_bus_obj.html" title=" " alt="" coords="193,421,317,704"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="570,214,511,244,447,282,386,327,332,380,303,423,299,420,328,377,382,323,444,277,508,239,568,209"/>
+<area shape="rect" id="Node000004" href="$class_olx_a_p_i_generator_obj.html" title=" " alt="" coords="342,421,499,704"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="576,291,514,380,489,423,484,420,509,377,572,288"/>
+<area shape="rect" id="Node000005" href="$class_olx_a_p_i_line_obj.html" title=" " alt="" coords="524,421,648,704"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="636,346,620,422,614,421,631,345"/>
+<area shape="rect" id="Node000006" href="$class_olx_a_p_i_series_reactor_obj.html" title=" " alt="" coords="672,421,849,704"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="715,345,732,421,727,422,710,346"/>
+<area shape="rect" id="Node000007" href="$class_olx_a_p_i_shunt_capacitor_obj.html" title=" " alt="" coords="874,379,1063,747"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="774,269,821,322,864,377,876,394,872,398,860,380,816,325,770,273"/>
+<area shape="rect" id="Node000008" href="$class_olx_a_p_i_x_f_m_r3_w_obj.html" title=" " alt="" coords="1088,421,1244,704"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="777,200,850,229,929,268,1007,317,1044,346,1077,377,1111,420,1106,423,1073,380,1040,350,1004,322,926,273,848,234,775,205"/>
+<area shape="rect" id="Node000009" href="$class_olx_a_p_i_x_f_m_r_obj.html" title=" " alt="" coords="1269,421,1405,704"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="778,179,888,200,1015,238,1081,264,1144,295,1204,333,1258,377,1277,397,1293,420,1288,423,1273,400,1255,381,1201,337,1142,300,1078,269,1014,243,887,206,777,184"/>
+</map>

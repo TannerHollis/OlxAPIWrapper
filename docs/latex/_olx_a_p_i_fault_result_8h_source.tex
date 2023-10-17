@@ -1,0 +1,49 @@
+\doxysection{Olx\+APIFault\+Result.\+h}
+\hypertarget{_olx_a_p_i_fault_result_8h_source}{}\label{_olx_a_p_i_fault_result_8h_source}\mbox{\hyperlink{_olx_a_p_i_fault_result_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i3_p_value_8h}{OlxAPI3PValue.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_obj_8h}{OlxAPIObj.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}olxapi/include/olxapi.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_olx_a_p_i_fault_result}{OlxAPIFaultResult}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_result}{OlxAPIFaultResult}}(\textcolor{keywordtype}{int}\ fltHandle);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a182d4ace485e9cc3071abf887e5744ad}{getDescription}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a30468b00bcc80b3511babbbb14215ce8}{getMVA}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a01bc2a29ab0e85be67767bf37ee62bae}{getThevNegR}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_ac3f9b826aaa80211a2e9fde86baccf0e}{getThevPosR}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_aaf150ed0a36af1322f183220273a01c2}{getThevZeroR}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_ab1d4129b32c7ae446643ed9aaecb1c66}{getThevPosX}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_aea4ba20a1f0e4cd6b910e6bfc93a62f0}{getThevNegX}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a90416ff396059393d6e0f4263b3fa38d}{getThevZeroX}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a14c52e233e1771cbe8be3d38b1c4bedc}{getXRRatio}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_af84ddd6f9e4a98430ef1723306b1ea1b}{getXRANSIRatio}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i3_p_value}{OlxAPI3PValue}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a916e21a6f520a170384cd844d4836043}{getCurrentAt}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i3_p_value}{OlxAPI3PValue}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a916e21a6f520a170384cd844d4836043}{getCurrentAt}}(\mbox{\hyperlink{class_olx_a_p_i_obj}{OlxAPIObj}}*\ obj);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i3_p_value}{OlxAPI3PValue}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_afac543d953da43638ef426ad8dcd6cc0}{getVoltageAt}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i3_p_value}{OlxAPI3PValue}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_afac543d953da43638ef426ad8dcd6cc0}{getVoltageAt}}(\mbox{\hyperlink{class_olx_a_p_i_obj}{OlxAPIObj}}*\ obj);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_result_a224c1e803ad57550736f13a770fe583e}{getDoubleParameter}}(\textcolor{keywordtype}{int}\ paramToken);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ fltHandle;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+
+\end{DoxyCode}

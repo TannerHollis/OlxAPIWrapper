@@ -1,6 +1,0 @@
-<map id="io::CSVReader::set_file_name" name="io::CSVReader::set_file_name">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,139,72"/>
-<area shape="rect" id="Node000002" href="$classio_1_1_line_reader.html#a1a0763d491dec16cebc33134e965dfee" title=" " alt="" coords="187,29,317,72"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,48,171,48,171,53,139,53"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="217,29,216,19,222,10,234,5,252,3,271,5,283,11,281,16,270,10,252,8,235,10,225,14,221,21,222,28"/>
-</map>

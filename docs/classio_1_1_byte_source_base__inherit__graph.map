@@ -1,9 +1,0 @@
-<map id="io::ByteSourceBase" name="io::ByteSourceBase">
-<area shape="rect" id="Node000001" title=" " alt="" coords="283,5,421,96"/>
-<area shape="rect" id="Node000002" href="$classio_1_1detail_1_1_non_owning_i_stream_byte_source.html" title=" " alt="" coords="5,144,224,272"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,106,212,146,209,142,270,102"/>
-<area shape="rect" id="Node000003" href="$classio_1_1detail_1_1_non_owning_string_byte_source.html" title=" " alt="" coords="248,144,456,272"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="355,111,355,144,349,144,349,111"/>
-<area shape="rect" id="Node000004" href="$classio_1_1detail_1_1_owning_std_i_o_byte_source_base.html" title=" " alt="" coords="480,144,693,272"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="433,102,493,142,490,146,430,106"/>
-</map>

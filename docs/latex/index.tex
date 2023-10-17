@@ -1,0 +1,332 @@
+\chapter{Olx\+APIWrapper}
+\hypertarget{index}{}\label{index}\index{OlxAPIWrapper@{OlxAPIWrapper}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+ This project is a wrapper for ASPEN Oneliner\textquotesingle{}s c API. Currently using Olx\+API v15.\+7 (\href{https://github.com/aspeninc/TestBenchOlxAPI/tree/master}{\texttt{ Latest version}}).
+
+
+\begin{DoxyItemize}
+\item Easy to Use Classes
+\item Example Application Included
+\end{DoxyItemize}\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Requirements
+\item Using Olx\+APIWrapper
+\begin{DoxyItemize}
+\item Getting Started
+\item Editting Equipment Values
+\item Get Unique Object String
+\item Graphics Objects
+\begin{DoxyItemize}
+\item Olx\+APIGraphics\+Type1\+Obj
+\item Olx\+APIGraphics\+Type2\+Obj
+\item Olx\+APIGraphics\+Type3\+Obj
+\item Olx\+APIGraphics\+Type4\+Obj
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item \href{https://tannerhollis.github.io/OlxAPIWrapper/}{\texttt{ Documentation}}
+\item Using the Example Application
+\item Supported Oneliner Equipment
+\item TODO
+\end{DoxyItemize}
+
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Experimental feature. May ruin Oneliner graphics display. Use with caution.\texorpdfstring{$\ast$}{*}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item All {\ttfamily \texorpdfstring{$\ast$}{*}.dll} files from the ASPEN Oneliner installation folder must be copied over to the output directory of the project.
+\item Must have {\ttfamily hasp\+\_\+rt.\+exe} copied over to the output directory.
+\item Be sure to have an open license seat before running. It must also be available on the local computer.
+\item If there is a newer version of the library available and you want to use it, just swap out the {\ttfamily olxapi} folder files.
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Using Olx\+APIWrapper}{Using OlxAPIWrapper}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{Getting Started}{Getting Started}}\label{index_autotoc_md4}
+It is very easy to start using, simply load an entire model using the {\ttfamily \doxylink{class_olx_a_p_i_model_obj}{Olx\+APIModel\+Obj}} class. All elements are loaded into this object and some objects are searchable via names, otherwise {\ttfamily handle} are used exclusively. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_model_obj_8h}{OlxAPIModelObj.h}}"{}}}
+\DoxyCodeLine{...}
+\DoxyCodeLine{string\ filePath\ =\ \textcolor{stringliteral}{"{}C:/.../Example.olr"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ readonly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\mbox{\hyperlink{class_olx_a_p_i_model_obj}{OlxAPIModelObj}}\ model(filePath,\ readonly);}
+\DoxyCodeLine{}
+\DoxyCodeLine{vector<int>\ lineHandles\ =\ model.getLineHandles();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ =\ 0;\ i\ <\ lineHandles.size();\ i++)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Line\ Name:\ "{}}\ <<\ model.getLine(lineHandles[i])-\/>getName()\ <<\ endl;\ \textcolor{comment}{//\ Print\ line\ name}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Back to top\hypertarget{index_autotoc_md5}{}\doxysubsubsection{\texorpdfstring{Editing Equipment Values}{Editing Equipment Values}}\label{index_autotoc_md5}
+All elements editable within Oneliner are available to the user via unique {\ttfamily get} and {\ttfamily set} like used in the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{...}
+\DoxyCodeLine{string\ cable\ =\ \textcolor{stringliteral}{"{}Cable\ 1.1"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ lineHandle\ =\ model.findLineHandleByName(cable);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(handle\ <\ 0)\ \textcolor{comment}{//\ Check\ for\ valid\ handle\ returned}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\mbox{\hyperlink{class_olx_a_p_i_line_obj}{OlxAPILineObj}}*\ line\ =\ model.getLine(lineHandle);}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ length\ =\ line-\/>\mbox{\hyperlink{class_olx_a_p_i_line_obj_aa7082b8397d1eb520f2e2c00f3727a14}{getLength}}();}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ ret\ =\ line-\/>\mbox{\hyperlink{class_olx_a_p_i_line_obj_ad0f938b407360e5319df1a0879ce380f}{setLength}}(length\ +\ 100);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(ret\ ==\ OLXAPI\_OK)\ \textcolor{comment}{//\ Check\ write\ was\ successful}}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Successful\ write\ to\ cable:\ "{}}\ <<\ cable\ <<\ endl;}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+Back to top\hypertarget{index_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{Get Unique Formatted Object ID String}{Get Unique Formatted Object ID String}}\label{index_autotoc_md6}
+All objects have a unique id that can be formatted into a string. This string is useful for reverse lookups, which return handles if successful.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{string}\ filePath\ =\ \textcolor{stringliteral}{"{}C:/.../Example.olr"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ readonly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\mbox{\hyperlink{class_olx_a_p_i_model_obj}{OlxAPIModelObj}}\ model(filePath,\ readonly);}
+\DoxyCodeLine{}
+\DoxyCodeLine{vector<int>\ lineHandles\ =\ model.getLineHandles();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ =\ 0;\ i\ <\ lineHandles.size();\ i++)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ model.getLine(lineHandles[i])-\/>getObjectIDString()\ <<\ endl;\ \textcolor{comment}{//\ Print\ line\ name}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Back to top\hypertarget{index_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Edit Graphics Object Values}{Edit Graphics Object Values}}\label{index_autotoc_md7}
+This is currently under development, but this will allow the user to get positions of graphics objects within the model. Similar to other API objects, there are {\ttfamily get} and {\ttfamily set} for each graphics object value.\hypertarget{index_autotoc_md8}{}\doxyparagraph{\texorpdfstring{Olx\+APIGraphics\+Type1\+Obj}{OlxAPIGraphicsType1Obj}}\label{index_autotoc_md8}
+This graphics object is associated with the following devices and has the following properties\+:
+
+{\bfseries{Associated Devices}}\+: {\ttfamily \doxylink{class_olx_a_p_i_bus_obj}{Olx\+APIBus\+Obj}}
+
+{\ttfamily Olx\+APIGraphics\+Type1\+Obj\texorpdfstring{$\ast$}{*} gfx\+Obj = bus-\/\texorpdfstring{$>$}{>}gfx\+Obj;}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endhead
+{\ttfamily size}   &Sets the length of the bus   &{\ttfamily int}   &{\ttfamily get\+Size();}   &{\ttfamily set\+Size(10);}    \\\cline{1-5}
+{\ttfamily angle}   &Sets the bus orientation (0-\/horizontal, 1-\/vertical)   &{\ttfamily int}   &{\ttfamily get\+Angle();}   &{\ttfamily set\+Angle(1);}    \\\cline{1-5}
+{\ttfamily x}   &Sets the x position of the bus   &{\ttfamily int}   &{\ttfamily get\+X();}   &{\ttfamily set\+X(10);}    \\\cline{1-5}
+{\ttfamily y}   &Sets the y position of the bus   &{\ttfamily int}   &{\ttfamily get\+Y();}   &{\ttfamily set\+Y(10);}    \\\cline{1-5}
+{\ttfamily nameX}   &Sets the x position of the display name   &{\ttfamily int}   &{\ttfamily get\+Name\+X();}   &{\ttfamily set\+Name\+X(10);}    \\\cline{1-5}
+{\ttfamily nameY}   &Sets the y position of the display name   &{\ttfamily int}   &{\ttfamily get\+Name\+Y();}   &{\ttfamily get\+Name\+Y(10);}   \\\cline{1-5}
+\end{longtabu}
+
+
+Back to top\hypertarget{index_autotoc_md9}{}\doxyparagraph{\texorpdfstring{Olx\+APIGraphics\+Type2\+Obj}{OlxAPIGraphicsType2Obj}}\label{index_autotoc_md9}
+This graphics object is associated with the following devices and has the following properties\+:
+
+{\bfseries{Associated Devices}}\+: {\ttfamily \doxylink{class_olx_a_p_i_shunt_capacitor_obj}{Olx\+APIShunt\+Capacitor\+Obj}}, {\ttfamily \doxylink{class_olx_a_p_i_generator_obj}{Olx\+APIGenerator\+Obj}}
+
+{\ttfamily Olx\+APIGraphics\+Type2\+Obj\texorpdfstring{$\ast$}{*} gfx\+Obj = shunt\+Capacitor-\/\texorpdfstring{$>$}{>}gfx\+Obj;}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endhead
+{\ttfamily x}   &Sets the x position of the device   &{\ttfamily int}   &{\ttfamily get\+X();}   &{\ttfamily set\+X(10);}    \\\cline{1-5}
+{\ttfamily y}   &Sets the y position of the device   &{\ttfamily int}   &{\ttfamily get\+Y();}   &{\ttfamily set\+Y(10);}    \\\cline{1-5}
+{\ttfamily textX}   &Sets the x position of the display text   &{\ttfamily int}   &{\ttfamily get\+Text\+X();}   &{\ttfamily set\+Text\+X(10);}    \\\cline{1-5}
+{\ttfamily textY}   &Sets the y position of the display text   &{\ttfamily int}   &{\ttfamily get\+Text\+Y();}   &{\ttfamily get\+Text\+Y(10);}   \\\cline{1-5}
+\end{longtabu}
+
+
+Back to top\hypertarget{index_autotoc_md10}{}\doxyparagraph{\texorpdfstring{Olx\+APIGraphics\+Type3\+Obj}{OlxAPIGraphicsType3Obj}}\label{index_autotoc_md10}
+This graphics object is associated with the following devices and has the following properties\+:
+
+{\bfseries{Associated Devices}}\+: {\ttfamily \doxylink{class_olx_a_p_i_x_f_m_r_obj}{Olx\+APIXFMRObj}},{\ttfamily \doxylink{class_olx_a_p_i_series_reactor_obj}{Olx\+APISeries\+Reactor\+Obj}}
+
+{\ttfamily Olx\+APIGraphics\+Type3\+Obj\texorpdfstring{$\ast$}{*} gfx\+Obj = xfmr-\/\texorpdfstring{$>$}{>}gfx\+Obj;}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endhead
+{\ttfamily segments}   &Sets the number of segments (1, if connected between two busses without a {\itshape kink}, or 3, if a {\itshape kink} is present).   &{\ttfamily int}   &{\ttfamily get\+NSegments();}   &{\ttfamily set\+NSegments(1);}    \\\cline{1-5}
+{\ttfamily pointsX}   &Sets the x position of a segment point. Maximum of 4 points (3 segments).   &{\ttfamily int}   &{\ttfamily get\+Point\+X(0);}   &{\ttfamily set\+Point\+X(0,10);}    \\\cline{1-5}
+{\ttfamily pointsY}   &Sets the y position of a segment point. Maximum of 4 points (3 segments)   &{\ttfamily int}   &{\ttfamily get\+Point\+Y(0);}   &{\ttfamily set\+Point\+Y(0,10);}    \\\cline{1-5}
+{\ttfamily text1X}   &Sets the x position of the display text near bus 1   &{\ttfamily int}   &{\ttfamily get\+Text1\+X();}   &{\ttfamily set\+Text1\+X(10);}    \\\cline{1-5}
+{\ttfamily text1Y}   &Sets the y position of the display text near bus 1   &{\ttfamily int}   &{\ttfamily get\+Text1\+Y();}   &{\ttfamily get\+Text1\+Y(10);}    \\\cline{1-5}
+{\ttfamily text2X}   &Sets the x position of the display text near bus 2   &{\ttfamily int}   &{\ttfamily get\+Text2\+X();}   &{\ttfamily set\+Text2\+X(10);}    \\\cline{1-5}
+{\ttfamily text2Y}   &Sets the y position of the display text near bus 2   &{\ttfamily int}   &{\ttfamily get\+Text2\+Y();}   &{\ttfamily get\+Text2\+Y(10);}   \\\cline{1-5}
+\end{longtabu}
+
+
+Back to top\hypertarget{index_autotoc_md11}{}\doxyparagraph{\texorpdfstring{Olx\+APIGraphics\+Type4\+Obj}{OlxAPIGraphicsType4Obj}}\label{index_autotoc_md11}
+This graphics object is associated with the following devices and has the following properties\+:
+
+{\bfseries{Associated Devices}}\+: {\ttfamily \doxylink{class_olx_a_p_i_x_f_m_r3_w_obj}{Olx\+APIXFMR3\+WObj}}
+
+{\ttfamily Olx\+APIGraphics\+Type4\+Obj\texorpdfstring{$\ast$}{*} gfx\+Obj = xfmr3w-\/\texorpdfstring{$>$}{>}gfx\+Obj;}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endhead
+{\ttfamily segments}   &Sets the number of segments (2, if tertiary winding is no {\itshape kinks} are present. Otherwise, use with caution. A {\itshape kink} controls the use of points 3 and 4).   &{\ttfamily int}   &{\ttfamily get\+NSegments();}   &{\ttfamily set\+NSegments(1);}    \\\cline{1-5}
+{\ttfamily pointsX}   &Sets the x position of a segment point. Maximum of 6 points (5 segments).   &{\ttfamily int}   &{\ttfamily get\+Point\+X(0);}   &{\ttfamily set\+Point\+X(0,10);}    \\\cline{1-5}
+{\ttfamily pointsY}   &Sets the y position of a segment point. Maximum of 6 points (5 segments)   &{\ttfamily int}   &{\ttfamily get\+Point\+Y(0);}   &{\ttfamily set\+Point\+Y(0,10);}    \\\cline{1-5}
+{\ttfamily text1X}   &Sets the x position of the display text near bus 1   &{\ttfamily int}   &{\ttfamily get\+Text1\+X();}   &{\ttfamily set\+Text1\+X(10);}    \\\cline{1-5}
+{\ttfamily text1Y}   &Sets the y position of the display text near bus 1   &{\ttfamily int}   &{\ttfamily get\+Text1\+Y();}   &{\ttfamily get\+Text1\+Y(10);}    \\\cline{1-5}
+{\ttfamily text2X}   &Sets the x position of the display text near bus 2   &{\ttfamily int}   &{\ttfamily get\+Text2\+X();}   &{\ttfamily set\+Text2\+X(10);}    \\\cline{1-5}
+{\ttfamily text2Y}   &Sets the y position of the display text near bus 2   &{\ttfamily int}   &{\ttfamily get\+Text2\+Y();}   &{\ttfamily get\+Text2\+Y(10);}    \\\cline{1-5}
+{\ttfamily text3X}   &Sets the x position of the display text near bus 3   &{\ttfamily int}   &{\ttfamily get\+Text3\+X();}   &{\ttfamily set\+Text3\+X(10);}    \\\cline{1-5}
+{\ttfamily text3Y}   &Sets the y position of the display text near bus 3   &{\ttfamily int}   &{\ttfamily get\+Text3\+Y();}   &{\ttfamily get\+Text3\+Y(10);}   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{index_autotoc_md12}{}\doxyparagraph{\texorpdfstring{Olx\+APIGraphics\+Type5\+Obj}{OlxAPIGraphicsType5Obj}}\label{index_autotoc_md12}
+This graphics object is associated with the following devices and has the following properties\+:
+
+{\bfseries{Associated Devices}}\+: {\ttfamily \doxylink{class_olx_a_p_i_line_obj}{Olx\+APILine\+Obj}}
+
+{\ttfamily Olx\+APIGraphics\+Type5\+Obj\texorpdfstring{$\ast$}{*} gfx\+Obj = line-\/\texorpdfstring{$>$}{>}gfx\+Obj;}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Get Example   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Set Example    }\\\cline{1-5}
+\endhead
+{\ttfamily segments}   &Sets the number of segments (2, if tertiary winding is no {\itshape kinks} are present. Otherwise, use with caution. A {\itshape kink} controls the use of points 3 and 4).   &{\ttfamily int}   &{\ttfamily get\+NSegments();}   &{\ttfamily set\+NSegments(1);}    \\\cline{1-5}
+{\ttfamily pointsX}   &Sets the x position of a segment point. Maximum of 6 points (5 segments).   &{\ttfamily int}   &{\ttfamily get\+Point\+X(0);}   &{\ttfamily set\+Point\+X(0,10);}    \\\cline{1-5}
+{\ttfamily pointsY}   &Sets the y position of a segment point. Maximum of 6 points (5 segments)   &{\ttfamily int}   &{\ttfamily get\+Point\+Y(0);}   &{\ttfamily set\+Point\+Y(0,10);}    \\\cline{1-5}
+{\ttfamily add\+Point}\texorpdfstring{$\ast$}{*}   &Inserts a point after the index provided   &\multicolumn{2}{l|}{{\ttfamily int}   }&{\ttfamily add\+Point(0, 0, 100, 100, 100);}    \\\cline{1-5}
+{\ttfamily remove\+Point}\texorpdfstring{$\ast$}{*}   &Inserts a point at the index provided   &\multicolumn{2}{l|}{{\ttfamily int}   }&{\ttfamily remove\+Point(0);}    \\\cline{1-5}
+{\ttfamily text1X}   &Sets the x position of the display text near bus 1   &{\ttfamily int}   &{\ttfamily get\+Text1\+X();}   &{\ttfamily set\+Text1\+X(10);}    \\\cline{1-5}
+{\ttfamily text1Y}   &Sets the y position of the display text near bus 1   &{\ttfamily int}   &{\ttfamily get\+Text1\+Y();}   &{\ttfamily get\+Text1\+Y(10);}    \\\cline{1-5}
+{\ttfamily text2X}   &Sets the x position of the display text near bus 2   &{\ttfamily int}   &{\ttfamily get\+Text2\+X();}   &{\ttfamily set\+Text2\+X(10);}    \\\cline{1-5}
+{\ttfamily text2Y}   &Sets the y position of the display text near bus 2   &{\ttfamily int}   &{\ttfamily get\+Text2\+Y();}   &{\ttfamily get\+Text2\+Y(10);}   \\\cline{1-5}
+\end{longtabu}
+
+
+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Do not use. Will corrupt surrounding data.\texorpdfstring{$\ast$}{*}
+
+Back to top\hypertarget{index_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{Supported One\+Liner Equipment}{Supported OneLiner Equipment}}\label{index_autotoc_md13}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ASPEN Equipment   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Olx\+APIWrapper Class   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Implementation   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Graphics Object    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ASPEN Equipment   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Olx\+APIWrapper Class   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Implementation   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Graphics Object    }\\\cline{1-4}
+\endhead
+Bus   &{\ttfamily \doxylink{class_olx_a_p_i_bus_obj}{Olx\+APIBus\+Obj}}   &100\%   &\`{}\+Olx\+APIGraphics\+Type1\+Obj\`{}    \\\cline{1-4}
+Line   &{\ttfamily \doxylink{class_olx_a_p_i_line_obj}{Olx\+APILine\+Obj}}   &100\%   &\`{}\+Olx\+APIGraphics\+Type5\+Obj\`{}    \\\cline{1-4}
+2-\/Winding Transformer   &{\ttfamily \doxylink{class_olx_a_p_i_x_f_m_r_obj}{Olx\+APIXFMRObj}}   &100\%   &\`{}\+Olx\+APIGraphics\+Type3\+Obj\`{}    \\\cline{1-4}
+3-\/Winding Transformer   &{\ttfamily \doxylink{class_olx_a_p_i_x_f_m_r3_w_obj}{Olx\+APIXFMR3\+WObj}}   &100\%   &\`{}\+Olx\+APIGraphics\+Type4\+Obj\`{}    \\\cline{1-4}
+Series Reactor   &{\ttfamily \doxylink{class_olx_a_p_i_series_reactor_obj}{Olx\+APISeries\+Reactor\+Obj}}   &100\%   &\`{}\+Olx\+APIGraphics\+Type3\+Obj\`{}    \\\cline{1-4}
+Shunt Capacitor   &{\ttfamily \doxylink{class_olx_a_p_i_shunt_capacitor_obj}{Olx\+APIShunt\+Capacitor\+Obj}}   &100\%   &\`{}\+Olx\+APIGraphics\+Type2\+Obj\`{}    \\\cline{1-4}
+Generator (Synchronous)   &{\ttfamily \doxylink{class_olx_a_p_i_generator_obj}{Olx\+APIGenerator\+Obj}}   &100\%   &\`{}\+Olx\+APIGraphics\+Type2\+Obj\`{}   \\\cline{1-4}
+\end{longtabu}
+Back to top\hypertarget{index_autotoc_md14}{}\doxysubsection{\texorpdfstring{Using the Example Application}{Using the Example Application}}\label{index_autotoc_md14}
+The example application, when compiled, replaces cable lengths, types, and impedances via a lookup routine using the cable names, given that each cable has a unique name.\hypertarget{index_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{Command Line Arguments}{Command Line Arguments}}\label{index_autotoc_md15}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{>\ ./OlxAPIWrapperTest.exe\ -\/i\ "{}../<input\_model.olr>"{}\ -\/csv\ "{}../<input\_csv.csv>"{}\ -\/o\ "{}./<output\_model.olr>"{}}
+
+\end{DoxyCode}
+ This directs the application to open the {\ttfamily input\+\_\+model.\+olr} model file and use the {\ttfamily input\+\_\+csv.\+csv} csv file to replace cable properties. If no {\ttfamily -\/o} is used, the model will be overwritten, therefore the output file is specified to prevent overwriting the same file. Back to top\hypertarget{index_autotoc_md16}{}\doxyparagraph{\texorpdfstring{Other Arguments}{Other Arguments}}\label{index_autotoc_md16}
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/h} Display help
+\item {\ttfamily -\/v} Display the version of the Oxl\+API c library.
+\item {\ttfamily -\/i} without {\ttfamily -\/csv} will simply print all lines and busses in the model.
+\item {\ttfamily -\/i}with {\ttfamily -\/csv} will overwrite cable properties in the same model
+\begin{DoxyItemize}
+\item If cables are not found, they are skipped
+\end{DoxyItemize}
+\item {\ttfamily -\/i} with {\ttfamily -\/csv} and {\ttfamily -\/o} will write cable properties to the {\ttfamily output\+\_\+model.\+olr}
+\begin{DoxyItemize}
+\item ASPEN Oneliner needs a full path for the {\ttfamily -\/i} but does not require a full path for the save, if no full path is provided, it will save in the same directory as the {\ttfamily -\/i} input model directory.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Back to top\hypertarget{index_autotoc_md17}{}\doxysubsubsection{\texorpdfstring{CSV Input File}{CSV Input File}}\label{index_autotoc_md17}
+The CSV input file template is as follows \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{15}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Length   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ X   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R0   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ X0   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G10   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B10   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G20   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B20    }\\\cline{1-15}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Length   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ X   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ R0   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ X0   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B1   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B2   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G10   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B10   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ G20   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ B20    }\\\cline{1-15}
+\endhead
+F11.\+1   &5930   &IWP 500   &0.\+01875   &0.\+02406   &0.\+13957   &0.\+05338   &0   &0.\+00114   &0   &0.\+00114   &0   &0.\+00114   &0   &0.\+00114    \\\cline{1-15}
+F11.\+2   &2320   &IWP 500   &0.\+00654   &0.\+00839   &0.\+04867   &0.\+01861   &0   &0.\+0004   &0   &0.\+0004   &0   &0.\+0004   &0   &0.\+0004    \\\cline{1-15}
+F11.\+3   &1770   &IWP 500   &0.\+00594   &0.\+00543   &0.\+03197   &0.\+01175   &0   &0.\+00021   &0   &0.\+00021   &0   &0.\+00021   &0   &0.\+00021    \\\cline{1-15}
+F11.\+4   &1274   &IWP 500   &0.\+01922   &0.\+01758   &0.\+10348   &0.\+03803   &0   &0.\+00069   &0   &0.\+00069   &0   &0.\+00069   &0   &0.\+00069    \\\cline{1-15}
+F11.\+5   &6766   &IWP 4/0   &0.\+00991   &0.\+00907   &0.\+05335   &0.\+01961   &0   &0.\+00035   &0   &0.\+00035   &0   &0.\+00035   &0   &0.\+00035    \\\cline{1-15}
+F11.\+6   &3304   &IWP 4/0   &0.\+01295   &0.\+01185   &0.\+06972   &0.\+02563   &0   &0.\+00046   &0   &0.\+00046   &0   &0.\+00046   &0   &0.\+00046   \\\cline{1-15}
+\end{longtabu}
+Back to top\hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{TODO}{TODO}}\label{index_autotoc_md18}
+
+\begin{DoxyItemize}
+\item Implement the following equipment
+\begin{DoxyItemize}
+\item \mbox{[}x\mbox{]} Transmission Line
+\item \mbox{[}x\mbox{]} Bus
+\item \mbox{[}x\mbox{]} 2W Transformer
+\item \mbox{[}x\mbox{]} 3W Transformer
+\item \mbox{[}x\mbox{]} Generator
+\item \mbox{[} \mbox{]} Inverter-\/\+Based Resource
+\item \mbox{[}x\mbox{]} Shunt Capacitor/\+Reactor
+\item \mbox{[}x\mbox{]} Series Capacitor/\+Reactor
+\item \mbox{[} \mbox{]} Load ( Load Flow )
+\item \mbox{[} \mbox{]} Switch
+\item \mbox{[} \mbox{]} Breaker
+\end{DoxyItemize}
+\item Implement fault capabilities
+\begin{DoxyItemize}
+\item Fault simulation capabilities with In-\/\+Service and OOS parameters
+\end{DoxyItemize}
+\item Implement protective devices
+\begin{DoxyItemize}
+\item Overcurrent (Phase/\+Ground)
+\item Distance (Phase/\+Ground)
+\item Recloser Relay (Phase/\+Ground)
+\item Fuse
+\end{DoxyItemize}
+\item Finish Graphics Objects
+\item Implement Adding/\+Removing Equipment
+\begin{DoxyItemize}
+\item Requires a lot of trial and error, likely to never be implemented
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Back to top 

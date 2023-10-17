@@ -1,6 +1,6 @@
 #include "OlxAPIXFMRObj.h"
 
-OlxAPIXFMRObj::OlxAPIXFMRObj(int handle) : OlxAPIBranchObj(handle)
+OlxAPIXFMRObj::OlxAPIXFMRObj(int handle) : OlxAPIObj(handle)
 {
     getBaseMVA();
     getLTCCenterTap();

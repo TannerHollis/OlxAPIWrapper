@@ -143,6 +143,19 @@ void displayModelObjects(OlxAPIModelObj* model)
         {
             OlxAPIBusObj* bus = model->getBus(busHandles[i]);
             cout << "Bus Name: " << bus->getName() << "\tkV: " << bus->getKVNominal() << endl;
+
+            OlxAPIFault fault(bus);
+            fault.setCloseInFault(false);
+            fault.setFaultConnection1LG(OlxAPIFault::FaultConnection::FLT_1LG_A);
+            fault.runFault();
+            OlxAPIFaultResult* result = fault.getResult(0);
+            cout << result->getDescription() << endl;
+            vector<int> lineHandles = model->getLineHandles();
+            for (int j = 0; j < lineHandles.size(); j++)
+            {
+                OlxAPILineObj* line = model->getLine(lineHandles[j]);
+                cout << "Current at Line: " << line->getName() << "\t " << result->getCurrentAt(line).getZeroSeq() << endl;
+            }
         }
     }
 

@@ -1,0 +1,9 @@
+<map id="OlxAPIObj::getHandle" name="OlxAPIObj::getHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="227,80,375,107"/>
+<area shape="rect" id="Node000002" href="$class_olx_a_p_i_line_obj.html#a8b34b747d856d91c383e2ed7ecdd94d5" title=" " alt="" coords="5,5,179,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,77,160,51,162,46,243,72"/>
+<area shape="rect" id="Node000003" href="$class_olx_a_p_i_fault_result.html#abec9396c0669464fb2849f36992689d6" title=" " alt="" coords="24,72,160,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,96,161,96,161,91,211,91"/>
+<area shape="rect" id="Node000004" href="$class_olx_a_p_i_fault_result.html#a4eeb067c90193cfb55e70ea5260cfbb5" title=" " alt="" coords="24,139,160,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="243,114,161,141,160,136,241,109"/>
+</map>

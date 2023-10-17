@@ -3,7 +3,7 @@
 #include "OlxAPIBranchObj.h"
 #include "OlxAPIGraphicsType3Obj.h"
 
-class OlxAPIXFMRObj : public OlxAPIBranchObj
+class OlxAPIXFMRObj : public OlxAPIObj
 {
 public:
 	typedef enum GroundingImpedance

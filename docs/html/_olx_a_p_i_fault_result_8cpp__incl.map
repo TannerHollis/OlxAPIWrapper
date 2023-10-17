@@ -1,0 +1,17 @@
+<map id="OlxAPIFaultResult.cpp" name="OlxAPIFaultResult.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="130,5,283,32"/>
+<area shape="rect" id="Node000002" href="$_olx_a_p_i_fault_result_8h.html" title=" " alt="" coords="137,80,276,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,33,209,64,204,64,204,33"/>
+<area shape="rect" id="Node000003" href="$_olx_a_p_i3_p_value_8h.html" title=" " alt="" coords="5,155,128,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="183,110,106,149,103,145,181,105"/>
+<area shape="rect" id="Node000005" href="$_olx_a_p_i_obj_8h.html" title=" " alt="" coords="203,155,296,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="216,106,236,140,232,143,212,109"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="129,229,279,256"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="205,108,193,155,193,186,198,214,193,215,188,186,188,154,200,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="304,229,357,256"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="243,105,278,124,310,153,325,183,331,213,326,214,320,185,306,156,275,128,240,110"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="31,229,102,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="69,182,69,214,64,214,64,182"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="244,183,222,217,218,215,239,180"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="265,180,307,217,304,221,262,184"/>
+</map>
