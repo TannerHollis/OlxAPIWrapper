@@ -1,0 +1,18 @@
+<map id="io::CSVReader::read_header" name="io::CSVReader::read_header">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,146,215"/>
+<area shape="rect" id="Node000002" href="$classio_1_1_line_reader.html#a9279e6a30a85061167ecd50e20c5a10e" title=" " alt="" coords="204,113,348,156"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,170,188,158,189,163,147,175"/>
+<area shape="rect" id="Node000003" href="$classio_1_1_line_reader.html#a09a64339a84ceeb09f9a1249beacca15" title=" " alt="" coords="194,180,358,207"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,191,178,191,178,196,146,196"/>
+<area shape="rect" id="Node000007" href="$structio_1_1error_1_1with__file__name.html#ae765de62778c989d4658b4efe2995390" title=" " alt="" coords="430,272,578,315"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="147,207,415,270,414,275,146,212"/>
+<area shape="rect" id="Node000004" href="$classio_1_1detail_1_1_synchronous_reader.html#a519a0cb25c641d2e51b6542749c44606" title=" " alt="" coords="406,5,601,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="339,177,356,166,368,153,374,140,380,114,385,86,392,72,404,58,407,55,411,59,408,62,397,75,390,88,385,115,379,142,372,156,360,170,342,182"/>
+<area shape="rect" id="Node000005" href="$classio_1_1detail_1_1_synchronous_reader.html#a9d6b2c888cc7020df1bb81c8bb5c58bc" title=" " alt="" coords="406,72,601,115"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="331,177,357,166,371,156,380,146,390,135,405,124,414,119,417,124,407,129,393,139,384,149,374,160,359,170,333,182"/>
+<area shape="rect" id="Node000006" href="$structio_1_1error_1_1with__file__line.html#aa92778a81778abc676ec6ee9952bba8c" title=" " alt="" coords="442,139,566,181"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="358,179,426,169,427,174,359,184"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="307,205,359,231,407,258,421,264,419,269,405,262,357,236,305,210"/>
+<area shape="rect" id="Node000008" href="$classio_1_1detail_1_1_synchronous_reader.html#a6cad1371b97e14f660914898b16433c4" title=" " alt="" coords="406,205,601,248"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="359,203,391,207,390,213,358,208"/>
+</map>

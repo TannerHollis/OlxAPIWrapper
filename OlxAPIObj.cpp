@@ -17,6 +17,11 @@ string OlxAPIObj::getObjectIDString()
 	return string(idString);
 }
 
+int OlxAPIObj::getEquipmentType()
+{
+	return OlxAPIEquipmentType(handle);
+}
+
 int OlxAPIObj::getIntParameter(int paramToken, int* data)
 {
 	return OlxAPIGetData(handle, paramToken, data);

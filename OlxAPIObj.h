@@ -16,6 +16,8 @@ public:
 
 	string getObjectIDString();
 
+	int getEquipmentType();
+
 protected:
 	int getIntParameter(int paramToken, int* data);
 	int setIntParameter(int paramToken, int* data);

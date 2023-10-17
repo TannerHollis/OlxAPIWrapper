@@ -1,0 +1,93 @@
+\doxysection{Olx\+APIGenerator\+Obj.\+h}
+\hypertarget{_olx_a_p_i_generator_obj_8h_source}{}\label{_olx_a_p_i_generator_obj_8h_source}\mbox{\hyperlink{_olx_a_p_i_generator_obj_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_obj_8h}{OlxAPIObj.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_graphics_type2_obj_8h}{OlxAPIGraphicsType2Obj.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_olx_a_p_i_generator_obj}{OlxAPIGeneratorObj}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_olx_a_p_i_obj}{OlxAPIObj}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7}{GeneratorImpedance}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7a89b12f0917c84e1a1c7a2d75e7de16bf}{GEN\_SUBTRANSIENT}}\ =\ 0,}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7adc3e43f5b04ffa5175fbd598f3b18915}{GEN\_SYNCHRONOUS}}\ =\ 1,}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7a881eaaf7c00c6214e00cd0df4c94b9a4}{GEN\_TRANSIENT}}\ =\ 2,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7a52120428c90f3f4d8cc94cea86e6db61}{GEN\_NEG\_SEQ}}\ =\ 3,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7ab53248a24f81e1b8b539ae8b740e3bc9}{GEN\_ZERO\_SEQ}}\ =\ 4}
+\DoxyCodeLine{00016\ \ \ \ \ \}\mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7}{GeneratorImpedance}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj}{OlxAPIGeneratorObj}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a89c07beda327aa4ec4e1b84835f46496}{\string~OlxAPIGeneratorObj}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a2bf3058549ef732f98112b7ebcdb9bcc}{getMVARating}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a493a2f105d833adc87252ae7eeda7523}{setMVARating}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a1192d5ed15f4a435da105809a03bcbbe}{getPMax}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a54d82526030956fec552653cf74b5aac}{setPMax}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_abe114ae2d6adf64a2e9c01e58767d87e}{getPMin}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a35b30eff43bba4a53fa9df052bad55f5}{setPMin}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a491ff70aebeced44bf496ca5bdb1cb07}{getQMax}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_aec8a38a2b1c806d847da4837a01299a4}{setQMax}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a02f424ecf3a4052264183802b1bf4279}{getQMin}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a6dd421b20db1805f2fcbb8e27d38661e}{setQMin}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a0078637337190191734be0b1b8204642}{getRz}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_aee1a0ca78d8bada6e113b62e3d34f07b}{setRz}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a3fb5aef33db6bb6a8e41fadcb80282ba}{getXz}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a0da85e3bbae746c745a3bb36ffa52786}{setXz}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a8bda82a9677921f9c68f474a08fa1f3d}{getScheduledP}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_aa1e96fbb2bb933c219172c61d8e92b38}{setScheduledP}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a3244d7dc9766d19425e4d5c698e8049c}{getScheduledQ}}();}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a1d22d6885640dc8d20e72f19f4e36a8f}{setScheduledQ}}(\textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a06b2745f22c6451a2813773b8031349e}{getOnline}}();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_abda62bac0fd8568c7b28b10fec66ae84}{setOnline}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a41d4bb139469629843f72d9ee960ba89}{getGeneratorHandle}}();}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_afb4cf4fd60bfe292d9bd40d37696337a}{getGenID}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_ad966c3f98ca808e4ce720370145c8cf6}{getOffDate}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a191360a1db0eed2442f00f9ddaf41189}{setOffDate}}(\textcolor{keywordtype}{string}\&\ value);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a81cfdb8db26337cadcb8691422ec4edc}{getOnDate}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a0992870996efdf95d50dd9ca726fd56f}{setOnDate}}(\textcolor{keywordtype}{string}\&\ value);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_aa0f6858641b21c89624fc4f9e4b0277d}{getR}}(\mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7}{GeneratorImpedance}}\ impedance);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_ab8566c739cc91ceb0abc4118dae51c75}{setR}}(\mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7}{GeneratorImpedance}}\ impedance,\ \textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_ac606092d292a5e62610ab9886b594936}{getX}}(\mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7}{GeneratorImpedance}}\ impedance);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a86bc52b294f9a888c7e4f6959d9fd0ec}{setX}}(\mbox{\hyperlink{class_olx_a_p_i_generator_obj_a04fa6201d8ef3d1e8738829c31ccdcc7}{GeneratorImpedance}}\ impedance,\ \textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_graphics_type2_obj}{OlxAPIGraphicsType2Obj}}*\ \mbox{\hyperlink{class_olx_a_p_i_generator_obj_a9a48f402625217ea8afe6df4941695be}{gfxObj}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ dMVARating;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{double}\ dPmax;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{double}\ dPmin;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ dQmax;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ dQmin;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ dRz;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{double}\ dXz;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{double}\ dSchedP;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{double}\ dSchedQ;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ nOnline;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ nGenUnitHandle;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{string}\ sID;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{string}\ sOffDate;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{string}\ sOnDate;}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{double}\ dR[5];\ \textcolor{comment}{//\ Subtransient,\ synchronous,\ transient,\ negative,\ zero\ sequence}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{double}\ dX[5];\ \textcolor{comment}{//\ Subtransient,\ synchronous,\ transient,\ negative,\ zero\ sequence}}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+
+\end{DoxyCode}

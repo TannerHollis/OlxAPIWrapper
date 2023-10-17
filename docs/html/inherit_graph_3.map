@@ -1,0 +1,19 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_olx_a_p_i_obj.html" title=" " alt="" coords="5,157,88,184"/>
+<area shape="rect" id="Node000001" href="$class_olx_a_p_i_branch_obj.html" title=" " alt="" coords="160,31,283,57"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="62,143,92,104,112,84,134,67,158,55,160,60,137,72,116,88,96,108,66,146"/>
+<area shape="rect" id="Node000004" href="$class_olx_a_p_i_bus_obj.html" title=" " alt="" coords="169,81,274,108"/>
+<area shape="poly" id="edge9_Node000000_Node000004" title=" " alt="" coords="80,146,135,118,167,106,169,111,137,122,83,151"/>
+<area shape="rect" id="Node000005" href="$class_olx_a_p_i_generator_obj.html" title=" " alt="" coords="152,132,291,159"/>
+<area shape="poly" id="edge10_Node000000_Node000005" title=" " alt="" coords="103,160,151,153,152,158,103,165"/>
+<area shape="rect" id="Node000006" href="$class_olx_a_p_i_series_reactor_obj.html" title=" " alt="" coords="139,183,304,209"/>
+<area shape="poly" id="edge11_Node000000_Node000006" title=" " alt="" coords="103,176,139,181,138,187,103,181"/>
+<area shape="rect" id="Node000007" href="$class_olx_a_p_i_shunt_capacitor_obj.html" title=" " alt="" coords="136,233,307,260"/>
+<area shape="poly" id="edge12_Node000000_Node000007" title=" " alt="" coords="83,190,137,219,168,230,166,235,135,224,80,195"/>
+<area shape="rect" id="Node000008" href="$class_olx_a_p_i_x_f_m_r3_w_obj.html" title=" " alt="" coords="153,284,290,311"/>
+<area shape="poly" id="edge13_Node000000_Node000008" title=" " alt="" coords="66,195,96,234,116,253,137,270,160,281,158,286,134,274,112,257,92,237,62,198"/>
+<area shape="rect" id="Node000002" href="$class_olx_a_p_i_line_obj.html" title=" " alt="" coords="361,5,467,32"/>
+<area shape="poly" id="edge7_Node000001_Node000002" title=" " alt="" coords="298,31,360,23,360,28,298,37"/>
+<area shape="rect" id="Node000003" href="$class_olx_a_p_i_x_f_m_r_obj.html" title=" " alt="" coords="355,56,472,83"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="298,51,355,59,355,64,298,57"/>
+</map>

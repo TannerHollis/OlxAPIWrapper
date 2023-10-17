@@ -1,0 +1,30 @@
+<map id="OlxAPIShuntCapacitorObj::OlxAPIShuntCapacitorObj" name="OlxAPIShuntCapacitorObj::OlxAPIShuntCapacitorObj">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,239,185,281"/>
+<area shape="rect" id="Node000002" href="$class_olx_a_p_i_shunt_capacitor_obj.html#a21465e589c4339baf86a10bd37d38409" title=" " alt="" coords="233,5,404,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,237,122,199,150,151,187,102,231,58,236,54,239,59,234,62,191,105,155,154,127,202,108,239"/>
+<area shape="rect" id="Node000004" href="$class_olx_a_p_i_shunt_capacitor_obj.html#a44474dec4da9f79abaeeb72904922dbf" title=" " alt="" coords="233,205,404,248"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,244,217,239,217,244,185,249"/>
+<area shape="rect" id="Node000006" href="$class_olx_a_p_i_shunt_capacitor_obj.html#aa0b3af2984db00fa7f8c11790cfff0bb" title=" " alt="" coords="233,272,404,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="185,271,217,276,217,281,184,276"/>
+<area shape="rect" id="Node000007" href="$class_olx_a_p_i_shunt_capacitor_obj.html#ae9d06a0e3008c92f3714b7091e9d7955" title=" " alt="" coords="233,472,404,515"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="108,281,127,318,155,366,191,415,234,458,239,461,236,466,231,462,187,418,150,369,122,321,103,283"/>
+<area shape="rect" id="Node000009" href="$class_olx_a_p_i_shunt_capacitor_obj.html#a013ac7efa79bde66e24b0f1a5458228f" title=" " alt="" coords="233,339,404,381"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="140,279,234,324,247,330,244,335,232,329,138,284"/>
+<area shape="rect" id="Node000010" href="$class_olx_a_p_i_shunt_capacitor_obj.html#a13301c9006c16b4bd95f0d9b9f9378ac" title=" " alt="" coords="233,405,404,448"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="116,280,166,335,199,365,234,391,242,396,239,400,231,396,195,369,162,338,112,283"/>
+<area shape="rect" id="Node000011" href="$class_olx_a_p_i_shunt_capacitor_obj.html#aa181b7d08b3ed5bc89e2ee1fdf51f335" title=" " alt="" coords="233,72,404,115"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="112,237,162,182,195,151,231,124,239,120,242,124,234,129,199,155,166,185,116,240"/>
+<area shape="rect" id="Node000012" href="$class_olx_a_p_i_shunt_capacitor_obj.html#a7f93161e6f4dd190d64ce452e61cbeb5" title=" " alt="" coords="233,139,404,181"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="138,236,232,191,244,185,247,190,234,196,140,241"/>
+<area shape="rect" id="Node000003" href="$class_olx_a_p_i_obj.html#ab17e40aeee1622069fcd56e487e25237" title=" " alt="" coords="465,80,647,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,46,492,73,490,78,396,51"/>
+<area shape="rect" id="Node000005" href="$class_olx_a_p_i_obj.html#a91862f68f8426d6989d1e0d193b044b7" title=" " alt="" coords="452,313,660,340"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="377,246,405,258,512,304,510,309,403,262,375,251"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="405,303,442,308,441,313,404,308"/>
+<area shape="rect" id="Node000008" href="$class_olx_a_p_i_obj.html#a4c2c21d9c7531afdf4e1589a3f305196" title=" " alt="" coords="455,480,657,507"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="405,491,439,491,439,496,405,496"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="404,345,441,340,442,345,405,351"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="375,402,403,391,510,344,512,349,405,396,377,407"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="405,91,450,91,450,96,405,96"/>
+<area shape="poly" id="edge16_Node000012_Node000003" title=" " alt="" coords="396,136,490,109,492,114,397,141"/>
+</map>

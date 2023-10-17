@@ -1,0 +1,107 @@
+\doxysection{Olx\+APIFault.\+h}
+\hypertarget{_olx_a_p_i_fault_8h_source}{}\label{_olx_a_p_i_fault_8h_source}\mbox{\hyperlink{_olx_a_p_i_fault_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}olxapi/include/olxapi.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_olx_a_p_i_fault}{OlxAPIFault}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{FaultConnection}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba15537a18433a820cc1f8db94329020b8}{FLT\_NONE}}\ =\ 0,\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c}{FLT\_3LG}}\ =\ 1,\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba0ea366d1923eea39c2f691e1d6dd4426}{FLT\_2LG\_BC}}\ =\ 1,\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba774ff1f2356a2e88e7f0e6be008a7500}{FLT\_2LG\_CA}}\ =\ 2,\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba329da5009792e76e72db4b27c95f84a8}{FLT\_2LG\_AB}}\ =\ 3,\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ababa1937a175392b967eaa7b935366149a}{FLT\_1LG\_A}}\ =\ 1,\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1e9f2f3a5f4184643662a6b577658b27}{FLT\_1LG\_B}}\ =\ 2,\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1286673be9606ef06f00c4f5731522d0}{FLT\_1LG\_C}}\ =\ 3,\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba038d660046741e67bc00d8acda7fb2f1}{FLT\_LL\_BC}}\ =\ 1,\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba33a943a6aa51e68c0510d6be990c6b76}{FLT\_LL\_CA}}\ =\ 2,\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba312b045b12031f83e6c590a32b24d579}{FLT\_LL\_AB}}\ =\ 2\ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \}\ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{FaultConnection}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault}{OlxAPIFault}}(\textcolor{keywordtype}{int}\ devHandle);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_fault_af5b363876ee72dbdee77e19063a5023c}{runFault}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a6e1dfd8be2875c646555f9e52c25293d}{setCloseInFault}}(\textcolor{keywordtype}{bool}\ withOutage);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a3c88b34c6796cf65cf9fc17fdda33195}{setCloseInFaultWithEndOpen}}(\textcolor{keywordtype}{bool}\ withOutage);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a314900abd9628acce6a07bc65f46e7a5}{addOutage}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ab1996229d969d5ff4c7a3750ac314fa8}{setFaultImpedance}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_acffc97091697646e639a2372cfae6714}{r}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ac76ef038afb292c7044732949273e8ad}{x}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a88ca8dd7c245a94a6feec0920b28d716}{setFaultConnection3LG}}(FaultConnection\ connection);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c}{setFaultConnection1LG}}(FaultConnection\ connection);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd}{setFaultConnection2LG}}(FaultConnection\ connection);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172}{setFaultConnectionLL}}(FaultConnection\ connection);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ devHandle;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ fltHandle;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{FaultConnection}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_af93bc4facdcfed4c6d0a0eabcee61feb}{flt3lg}};\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{FaultConnection}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ab754c372f785ab86286f2397aa721461}{flt2lg}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{FaultConnection}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a2ab9a4f97435c3c9b646d0446ed42a99}{flt1lg}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{FaultConnection}}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ab531fb8c3cf9535f96be6d31899ecffa}{fltll}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a4ec00f512796774d80800939c20c752c}{\_fltConns}}[4];}
+\DoxyCodeLine{00059\ \ \ \ \ \}\ faultConnections;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_acffc97091697646e639a2372cfae6714}{r}};\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ac76ef038afb292c7044732949273e8ad}{x}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ \}\ faultResistance;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ab6d01d439f635e75b42a473525632f74}{closeIn}};\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a40030be87e2c5b43b688c65a66011b0c}{closeInWOutage}};\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ad3bffa909f5202432d26044fddded9d1}{closeInWEndOpen}};\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a7d08f0bf36fc4d16adc2b78adc4b8ebc}{closeInWEndOpenWOutage}};\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_aaa86dd024dad902331fba81fc0eba125}{remoteBus}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ae99362a427d47e09d6d9c6a4aad4e52d}{remoteBusWOutage}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ab235e66433ee84756c815c78b0d01977}{lineEnd}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ad63ae0bfe72e8d076729eeab7f05fde8}{lineEndWOutage}};\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a191eec99c3acf27010b8dc8dd8f8854e}{intermediate}};\ \textcolor{comment}{//\ 0\ -\/\ reset,\ 0.01\ -\/\ 100\%\ -\/\ set}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ae8443c26fb157de7adbb4ce8cec15e3c}{intermediateWOutage}};\ \textcolor{comment}{//\ 0\ -\/\ reset,\ 0.01\ -\/\ 100\%\ -\/\ set}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a408afb57a3f349266b96d3fa7995471e}{intermediateWEndOpen}};\ \textcolor{comment}{//\ 0\ -\/\ reset,\ 0.01\ -\/\ 100\%\ -\/\ set}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ad931b1a2e7122259fc820f1dd119c238}{intermediateWEndOpenWOutage}};\ \textcolor{comment}{//\ 0\ -\/\ reset,\ 0.01\ -\/\ 100\%\ -\/\ set}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_acb7fd67f58bcf082dca9ab77cfacc6c5}{autoSeqFrom}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ab1036c7debc60625636e4ee996b1e45b}{autoSeqTo}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_aab76d0014a3a2cc02709bd07b686817b}{outageGrounding}};\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a5c702e77b20e3471c5ff3cc5c2c0d6f4}{\_fltOpts}}[15];}
+\DoxyCodeLine{00096\ \ \ \ \ \}\ faultOptions;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ nOutages;}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{int}*\ outageList;\ \textcolor{comment}{//\ pointer\ to\ list\ of\ outage\ busses,\ 0\ terminated}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{union\ }\{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a1d6f095457aea96844b9af90ba7ff1fa}{oneAtATime}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a6b5d2d9d889eb02a55e1c25feb6f35a5}{twoAtATime}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a1f188055aa3d151e9fae07a4bc754b95}{allAtOnce}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_fault_a6d82f70688c4b48b0fd6e9a4f48f4c4f}{breakerFailure}};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_fault_ad1a3aa9b8685881fb10ef911d0c36264}{\_outageOpts}}[4];}
+\DoxyCodeLine{00110\ \ \ \ \ \}\ outageOptions;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ clearPrevious;\ \textcolor{comment}{//\ 0\ -\/\ do\ not\ clear,\ 1\ -\/\ clear\ previous\ faults}}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+
+\end{DoxyCode}

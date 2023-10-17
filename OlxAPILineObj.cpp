@@ -1,7 +1,6 @@
 #include "OlxAPILineObj.h"
 
-
-OlxAPILineObj::OlxAPILineObj(int handle) : OlxAPIObj(handle)
+OlxAPILineObj::OlxAPILineObj(int handle) : OlxAPIBranchObj(handle)
 {
 	getR();
 	getX();
@@ -298,4 +297,22 @@ int OlxAPILineObj::setRatings(double* value)
 {
 	memcpy(dRatings, value, 4);
 	return setDoubleArrayParameter(LN_vdRating, dRatings, 4);
+}
+
+int OlxAPILineObj::getBranchHandle()
+{
+	int nBranchHandle = 0;
+	while (nBranchHandle >= 0)
+	{
+		int ret = OlxAPIGetEquipment(TC_BRANCH, &nBranchHandle);
+		if (ret != OLXAPI_OK)
+			break;
+
+		int nEquipmentHandle = 0;
+		ret = OlxAPIGetData(nBranchHandle, BR_nHandle, &nEquipmentHandle);
+		if (nEquipmentHandle == getHandle())
+			return nBranchHandle;
+	}
+
+	return -1;
 }

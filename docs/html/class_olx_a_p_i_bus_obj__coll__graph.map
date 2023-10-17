@@ -1,0 +1,11 @@
+<map id="OlxAPIBusObj" name="OlxAPIBusObj">
+<area shape="rect" id="Node000001" title=" " alt="" coords="95,753,219,1036"/>
+<area shape="rect" id="Node000002" href="$class_olx_a_p_i_obj.html" title=" " alt="" coords="5,343,185,668"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,683,137,754,132,754,121,683"/>
+<area shape="rect" id="Node000003" href="$class_olx_a_p_i_graphics_type1_obj.html" title=" " alt="" coords="209,321,389,689"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,690,217,739,212,737,229,688"/>
+<area shape="rect" id="Node000004" href="$class_olx_a_p_i_graphics_obj.html" title=" " alt="" coords="227,139,371,272"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="302,287,302,322,297,322,297,287"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="286,5,313,75"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="302,75,302,122,297,122,297,75"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="io::detail::SynchronousReader::is_valid" name="io::detail::SynchronousReader::is_valid">
+<area shape="rect" id="Node000001" title=" " alt="" coords="733,56,928,99"/>
+<area shape="rect" id="Node000002" href="$classio_1_1_line_reader.html#a09a64339a84ceeb09f9a1249beacca15" title=" " alt="" coords="520,64,685,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="717,80,685,80,685,75,717,75"/>
+<area shape="rect" id="Node000003" href="$classio_1_1_c_s_v_reader.html#a6be5e639c82112332fe527525ff4319a" title=" " alt="" coords="305,5,472,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="536,62,439,35,441,30,537,57"/>
+<area shape="rect" id="Node000004" href="$classio_1_1_c_s_v_reader.html#ac5ece4c73a35ce331cdd27e98587beda" title=" " alt="" coords="319,56,459,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="505,80,459,80,459,75,505,75"/>
+<area shape="rect" id="Node000007" href="$classio_1_1_c_s_v_reader.html#a5ca6e99a0c31b29b8d0fd14c9ec70ea3" title=" " alt="" coords="305,123,472,149"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="537,98,441,125,439,120,536,93"/>
+<area shape="rect" id="Node000005" href="$_olx_a_p_i_wrapper_test_8cpp.html#a82dabd8b3b89ca1c0c85605a58c9309c" title=" " alt="" coords="103,93,257,120"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="304,92,258,98,257,93,303,87"/>
+<area shape="rect" id="Node000006" href="$_olx_a_p_i_wrapper_test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,93,55,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="87,109,55,109,55,104,87,104"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="289,125,257,120,258,115,290,119"/>
+</map>

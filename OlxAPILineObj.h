@@ -1,9 +1,9 @@
 #pragma once
 
-#include "OlxAPIObj.h"
+#include "OlxAPIBranchObj.h"
 #include "OlxAPIGraphicsType5Obj.h"
 
-class OlxAPILineObj : public OlxAPIObj
+class OlxAPILineObj : public OlxAPIBranchObj
 {
 public:
 	OlxAPILineObj(int handle);
@@ -73,6 +73,8 @@ public:
 
 	double* getRatings();
 	int setRatings(double* value);
+
+	int getBranchHandle();
 
 	OlxAPIGraphicsType5Obj* gfxObj;
 

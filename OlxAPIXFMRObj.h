@@ -1,9 +1,9 @@
 #pragma once
 
-#include "OlxAPIObj.h"
+#include "OlxAPIBranchObj.h"
 #include "OlxAPIGraphicsType3Obj.h"
 
-class OlxAPIXFMRObj : public OlxAPIObj
+class OlxAPIXFMRObj : public OlxAPIBranchObj
 {
 public:
 	typedef enum GroundingImpedance

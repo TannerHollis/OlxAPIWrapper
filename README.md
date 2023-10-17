@@ -49,7 +49,9 @@ for(int = 0; i < lineHandles.size(); i++)
     cout << "Line Name: " << model.getLine(lineHandles[i])->getName() << endl; // Print line name
 }
 ```
+
 [Back to top](#table-of-contents)
+
 ### Editing Equipment Values
 All elements editable within Oneliner are available to the user via unique ```get``` and ```set``` like used in the following:
 
@@ -67,7 +69,9 @@ if(ret == OLXAPI_OK) // Check write was successful
     cout << "Successful write to cable: " << cable << endl;
 ...
 ```
+
 [Back to top](#table-of-contents)
+
 ### Get Unique Formatted Object ID String
 All objects have a unique id that can be formatted into a string. This string is useful for reverse lookups, which return handles if successful.
 
@@ -83,7 +87,9 @@ for(int = 0; i < lineHandles.size(); i++)
     cout << model.getLine(lineHandles[i])->getObjectIDString() << endl; // Print line name
 }
 ```
+
 [Back to top](#top)
+
 ### Edit Graphics Object Values
 This is currently under development, but this will allow the user to get positions of graphics objects within the model. Similar to other API objects, there are `get` and `set` for each graphics object value.
 
@@ -104,6 +110,7 @@ This graphics object is associated with the following devices and has the follow
 |`nameY`|Sets the y position of the display name|`int`|`getNameY();`| `getNameY(10);`|
 
 [Back to top](#table-of-contents)
+
 #### OlxAPIGraphicsType2Obj
 This graphics object is associated with the following devices and has the following properties:
 
@@ -119,6 +126,7 @@ This graphics object is associated with the following devices and has the follow
 |`textY`|Sets the y position of the display text |`int`|`getTextY();`| `getTextY(10);`|
 
 [Back to top](#table-of-contents)
+
 #### OlxAPIGraphicsType3Obj
 This graphics object is associated with the following devices and has the following properties:
 
@@ -137,6 +145,7 @@ This graphics object is associated with the following devices and has the follow
 |`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
 
 [Back to top](#table-of-contents)
+
 #### OlxAPIGraphicsType4Obj
 This graphics object is associated with the following devices and has the following properties:
 
@@ -155,6 +164,7 @@ This graphics object is associated with the following devices and has the follow
 |`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
 |`text3X`|Sets the x position of the display text near bus 3|`int`|`getText3X();`| `setText3X(10);`|
 |`text3Y`|Sets the y position of the display text near bus 3|`int`|`getText3Y();`| `getText3Y(10);`|
+
 #### OlxAPIGraphicsType5Obj
 This graphics object is associated with the following devices and has the following properties:
 
@@ -173,8 +183,11 @@ This graphics object is associated with the following devices and has the follow
 |`text1Y`|Sets the y position of the display text near bus 1|`int`|`getText1Y();`| `getText1Y(10);`|
 |`text2X`|Sets the x position of the display text near bus 2|`int`|`getText2X();`| `setText2X(10);`|
 |`text2Y`|Sets the y position of the display text near bus 2|`int`|`getText2Y();`| `getText2Y(10);`|
+
 **Do not use. Will corrupt surrounding data.*
+
 [Back to top](#table-of-contents)
+
 ### Supported OneLiner Equipment
 |ASPEN Equipment |OlxAPIWrapper Class | Implementation | Graphics Object|
 |--|--|--|--|
@@ -186,6 +199,7 @@ This graphics object is associated with the following devices and has the follow
 |Shunt Capacitor| `OlxAPIShuntCapacitorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
 |Generator (Synchronous)| `OlxAPIGeneratorObj` |100%|[`OlxAPIGraphicsType2Obj`](#olxapigraphicstype2obj)|
 [Back to top](#table-of-contents)
+
 ## Using the Example Application
 The example application, when compiled, replaces cable lengths, types, and impedances via a lookup routine using the cable names, given that each cable has a unique name. 
 
@@ -195,6 +209,7 @@ The example application, when compiled, replaces cable lengths, types, and imped
 ```
 This directs the application to open the `input_model.olr` model file and use the `input_csv.csv` csv file to replace cable properties. If no `-o` is used, the model will be overwritten, therefore the output file is specified to prevent overwriting the same file.
 [Back to top](#table-of-contents)
+
 #### Other Arguments
 
  - `-h` Display help
@@ -206,6 +221,7 @@ This directs the application to open the `input_model.olr` model file and use th
 	 - ASPEN Oneliner needs a full path for the `-i` but does not require a full path for the save, if no full path is provided, it will save in the same directory as the `-i` input model directory.
 
 [Back to top](#table-of-contents)
+
 ### CSV Input File
 The CSV input file template is as follows
 |Name | Length | Type | R | X | R0 | X0 | G1| B1 | G2 | B2 | G10 | B10 | G20 | B20 |
@@ -217,6 +233,7 @@ The CSV input file template is as follows
 |F11.5|6766|IWP 4/0|0.00991|0.00907|0.05335|0.01961|0|0.00035|0|0.00035|0|0.00035|0|0.00035|
 |F11.6|3304|IWP 4/0|0.01295|0.01185|0.06972|0.02563|0|0.00046|0|0.00046|0|0.00046|0|0.00046|
 [Back to top](#table-of-contents)
+
 ### TODO
 
  - Implement the following equipment

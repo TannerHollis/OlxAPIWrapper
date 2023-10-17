@@ -2,8 +2,8 @@
 
 #include "olxapi/include/olxapi.h"
 
-#include "OlxAPILineObj.h"
 #include "OlxAPIBusObj.h"
+#include "OlxAPILineObj.h"
 #include "OlxAPIXFMRObj.h"
 #include "OlxAPIXFMR3WObj.h"
 #include "OlxAPISeriesReactorObj.h"
@@ -28,23 +28,23 @@ public:
 	bool isOpened();
 
 	OlxAPILineObj* getLine(int handle);
-	int findLineHandleByName(string& name);
+	int findLineHandleByName(string& name); // Returns first instance, not ideal
 	vector<int> getLineHandles();
 
 	OlxAPIBusObj* getBus(int handle);
-	int findBusHandleByName(string& name);
+	int findBusHandleByName(string& name); // Returns first instance, not ideal
 	vector<int> getBusHandles();
 
 	OlxAPIXFMRObj* getXFMR(int handle);
-	int findXFMRHandleByName(string& name);
+	int findXFMRHandleByName(string& name); // Returns first instance, not ideal
 	vector<int> getXFMRHandles();
 
 	OlxAPIXFMR3WObj* get3WXFMR(int handle);
-	int find3WXFMRHandleByName(string& name);
+	int find3WXFMRHandleByName(string& name); // Returns first instance, not ideal
 	vector<int> get3WXFMRHandles();
 
 	OlxAPISeriesReactorObj* getSeriesReactor(int handle);
-	int findSeriesReactorHandleByName(string& name);
+	int findSeriesReactorHandleByName(string& name); // Returns first instance, not ideal
 	vector<int> getSeriesReactorHandles();
 
 	OlxAPIShuntCapacitorObj* getShuntCapacitor(int handle);
@@ -65,9 +65,9 @@ private:
 	string filePath;
 	bool fileIsOpened;
 
-	map<int, OlxAPILineObj*> lines;
-
 	map<int, OlxAPIBusObj*> busses;
+
+	map<int, OlxAPILineObj*> lines;
 
 	map<int, OlxAPIXFMRObj*> XFMRs;
 
