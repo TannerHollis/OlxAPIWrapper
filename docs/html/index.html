@@ -147,7 +147,7 @@ Getting Started</h3>
 <div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Line Name: &quot;</span> &lt;&lt; model.getLine(lineHandles[i])-&gt;getName() &lt;&lt; endl; <span class="comment">// Print line name</span></div>
 <div class="line">}</div>
 <div class="ttc" id="a_olx_a_p_i_model_obj_8h_html"><div class="ttname"><a href="_olx_a_p_i_model_obj_8h.html">OlxAPIModelObj.h</a></div></div>
-<div class="ttc" id="aclass_olx_a_p_i_model_obj_html"><div class="ttname"><a href="class_olx_a_p_i_model_obj.html">OlxAPIModelObj</a></div><div class="ttdef"><b>Definition</b> OlxAPIModelObj.h:20</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_model_obj_html"><div class="ttname"><a href="class_olx_a_p_i_model_obj.html">OlxAPIModelObj</a></div><div class="ttdef"><b>Definition</b> OlxAPIModelObj.h:21</div></div>
 </div><!-- fragment --><p>Back to top</p>
 <h3><a class="anchor" id="autotoc_md5"></a>
 Editing Equipment Values</h3>
@@ -368,7 +368,72 @@ CSV Input File</h3>
 <td class="markdownTableBodyNone">F11.6   </td><td class="markdownTableBodyNone">3304   </td><td class="markdownTableBodyNone">IWP 4/0   </td><td class="markdownTableBodyNone">0.01295   </td><td class="markdownTableBodyNone">0.01185   </td><td class="markdownTableBodyNone">0.06972   </td><td class="markdownTableBodyNone">0.02563   </td><td class="markdownTableBodyNone">0   </td><td class="markdownTableBodyNone">0.00046   </td><td class="markdownTableBodyNone">0   </td><td class="markdownTableBodyNone">0.00046   </td><td class="markdownTableBodyNone">0   </td><td class="markdownTableBodyNone">0.00046   </td><td class="markdownTableBodyNone">0   </td><td class="markdownTableBodyNone">0.00046   </td></tr>
 </table>
 <p>Back to top</p>
-<h3><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Running Faults</h2>
+<p>Running faults with this API is made a little easier, with the help of objects. Once the model has been loaded, find a node at which a fault simulation is desired. Then Create a <a class="el" href="class_olx_a_p_i_fault.html">OlxAPIFault</a> class and pass the <a class="el" href="class_olx_a_p_i_obj.html">OlxAPIObj</a> as the argument for the constructor. This will build the fault scenario instruction by instruction. See the following example.</p>
+<p>*Currently Branches faults are not working as the parameter for running a line, xfmr, 3w-xfmr, series reactor require a branch handle. Which at the moment, are current non enumerable with v15.7.</p>
+<h3><a class="anchor" id="autotoc_md19"></a>
+Bus Fault</h3>
+<div class="fragment"><div class="line">...</div>
+<div class="line"> </div>
+<div class="line">OlxAPIBusObj* bus = model-&gt;findBus(<span class="stringliteral">&quot;T1_HS&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="class_olx_a_p_i_fault.html">OlxAPIFault</a> fault(&amp;bus);</div>
+<div class="line">fault.setCloseIn(<span class="keyword">false</span>); <span class="comment">// Set bus fault without outage, for bus objects a close-in is a bus fault.</span></div>
+<div class="line">fault.setFaultConnection1LG(OlxAPIFault::FaultConnection::FLT_1LG_A); <span class="comment">// Set fault to 1LG fault on A-Phase/Ground</span></div>
+<div class="line"><span class="keywordtype">int</span> nFaults = fault.runFault(); <span class="comment">// Simulate fault, returns number of faults successfully simulated</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nFaults; i++)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="class_olx_a_p_i_fault_result.html">OlxAPIFaultResult</a>* result = fault.getResult(i); <span class="comment">// If simulating more than one fault, you can get all results through this function</span></div>
+<div class="line">    <span class="keywordflow">if</span>(result == <span class="keyword">nullptr</span>) <span class="comment">// Check the fault result is valid</span></div>
+<div class="line">        <span class="keywordflow">continue</span>;</div>
+<div class="line">    </div>
+<div class="line">    cout &lt;&lt; result-&gt;<a class="code hl_function" href="class_olx_a_p_i_fault_result.html#a182d4ace485e9cc3071abf887e5744ad">getDescription</a>() &lt;&lt; endl; <span class="comment">// Print fault description</span></div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Zero Sequence Voltage: &quot;</span> &lt;&lt; result-&gt;<a class="code hl_function" href="class_olx_a_p_i_fault_result.html#afac543d953da43638ef426ad8dcd6cc0">getVoltageAt</a>(bus)-&gt;<a class="code hl_function" href="class_olx_a_p_i3_p_value.html#afb18f7d9fec702c1fe112267f3fbc289">getZeroSeq</a>() &lt;&lt; endl; <span class="comment">// Print resultant voltage at faulted bus</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="ttc" id="aclass_olx_a_p_i3_p_value_html_afb18f7d9fec702c1fe112267f3fbc289"><div class="ttname"><a href="class_olx_a_p_i3_p_value.html#afb18f7d9fec702c1fe112267f3fbc289">OlxAPI3PValue::getZeroSeq</a></div><div class="ttdeci">complex&lt; double &gt; getZeroSeq()</div><div class="ttdef"><b>Definition</b> OlxAPI3PValue.cpp:24</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_fault_html"><div class="ttname"><a href="class_olx_a_p_i_fault.html">OlxAPIFault</a></div><div class="ttdef"><b>Definition</b> OlxAPIFault.h:9</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_fault_result_html"><div class="ttname"><a href="class_olx_a_p_i_fault_result.html">OlxAPIFaultResult</a></div><div class="ttdef"><b>Definition</b> OlxAPIFaultResult.h:12</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_fault_result_html_a182d4ace485e9cc3071abf887e5744ad"><div class="ttname"><a href="class_olx_a_p_i_fault_result.html#a182d4ace485e9cc3071abf887e5744ad">OlxAPIFaultResult::getDescription</a></div><div class="ttdeci">string getDescription()</div><div class="ttdef"><b>Definition</b> OlxAPIFaultResult.cpp:8</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_fault_result_html_afac543d953da43638ef426ad8dcd6cc0"><div class="ttname"><a href="class_olx_a_p_i_fault_result.html#afac543d953da43638ef426ad8dcd6cc0">OlxAPIFaultResult::getVoltageAt</a></div><div class="ttdeci">OlxAPI3PValue getVoltageAt(int handle)</div><div class="ttdef"><b>Definition</b> OlxAPIFaultResult.cpp:75</div></div>
+</div><!-- fragment --><p>Back to top</p>
+<h3><a class="anchor" id="autotoc_md20"></a>
+Branch Fault</h3>
+<p>In order to simulate a fault on any "branch" (i.e. line, xfmr, 3wxfmr, seriesreactors), the branch handle must be found first. Otherwise a fault will not be succesful. The following code gets the branch handle and then simulates a fault.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"> </div>
+<div class="line">OlxAPILineObj* line = model-&gt;findLine(<span class="stringliteral">&quot;L544P34&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> branchHandle = model-&gt;findBranchHandleByDeviceHandle(line-&gt;<a class="code hl_function" href="class_olx_a_p_i_obj.html#a4e9102ba216c462a8f67c822a664a537">getHandle</a>());</div>
+<div class="line"><span class="keywordflow">if</span>(branchHandle == -1) <span class="comment">// Check for valid handle returned</span></div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line">    </div>
+<div class="line">OlxxAPIFault fault(branchHandle);</div>
+<div class="line">fault.setFaultType(<a class="code hl_enumvalue" href="class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70">OlxAPIFault::FLT_INT_EO</a>, 50); <span class="comment">// Set intermediate fault with end open at 50% (optional parameter)</span></div>
+<div class="line">fault.setFaultConnection(<a class="code hl_enumvalue" href="class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c">OlxAPIFault::FLT_3LG</a>); <span class="comment">// Set to 3LG fault</span></div>
+<div class="line"><span class="keywordtype">int</span> nFaults = fault.runFault(); <span class="comment">// Simulate fault, returns number of faults successfully simulated</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nFaults; i++)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="class_olx_a_p_i_fault_result.html">OlxAPIFaultResult</a>* result = fault.getResult(i); <span class="comment">// If simulating more than one fault, you can get all results through this function</span></div>
+<div class="line">    <span class="keywordflow">if</span>(result == <span class="keyword">nullptr</span>) <span class="comment">// Check the fault result is valid</span></div>
+<div class="line">        <span class="keywordflow">continue</span>;</div>
+<div class="line">    </div>
+<div class="line">    cout &lt;&lt; result-&gt;<a class="code hl_function" href="class_olx_a_p_i_fault_result.html#a182d4ace485e9cc3071abf887e5744ad">getDescription</a>() &lt;&lt; endl; <span class="comment">// Print fault description</span></div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;Positive Seq Current: &quot;</span> &lt;&lt; result-&gt;<a class="code hl_function" href="class_olx_a_p_i_fault_result.html#a916e21a6f520a170384cd844d4836043">getCurrentAt</a>(line)-&gt;<a class="code hl_function" href="class_olx_a_p_i3_p_value.html#a1da1f54191f9c0cc852c4a3c3d773ccb">getPosSeq</a>() &lt;&lt; endl; <span class="comment">// Print resultant positive sequence current through faulted line</span></div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="ttc" id="aclass_olx_a_p_i3_p_value_html_a1da1f54191f9c0cc852c4a3c3d773ccb"><div class="ttname"><a href="class_olx_a_p_i3_p_value.html#a1da1f54191f9c0cc852c4a3c3d773ccb">OlxAPI3PValue::getPosSeq</a></div><div class="ttdeci">complex&lt; double &gt; getPosSeq()</div><div class="ttdef"><b>Definition</b> OlxAPI3PValue.cpp:14</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_fault_html_a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70"><div class="ttname"><a href="class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70">OlxAPIFault::FLT_INT_EO</a></div><div class="ttdeci">@ FLT_INT_EO</div><div class="ttdef"><b>Definition</b> OlxAPIFault.h:36</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_fault_html_af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c"><div class="ttname"><a href="class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c">OlxAPIFault::FLT_3LG</a></div><div class="ttdeci">@ FLT_3LG</div><div class="ttdef"><b>Definition</b> OlxAPIFault.h:16</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_fault_result_html_a916e21a6f520a170384cd844d4836043"><div class="ttname"><a href="class_olx_a_p_i_fault_result.html#a916e21a6f520a170384cd844d4836043">OlxAPIFaultResult::getCurrentAt</a></div><div class="ttdeci">OlxAPI3PValue getCurrentAt(int handle)</div><div class="ttdef"><b>Definition</b> OlxAPIFaultResult.cpp:59</div></div>
+<div class="ttc" id="aclass_olx_a_p_i_obj_html_a4e9102ba216c462a8f67c822a664a537"><div class="ttname"><a href="class_olx_a_p_i_obj.html#a4e9102ba216c462a8f67c822a664a537">OlxAPIObj::getHandle</a></div><div class="ttdeci">int getHandle()</div><div class="ttdef"><b>Definition</b> OlxAPIObj.h:15</div></div>
+</div><!-- fragment --><p>Back to top</p>
+<h3><a class="anchor" id="autotoc_md21"></a>
 TODO</h3>
 <ul>
 <li>Implement the following equipment<ul>
@@ -387,6 +452,7 @@ TODO</h3>
 </li>
 <li>Implement fault capabilities<ul>
 <li>Fault simulation capabilities with In-Service and OOS parameters</li>
+<li>Finish adding all fault scenarios</li>
 </ul>
 </li>
 <li>Implement protective devices<ul>

@@ -3,7 +3,7 @@ var searchData=
   ['olxapi3pvalue_0',['OlxAPI3PValue',['../class_olx_a_p_i3_p_value.html#a6c0ef18734061183d28f4937b5f4ec80',1,'OlxAPI3PValue']]],
   ['olxapibranchobj_1',['OlxAPIBranchObj',['../class_olx_a_p_i_branch_obj.html#a5fc8b115703dec13a785c28f5fd1ecdf',1,'OlxAPIBranchObj']]],
   ['olxapibusobj_2',['OlxAPIBusObj',['../class_olx_a_p_i_bus_obj.html#af6bac4e261dc79b7bb1ad4ebb28ca785',1,'OlxAPIBusObj']]],
-  ['olxapifault_3',['olxapifault',['../class_olx_a_p_i_fault.html#a80f79c424e6215171350006e22d5b801',1,'OlxAPIFault::OlxAPIFault(int devHandle)'],['../class_olx_a_p_i_fault.html#a63088549dc6d3d570bad0b168f63e8d2',1,'OlxAPIFault::OlxAPIFault(OlxAPIBusObj *bus)'],['../class_olx_a_p_i_fault.html#ae8752fb855675855f50ab1935976e9f8',1,'OlxAPIFault::OlxAPIFault(OlxAPIBranchObj *bus)']]],
+  ['olxapifault_3',['olxapifault',['../class_olx_a_p_i_fault.html#a80f79c424e6215171350006e22d5b801',1,'OlxAPIFault::OlxAPIFault(int devHandle)'],['../class_olx_a_p_i_fault.html#a63088549dc6d3d570bad0b168f63e8d2',1,'OlxAPIFault::OlxAPIFault(OlxAPIBusObj *bus)'],['../class_olx_a_p_i_fault.html#ae8752fb855675855f50ab1935976e9f8',1,'OlxAPIFault::OlxAPIFault(OlxAPIBranchObj *bus)'],['../class_olx_a_p_i_fault.html#a7e51736a378ad11abc145f60646dc8b9',1,'OlxAPIFault::OlxAPIFault(OlxAPIObj *bus)']]],
   ['olxapifaultresult_4',['OlxAPIFaultResult',['../class_olx_a_p_i_fault_result.html#afa168592c4b11c192469e7010259604e',1,'OlxAPIFaultResult']]],
   ['olxapigeneratorobj_5',['OlxAPIGeneratorObj',['../class_olx_a_p_i_generator_obj.html#a89b207e783fba98aa5eb600b63e4134f',1,'OlxAPIGeneratorObj']]],
   ['olxapigraphicsobj_6',['OlxAPIGraphicsObj',['../class_olx_a_p_i_graphics_obj.html#aa65d1c63dca3dbfa4ccb172710a643dd',1,'OlxAPIGraphicsObj']]],

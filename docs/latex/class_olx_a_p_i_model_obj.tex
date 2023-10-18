@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for Olx\+APIModel\+Obj\+:
-\nopagebreak
+Collaboration diagram for Olx\+APIModel\+Obj\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -64,6 +63,12 @@ vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa5de7b796443a0cf0e
 \mbox{\hyperlink{class_olx_a_p_i_generator_obj}{Olx\+APIGenerator\+Obj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a}{get\+Generator}} (int handle)
 \item 
 vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86219c7237e35c1b}{get\+Generator\+Handles}} ()
+\item 
+\mbox{\hyperlink{class_olx_a_p_i_branch_obj}{Olx\+APIBranch\+Obj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa63061fc3b0b9a473a8b37269c66eb40}{get\+Branch}} (int handle)
+\item 
+int \mbox{\hyperlink{class_olx_a_p_i_model_obj_a21a12bd51820f6e39a658029314047b0}{find\+Branch\+Handle\+By\+Device\+Handle}} (int dev\+Handle)
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a48492e90905af11e35517d1a6eca4139}{get\+Branch\+Handles}} ()
 \end{DoxyCompactItemize}
 
 
@@ -74,6 +79,13 @@ vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86
 \doxysubsubsection{\texorpdfstring{OlxAPIModelObj()}{OlxAPIModelObj()}}
 {\footnotesize\ttfamily Olx\+APIModel\+Obj\+::\+Olx\+APIModel\+Obj (\begin{DoxyParamCaption}\item[{string \&}]{file\+Path,  }\item[{bool}]{readonly }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_olx_a_p_i_model_obj_ab86b410fdd3197723f3f55fabe4ef2de_cgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_olx_a_p_i_model_obj_a5de949a39e547ccd38ad4d7ee955b65e}\label{class_olx_a_p_i_model_obj_a5de949a39e547ccd38ad4d7ee955b65e} 
 \index{OlxAPIModelObj@{OlxAPIModelObj}!````~OlxAPIModelObj@{\texorpdfstring{$\sim$}{\string~}OlxAPIModelObj}}
 \index{````~OlxAPIModelObj@{\texorpdfstring{$\sim$}{\string~}OlxAPIModelObj}!OlxAPIModelObj@{OlxAPIModelObj}}
@@ -88,6 +100,12 @@ vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86
 \index{find3WXFMRHandleByName@{find3WXFMRHandleByName}!OlxAPIModelObj@{OlxAPIModelObj}}
 \doxysubsubsection{\texorpdfstring{find3WXFMRHandleByName()}{find3WXFMRHandleByName()}}
 {\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::find3\+WXFMRHandle\+By\+Name (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a21a12bd51820f6e39a658029314047b0}\label{class_olx_a_p_i_model_obj_a21a12bd51820f6e39a658029314047b0} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!findBranchHandleByDeviceHandle@{findBranchHandleByDeviceHandle}}
+\index{findBranchHandleByDeviceHandle@{findBranchHandleByDeviceHandle}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{findBranchHandleByDeviceHandle()}{findBranchHandleByDeviceHandle()}}
+{\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::find\+Branch\+Handle\+By\+Device\+Handle (\begin{DoxyParamCaption}\item[{int}]{dev\+Handle }\end{DoxyParamCaption})}
 
 \Hypertarget{class_olx_a_p_i_model_obj_a9bd3711982b2d352ca5bf5313ee2a67a}\label{class_olx_a_p_i_model_obj_a9bd3711982b2d352ca5bf5313ee2a67a} 
 \index{OlxAPIModelObj@{OlxAPIModelObj}!findBusHandleByName@{findBusHandleByName}}
@@ -125,6 +143,18 @@ vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86
 \doxysubsubsection{\texorpdfstring{get3WXFMRHandles()}{get3WXFMRHandles()}}
 {\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get3\+WXFMRHandles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\Hypertarget{class_olx_a_p_i_model_obj_aa63061fc3b0b9a473a8b37269c66eb40}\label{class_olx_a_p_i_model_obj_aa63061fc3b0b9a473a8b37269c66eb40} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getBranch@{getBranch}}
+\index{getBranch@{getBranch}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getBranch()}{getBranch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_branch_obj}{Olx\+APIBranch\+Obj}} \texorpdfstring{$\ast$}{*} Olx\+APIModel\+Obj\+::get\+Branch (\begin{DoxyParamCaption}\item[{int}]{handle }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_model_obj_a48492e90905af11e35517d1a6eca4139}\label{class_olx_a_p_i_model_obj_a48492e90905af11e35517d1a6eca4139} 
+\index{OlxAPIModelObj@{OlxAPIModelObj}!getBranchHandles@{getBranchHandles}}
+\index{getBranchHandles@{getBranchHandles}!OlxAPIModelObj@{OlxAPIModelObj}}
+\doxysubsubsection{\texorpdfstring{getBranchHandles()}{getBranchHandles()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+Branch\+Handles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \Hypertarget{class_olx_a_p_i_model_obj_a970ceaac65450aca4f4203410bbada9d}\label{class_olx_a_p_i_model_obj_a970ceaac65450aca4f4203410bbada9d} 
 \index{OlxAPIModelObj@{OlxAPIModelObj}!getBus@{getBus}}
 \index{getBus@{getBus}!OlxAPIModelObj@{OlxAPIModelObj}}
@@ -137,6 +167,13 @@ vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86
 \doxysubsubsection{\texorpdfstring{getBusHandles()}{getBusHandles()}}
 {\footnotesize\ttfamily vector$<$ int $>$ Olx\+APIModel\+Obj\+::get\+Bus\+Handles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_olx_a_p_i_model_obj_abdac212869b032b82443f84e44857696_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a}\label{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a} 
 \index{OlxAPIModelObj@{OlxAPIModelObj}!getGenerator@{getGenerator}}
 \index{getGenerator@{getGenerator}!OlxAPIModelObj@{OlxAPIModelObj}}
@@ -209,16 +246,14 @@ vector$<$ int $>$ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86
 \doxysubsubsection{\texorpdfstring{saveFile()}{saveFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily int Olx\+APIModel\+Obj\+::save\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=209pt]{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

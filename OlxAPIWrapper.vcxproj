@@ -186,7 +186,6 @@ xcopy /y /d  "C:\Program Files (x86)\ASPEN\1LPFv15\hasp_rt.exe" "$(TargetDir)"</
     <ClCompile Include="OlxAPIXFMRObj.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="csv.h" />
     <ClInclude Include="OlxAPI3PValue.h" />
     <ClInclude Include="OlxAPIBranchObj.h" />
     <ClInclude Include="OlxAPIBusObj.h" />

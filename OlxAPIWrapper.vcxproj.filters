@@ -1,3 +1,135 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="OlxAPI3PValue.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIBranchObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIBusObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIFault.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIFaultResult.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGeneratorObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType1Obj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType2Obj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType3Obj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType4Obj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIGraphicsType5Obj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPILineObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIModelObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPISeriesReactorObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIShuntCapacitorObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIVersion.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIXFMR3WObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="OlxAPIXFMRObj.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OlxAPI3PValue.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIBranchObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIBusObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIFault.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIFaultResult.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGeneratorObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType1Obj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType2Obj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType3Obj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType4Obj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIGraphicsType5Obj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPILineObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIModelObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPISeriesReactorObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIShuntCapacitorObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIVersion.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIXFMR3WObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="OlxAPIXFMRObj.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{f67147fc-3ea8-4922-9e0e-cac55675fb75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{7a8d94bf-5c28-4d25-88d2-d16ccb7d8f8b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>

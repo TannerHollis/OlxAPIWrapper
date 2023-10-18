@@ -13,50 +13,48 @@ public:
 	*/
 	typedef enum FaultConnection
 	{
-		FLT_NONE = 0, /**< Specify no fault for all types. */
-		FLT_3LG = 1, /**<Specify 3-Phase fault. Only use with setFaultConnection3LG(). */
-		FLT_2LG_BC = 1, /**< Specify 2LG fault, B to C fault. Only use with setFaultConnection2LG().*/
-		FLT_2LG_CA = 2, /**< Specify 2LG fault, C to A fault. Only use with setFaultConnection2LG().*/
-		FLT_2LG_AB = 3, /**< Specify 2LG fault, A to B fault. Only use with setFaultConnection2LG().*/
-		FLT_1LG_A = 1, /**< Specify 1LG fault, A fault. Only use with setFaultConnection1LG().*/
-		FLT_1LG_B = 2, /**< Specify 1LG fault, B fault. Only use with setFaultConnection1LG().*/
-		FLT_1LG_C = 3, /**< Specify 1LG fault, C fault. Only use with setFaultConnection1LG().*/
-		FLT_LL_BC = 1, /**< Specify LL fault, B to C fault. Only use with setFaultConnectionLL().*/
-		FLT_LL_CA = 2, /**< Specify LL fault, C to A fault. Only use with setFaultConnectionLL().*/
-		FLT_LL_AB = 2  /**< Specify LL fault, A to B fault. Only use with setFaultConnectionLL().*/
+		FLT_3LG = 0, /**< Specify 3-Phase fault */
+		FLT_2LG_BC = 1, /**< Specify 2LG fault, B to C fault */
+		FLT_2LG_CA = 2, /**< Specify 2LG fault, C to A fault */
+		FLT_2LG_AB = 3, /**< Specify 2LG fault, A to B fault */
+		FLT_1LG_A = 4, /**< Specify 1LG fault, A fault */
+		FLT_1LG_B = 5, /**< Specify 1LG fault, B fault */
+		FLT_1LG_C = 6, /**< Specify 1LG fault, C fault */
+		FLT_LL_BC = 7, /**< Specify LL fault, B to C fault */
+		FLT_LL_CA = 8, /**< Specify LL fault, C to A fault */
+		FLT_LL_AB = 9  /**< Specify LL fault, A to B fault */
 	} FaultConnection;
+
+	typedef enum FaultType
+	{
+		FLT_CLOSE_IN = 0, /**< Specify Close-In fault */
+		FLT_CLOSE_IN_WO = 1, /**< Specify Close-In fault with outages */
+		FLT_CLOSE_IN_EO = 2, /**< Specify Close-In, End-Open fault */
+		FLT_CLOSE_IN_EO_WO = 3, /**< Specify Close-In, End-Open fault with outages */
+		FLT_INT = 4, /**< Specify Intermediate fault */
+		FLT_INT_WO = 5, /**< Specify Intermediate fault with outages */
+		FLT_INT_EO = 6, /**< Specify Intermediate, End-Open fault */
+		FLT_INT_EO_WO = 7, /**< Specify Intermediate, End-Open fault with outages */
+	} FaultType;
 
 	OlxAPIFault(int devHandle);
 	OlxAPIFault(OlxAPIBusObj* bus);
 	OlxAPIFault(OlxAPIBranchObj* bus);
+	OlxAPIFault(OlxAPIObj* bus);
 
 	~OlxAPIFault();
 
+	void setFaultConnection(FaultConnection connection);
+
+	void setFaultType(FaultType type, double intPct = 0);
+
 	int runFault();
-
-	void setCloseInFault(bool withOutage);
-
-	void setCloseInFaultWithEndOpen(bool withOutage);
 
 	void addOutage(int handle);
 
 	void setFaultImpedance(double r, double x);
 
-	void setFaultConnection3LG(FaultConnection connection);
-
-	void setFaultConnection1LG(FaultConnection connection);
-
-	void setFaultConnection2LG(FaultConnection connection);
-
-	void setFaultConnectionLL(FaultConnection connection);
-
-	OlxAPIFaultResult* getResult(int index)
-	{
-		if (index > nResults || index < 0)
-			return nullptr;
-		else
-			return &results[index];
-	}
+	OlxAPIFaultResult* getResult(int index);
 
 	int getNResults();
 
@@ -65,13 +63,15 @@ private:
 	int fltHandleMin;
 	int fltHandleMax;
 
+	FaultConnection fltConnection;
+
 	union {
 		struct
 		{
-			FaultConnection flt3lg; /**< Fault connection flag. See setFaultConnection3LG() */
-			FaultConnection flt2lg; /**< Fault connection flag. See setFaultConnection2LG() */
-			FaultConnection flt1lg; /**< Fault connection flag. See setFaultConnection1LG() */
-			FaultConnection fltll; /**< Fault connection flag. See setFaultConnectionLL() */
+			int flt3lg; /**< Fault connection flag */
+			int flt2lg; /**< Fault connection flag */
+			int flt1lg; /**< Fault connection flag */
+			int fltll; /**< Fault connection flag */
 		};
 		int _fltConns[4];
 	} faultConnections;

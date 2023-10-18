@@ -7,8 +7,15 @@ var searchData=
   ['flt_5f2lg_5fbc_4',['FLT_2LG_BC',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba0ea366d1923eea39c2f691e1d6dd4426',1,'OlxAPIFault']]],
   ['flt_5f2lg_5fca_5',['FLT_2LG_CA',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba774ff1f2356a2e88e7f0e6be008a7500',1,'OlxAPIFault']]],
   ['flt_5f3lg_6',['FLT_3LG',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c',1,'OlxAPIFault']]],
-  ['flt_5fll_5fab_7',['FLT_LL_AB',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba312b045b12031f83e6c590a32b24d579',1,'OlxAPIFault']]],
-  ['flt_5fll_5fbc_8',['FLT_LL_BC',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba038d660046741e67bc00d8acda7fb2f1',1,'OlxAPIFault']]],
-  ['flt_5fll_5fca_9',['FLT_LL_CA',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba33a943a6aa51e68c0510d6be990c6b76',1,'OlxAPIFault']]],
-  ['flt_5fnone_10',['FLT_NONE',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba15537a18433a820cc1f8db94329020b8',1,'OlxAPIFault']]]
+  ['flt_5fclose_5fin_7',['FLT_CLOSE_IN',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821a614f936dda2042144836a26ad450f18c',1,'OlxAPIFault']]],
+  ['flt_5fclose_5fin_5feo_8',['FLT_CLOSE_IN_EO',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821a498ecf6737e73998c32f5e59b10d892f',1,'OlxAPIFault']]],
+  ['flt_5fclose_5fin_5feo_5fwo_9',['FLT_CLOSE_IN_EO_WO',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821a89ea80fc73ae8b243ce422a8fda3ec33',1,'OlxAPIFault']]],
+  ['flt_5fclose_5fin_5fwo_10',['FLT_CLOSE_IN_WO',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821ac3150037e9f2da83d8348826ea538b4a',1,'OlxAPIFault']]],
+  ['flt_5fint_11',['FLT_INT',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821acfb355fca7f660b83ec89dcdb3a0fa0f',1,'OlxAPIFault']]],
+  ['flt_5fint_5feo_12',['FLT_INT_EO',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70',1,'OlxAPIFault']]],
+  ['flt_5fint_5feo_5fwo_13',['FLT_INT_EO_WO',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821afd3004ab296bdbe152cea409dfabecc5',1,'OlxAPIFault']]],
+  ['flt_5fint_5fwo_14',['FLT_INT_WO',['../class_olx_a_p_i_fault.html#a1586ef3c728e26709ba56b12f0c81821a534d5fe8a8aa53123e0bae41d2742234',1,'OlxAPIFault']]],
+  ['flt_5fll_5fab_15',['FLT_LL_AB',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba312b045b12031f83e6c590a32b24d579',1,'OlxAPIFault']]],
+  ['flt_5fll_5fbc_16',['FLT_LL_BC',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba038d660046741e67bc00d8acda7fb2f1',1,'OlxAPIFault']]],
+  ['flt_5fll_5fca_17',['FLT_LL_CA',['../class_olx_a_p_i_fault.html#af8f8a7664fb38a3cddcfb4337253b6aba33a943a6aa51e68c0510d6be990c6b76',1,'OlxAPIFault']]]
 ];

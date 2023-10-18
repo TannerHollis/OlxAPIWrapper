@@ -6,8 +6,7 @@
 
 
 
-Collaboration diagram for Olx\+APIFault\+:
-\nopagebreak
+Collaboration diagram for Olx\+APIFault\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,22 +17,35 @@ Collaboration diagram for Olx\+APIFault\+:
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} \{ \newline
-\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba15537a18433a820cc1f8db94329020b8}{FLT\+\_\+\+NONE}} = 0
-, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c}{FLT\+\_\+3\+LG}} = 1
+\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c}{FLT\+\_\+3\+LG}} = 0
 , \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba0ea366d1923eea39c2f691e1d6dd4426}{FLT\+\_\+2\+LG\+\_\+\+BC}} = 1
 , \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba774ff1f2356a2e88e7f0e6be008a7500}{FLT\+\_\+2\+LG\+\_\+\+CA}} = 2
+, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba329da5009792e76e72db4b27c95f84a8}{FLT\+\_\+2\+LG\+\_\+\+AB}} = 3
 , \newline
-\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba329da5009792e76e72db4b27c95f84a8}{FLT\+\_\+2\+LG\+\_\+\+AB}} = 3
-, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ababa1937a175392b967eaa7b935366149a}{FLT\+\_\+1\+LG\+\_\+A}} = 1
-, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1e9f2f3a5f4184643662a6b577658b27}{FLT\+\_\+1\+LG\+\_\+B}} = 2
-, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1286673be9606ef06f00c4f5731522d0}{FLT\+\_\+1\+LG\+\_\+C}} = 3
+\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ababa1937a175392b967eaa7b935366149a}{FLT\+\_\+1\+LG\+\_\+A}} = 4
+, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1e9f2f3a5f4184643662a6b577658b27}{FLT\+\_\+1\+LG\+\_\+B}} = 5
+, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1286673be9606ef06f00c4f5731522d0}{FLT\+\_\+1\+LG\+\_\+C}} = 6
+, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba038d660046741e67bc00d8acda7fb2f1}{FLT\+\_\+\+LL\+\_\+\+BC}} = 7
 , \newline
-\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba038d660046741e67bc00d8acda7fb2f1}{FLT\+\_\+\+LL\+\_\+\+BC}} = 1
-, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba33a943a6aa51e68c0510d6be990c6b76}{FLT\+\_\+\+LL\+\_\+\+CA}} = 2
-, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba312b045b12031f83e6c590a32b24d579}{FLT\+\_\+\+LL\+\_\+\+AB}} = 2
+\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba33a943a6aa51e68c0510d6be990c6b76}{FLT\+\_\+\+LL\+\_\+\+CA}} = 8
+, \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba312b045b12031f83e6c590a32b24d579}{FLT\+\_\+\+LL\+\_\+\+AB}} = 9
+ \}
+\item 
+enum \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}{Fault\+Type}} \{ \newline
+\mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a614f936dda2042144836a26ad450f18c}{FLT\+\_\+\+CLOSE\+\_\+\+IN}} = 0
+, \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821ac3150037e9f2da83d8348826ea538b4a}{FLT\+\_\+\+CLOSE\+\_\+\+IN\+\_\+\+WO}} = 1
+, \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a498ecf6737e73998c32f5e59b10d892f}{FLT\+\_\+\+CLOSE\+\_\+\+IN\+\_\+\+EO}} = 2
+, \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a89ea80fc73ae8b243ce422a8fda3ec33}{FLT\+\_\+\+CLOSE\+\_\+\+IN\+\_\+\+EO\+\_\+\+WO}} = 3
+, \newline
+\mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821acfb355fca7f660b83ec89dcdb3a0fa0f}{FLT\+\_\+\+INT}} = 4
+, \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a534d5fe8a8aa53123e0bae41d2742234}{FLT\+\_\+\+INT\+\_\+\+WO}} = 5
+, \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70}{FLT\+\_\+\+INT\+\_\+\+EO}} = 6
+, \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821afd3004ab296bdbe152cea409dfabecc5}{FLT\+\_\+\+INT\+\_\+\+EO\+\_\+\+WO}} = 7
  \}
 \item 
 typedef enum \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Olx\+APIFault\+::\+Fault\+Connection}} \mbox{\hyperlink{class_olx_a_p_i_fault_a3e3cc426eba8f7e95a8017773b447aa6}{Fault\+Connection}}
+\item 
+typedef enum \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}{Olx\+APIFault\+::\+Fault\+Type}} \mbox{\hyperlink{class_olx_a_p_i_fault_add4113ec48769d3d3cb05792909055e0}{Fault\+Type}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -44,25 +56,19 @@ typedef enum \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb433725
 \item 
 \mbox{\hyperlink{class_olx_a_p_i_fault_ae8752fb855675855f50ab1935976e9f8}{Olx\+APIFault}} (\mbox{\hyperlink{class_olx_a_p_i_branch_obj}{Olx\+APIBranch\+Obj}} \texorpdfstring{$\ast$}{*}bus)
 \item 
+\mbox{\hyperlink{class_olx_a_p_i_fault_a7e51736a378ad11abc145f60646dc8b9}{Olx\+APIFault}} (\mbox{\hyperlink{class_olx_a_p_i_obj}{Olx\+APIObj}} \texorpdfstring{$\ast$}{*}bus)
+\item 
 \mbox{\hyperlink{class_olx_a_p_i_fault_ae4e2adbaf361381148490c96441ce27f}{\texorpdfstring{$\sim$}{\string~}\+Olx\+APIFault}} ()
 \item 
+void \mbox{\hyperlink{class_olx_a_p_i_fault_ac934fa70710a47d0c48cfbdabae887a0}{set\+Fault\+Connection}} (\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} connection)
+\item 
+void \mbox{\hyperlink{class_olx_a_p_i_fault_a28b31c6d9a8bf1d8d2a1037854896eff}{set\+Fault\+Type}} (\mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}{Fault\+Type}} type, double int\+Pct=0)
+\item 
 int \mbox{\hyperlink{class_olx_a_p_i_fault_af5b363876ee72dbdee77e19063a5023c}{run\+Fault}} ()
-\item 
-void \mbox{\hyperlink{class_olx_a_p_i_fault_a6e1dfd8be2875c646555f9e52c25293d}{set\+Close\+In\+Fault}} (bool with\+Outage)
-\item 
-void \mbox{\hyperlink{class_olx_a_p_i_fault_a3c88b34c6796cf65cf9fc17fdda33195}{set\+Close\+In\+Fault\+With\+End\+Open}} (bool with\+Outage)
 \item 
 void \mbox{\hyperlink{class_olx_a_p_i_fault_a314900abd9628acce6a07bc65f46e7a5}{add\+Outage}} (int handle)
 \item 
 void \mbox{\hyperlink{class_olx_a_p_i_fault_ab1996229d969d5ff4c7a3750ac314fa8}{set\+Fault\+Impedance}} (double \mbox{\hyperlink{class_olx_a_p_i_fault_acffc97091697646e639a2372cfae6714}{r}}, double \mbox{\hyperlink{class_olx_a_p_i_fault_ac76ef038afb292c7044732949273e8ad}{x}})
-\item 
-void \mbox{\hyperlink{class_olx_a_p_i_fault_a88ca8dd7c245a94a6feec0920b28d716}{set\+Fault\+Connection3\+LG}} (\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} connection)
-\item 
-void \mbox{\hyperlink{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c}{set\+Fault\+Connection1\+LG}} (\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} connection)
-\item 
-void \mbox{\hyperlink{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd}{set\+Fault\+Connection2\+LG}} (\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} connection)
-\item 
-void \mbox{\hyperlink{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172}{set\+Fault\+Connection\+LL}} (\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} connection)
 \item 
 \mbox{\hyperlink{class_olx_a_p_i_fault_result}{Olx\+APIFault\+Result}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_olx_a_p_i_fault_ab048014859203c27149b0130d25ea985}{get\+Result}} (int index)
 \item 
@@ -77,7 +83,13 @@ int \mbox{\hyperlink{class_olx_a_p_i_fault_aa92b29b1532063729f682f53cde01cf0}{ge
 \doxysubsubsection{\texorpdfstring{FaultConnection}{FaultConnection}}
 {\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Olx\+APIFault\+::\+Fault\+Connection}} \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Olx\+APIFault\+::\+Fault\+Connection}}}
 
-Fault Connection Type This is used when configuring fault options. 
+Fault Connection Type This is used when configuring fault options. \Hypertarget{class_olx_a_p_i_fault_add4113ec48769d3d3cb05792909055e0}\label{class_olx_a_p_i_fault_add4113ec48769d3d3cb05792909055e0} 
+\index{OlxAPIFault@{OlxAPIFault}!FaultType@{FaultType}}
+\index{FaultType@{FaultType}!OlxAPIFault@{OlxAPIFault}}
+\doxysubsubsection{\texorpdfstring{FaultType}{FaultType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}{Olx\+APIFault\+::\+Fault\+Type}} \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}{Olx\+APIFault\+::\+Fault\+Type}}}
+
+
 
 \doxysubsection{Member Enumeration Documentation}
 \Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab} 
@@ -87,48 +99,84 @@ Fault Connection Type This is used when configuring fault options.
 {\footnotesize\ttfamily enum \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Olx\+APIFault\+::\+Fault\+Connection}}}
 
 Fault Connection Type This is used when configuring fault options. \begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_NONE@{FLT\_NONE}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_NONE@{FLT\_NONE}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba15537a18433a820cc1f8db94329020b8}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba15537a18433a820cc1f8db94329020b8} 
-FLT\+\_\+\+NONE&Specify no fault for all types. \\
-\hline
-
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_3LG@{FLT\_3LG}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_3LG@{FLT\_3LG}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c} 
-FLT\+\_\+3\+LG&Specify 3-\/Phase fault. Only use with \doxylink{class_olx_a_p_i_fault_a88ca8dd7c245a94a6feec0920b28d716}{set\+Fault\+Connection3\+LG()}. \\
+FLT\+\_\+3\+LG&Specify 3-\/Phase fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_2LG\_BC@{FLT\_2LG\_BC}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_2LG\_BC@{FLT\_2LG\_BC}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba0ea366d1923eea39c2f691e1d6dd4426}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba0ea366d1923eea39c2f691e1d6dd4426} 
-FLT\+\_\+2\+LG\+\_\+\+BC&Specify 2LG fault, B to C fault. Only use with \doxylink{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd}{set\+Fault\+Connection2\+LG()}. \\
+FLT\+\_\+2\+LG\+\_\+\+BC&Specify 2LG fault, B to C fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_2LG\_CA@{FLT\_2LG\_CA}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_2LG\_CA@{FLT\_2LG\_CA}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba774ff1f2356a2e88e7f0e6be008a7500}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba774ff1f2356a2e88e7f0e6be008a7500} 
-FLT\+\_\+2\+LG\+\_\+\+CA&Specify 2LG fault, C to A fault. Only use with \doxylink{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd}{set\+Fault\+Connection2\+LG()}. \\
+FLT\+\_\+2\+LG\+\_\+\+CA&Specify 2LG fault, C to A fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_2LG\_AB@{FLT\_2LG\_AB}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_2LG\_AB@{FLT\_2LG\_AB}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba329da5009792e76e72db4b27c95f84a8}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba329da5009792e76e72db4b27c95f84a8} 
-FLT\+\_\+2\+LG\+\_\+\+AB&Specify 2LG fault, A to B fault. Only use with \doxylink{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd}{set\+Fault\+Connection2\+LG()}. \\
+FLT\+\_\+2\+LG\+\_\+\+AB&Specify 2LG fault, A to B fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_1LG\_A@{FLT\_1LG\_A}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_1LG\_A@{FLT\_1LG\_A}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ababa1937a175392b967eaa7b935366149a}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ababa1937a175392b967eaa7b935366149a} 
-FLT\+\_\+1\+LG\+\_\+A&Specify 1LG fault, A fault. Only use with \doxylink{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c}{set\+Fault\+Connection1\+LG()}. \\
+FLT\+\_\+1\+LG\+\_\+A&Specify 1LG fault, A fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_1LG\_B@{FLT\_1LG\_B}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_1LG\_B@{FLT\_1LG\_B}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1e9f2f3a5f4184643662a6b577658b27}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1e9f2f3a5f4184643662a6b577658b27} 
-FLT\+\_\+1\+LG\+\_\+B&Specify 1LG fault, B fault. Only use with \doxylink{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c}{set\+Fault\+Connection1\+LG()}. \\
+FLT\+\_\+1\+LG\+\_\+B&Specify 1LG fault, B fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_1LG\_C@{FLT\_1LG\_C}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_1LG\_C@{FLT\_1LG\_C}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1286673be9606ef06f00c4f5731522d0}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba1286673be9606ef06f00c4f5731522d0} 
-FLT\+\_\+1\+LG\+\_\+C&Specify 1LG fault, C fault. Only use with \doxylink{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c}{set\+Fault\+Connection1\+LG()}. \\
+FLT\+\_\+1\+LG\+\_\+C&Specify 1LG fault, C fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_LL\_BC@{FLT\_LL\_BC}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_LL\_BC@{FLT\_LL\_BC}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba038d660046741e67bc00d8acda7fb2f1}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba038d660046741e67bc00d8acda7fb2f1} 
-FLT\+\_\+\+LL\+\_\+\+BC&Specify LL fault, B to C fault. Only use with \doxylink{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172}{set\+Fault\+Connection\+LL()}. \\
+FLT\+\_\+\+LL\+\_\+\+BC&Specify LL fault, B to C fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_LL\_CA@{FLT\_LL\_CA}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_LL\_CA@{FLT\_LL\_CA}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba33a943a6aa51e68c0510d6be990c6b76}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba33a943a6aa51e68c0510d6be990c6b76} 
-FLT\+\_\+\+LL\+\_\+\+CA&Specify LL fault, C to A fault. Only use with \doxylink{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172}{set\+Fault\+Connection\+LL()}. \\
+FLT\+\_\+\+LL\+\_\+\+CA&Specify LL fault, C to A fault \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_LL\_AB@{FLT\_LL\_AB}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_LL\_AB@{FLT\_LL\_AB}}}\Hypertarget{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba312b045b12031f83e6c590a32b24d579}\label{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6aba312b045b12031f83e6c590a32b24d579} 
-FLT\+\_\+\+LL\+\_\+\+AB&Specify LL fault, A to B fault. Only use with \doxylink{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172}{set\+Fault\+Connection\+LL()}. \\
+FLT\+\_\+\+LL\+\_\+\+AB&Specify LL fault, A to B fault \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821} 
+\index{OlxAPIFault@{OlxAPIFault}!FaultType@{FaultType}}
+\index{FaultType@{FaultType}!OlxAPIFault@{OlxAPIFault}}
+\doxysubsubsection{\texorpdfstring{FaultType}{FaultType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}{Olx\+APIFault\+::\+Fault\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_CLOSE\_IN@{FLT\_CLOSE\_IN}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_CLOSE\_IN@{FLT\_CLOSE\_IN}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a614f936dda2042144836a26ad450f18c}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a614f936dda2042144836a26ad450f18c} 
+FLT\+\_\+\+CLOSE\+\_\+\+IN&Specify Close-\/\+In fault \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_CLOSE\_IN\_WO@{FLT\_CLOSE\_IN\_WO}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_CLOSE\_IN\_WO@{FLT\_CLOSE\_IN\_WO}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821ac3150037e9f2da83d8348826ea538b4a}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821ac3150037e9f2da83d8348826ea538b4a} 
+FLT\+\_\+\+CLOSE\+\_\+\+IN\+\_\+\+WO&Specify Close-\/\+In fault with outages \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_CLOSE\_IN\_EO@{FLT\_CLOSE\_IN\_EO}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_CLOSE\_IN\_EO@{FLT\_CLOSE\_IN\_EO}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a498ecf6737e73998c32f5e59b10d892f}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a498ecf6737e73998c32f5e59b10d892f} 
+FLT\+\_\+\+CLOSE\+\_\+\+IN\+\_\+\+EO&Specify Close-\/\+In, End-\/\+Open fault \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_CLOSE\_IN\_EO\_WO@{FLT\_CLOSE\_IN\_EO\_WO}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_CLOSE\_IN\_EO\_WO@{FLT\_CLOSE\_IN\_EO\_WO}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a89ea80fc73ae8b243ce422a8fda3ec33}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a89ea80fc73ae8b243ce422a8fda3ec33} 
+FLT\+\_\+\+CLOSE\+\_\+\+IN\+\_\+\+EO\+\_\+\+WO&Specify Close-\/\+In, End-\/\+Open fault with outages \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_INT@{FLT\_INT}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_INT@{FLT\_INT}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821acfb355fca7f660b83ec89dcdb3a0fa0f}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821acfb355fca7f660b83ec89dcdb3a0fa0f} 
+FLT\+\_\+\+INT&Specify Intermediate fault \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_INT\_WO@{FLT\_INT\_WO}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_INT\_WO@{FLT\_INT\_WO}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a534d5fe8a8aa53123e0bae41d2742234}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a534d5fe8a8aa53123e0bae41d2742234} 
+FLT\+\_\+\+INT\+\_\+\+WO&Specify Intermediate fault with outages \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_INT\_EO@{FLT\_INT\_EO}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_INT\_EO@{FLT\_INT\_EO}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70} 
+FLT\+\_\+\+INT\+\_\+\+EO&Specify Intermediate, End-\/\+Open fault \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLT\_INT\_EO\_WO@{FLT\_INT\_EO\_WO}!OlxAPIFault@{OlxAPIFault}}\index{OlxAPIFault@{OlxAPIFault}!FLT\_INT\_EO\_WO@{FLT\_INT\_EO\_WO}}}\Hypertarget{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821afd3004ab296bdbe152cea409dfabecc5}\label{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821afd3004ab296bdbe152cea409dfabecc5} 
+FLT\+\_\+\+INT\+\_\+\+EO\+\_\+\+WO&Specify Intermediate, End-\/\+Open fault with outages \\
 \hline
 
 \end{DoxyEnumFields}
@@ -138,20 +186,26 @@ FLT\+\_\+\+LL\+\_\+\+AB&Specify LL fault, A to B fault. Only use with \doxylink{
 \Hypertarget{class_olx_a_p_i_fault_a80f79c424e6215171350006e22d5b801}\label{class_olx_a_p_i_fault_a80f79c424e6215171350006e22d5b801} 
 \index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
 \index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{OlxAPIFault()}{OlxAPIFault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+\doxysubsubsection{\texorpdfstring{OlxAPIFault()}{OlxAPIFault()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily Olx\+APIFault\+::\+Olx\+APIFault (\begin{DoxyParamCaption}\item[{int}]{dev\+Handle }\end{DoxyParamCaption})}
 
 \Hypertarget{class_olx_a_p_i_fault_a63088549dc6d3d570bad0b168f63e8d2}\label{class_olx_a_p_i_fault_a63088549dc6d3d570bad0b168f63e8d2} 
 \index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
 \index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{OlxAPIFault()}{OlxAPIFault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\doxysubsubsection{\texorpdfstring{OlxAPIFault()}{OlxAPIFault()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily Olx\+APIFault\+::\+Olx\+APIFault (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_bus_obj}{Olx\+APIBus\+Obj}} \texorpdfstring{$\ast$}{*}}]{bus }\end{DoxyParamCaption})}
 
 \Hypertarget{class_olx_a_p_i_fault_ae8752fb855675855f50ab1935976e9f8}\label{class_olx_a_p_i_fault_ae8752fb855675855f50ab1935976e9f8} 
 \index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
 \index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{OlxAPIFault()}{OlxAPIFault()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+\doxysubsubsection{\texorpdfstring{OlxAPIFault()}{OlxAPIFault()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily Olx\+APIFault\+::\+Olx\+APIFault (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_branch_obj}{Olx\+APIBranch\+Obj}} \texorpdfstring{$\ast$}{*}}]{bus }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_fault_a7e51736a378ad11abc145f60646dc8b9}\label{class_olx_a_p_i_fault_a7e51736a378ad11abc145f60646dc8b9} 
+\index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
+\index{OlxAPIFault@{OlxAPIFault}!OlxAPIFault@{OlxAPIFault}}
+\doxysubsubsection{\texorpdfstring{OlxAPIFault()}{OlxAPIFault()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Olx\+APIFault\+::\+Olx\+APIFault (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_obj}{Olx\+APIObj}} \texorpdfstring{$\ast$}{*}}]{bus }\end{DoxyParamCaption})}
 
 \Hypertarget{class_olx_a_p_i_fault_ae4e2adbaf361381148490c96441ce27f}\label{class_olx_a_p_i_fault_ae4e2adbaf361381148490c96441ce27f} 
 \index{OlxAPIFault@{OlxAPIFault}!````~OlxAPIFault@{\texorpdfstring{$\sim$}{\string~}OlxAPIFault}}
@@ -178,7 +232,7 @@ FLT\+\_\+\+LL\+\_\+\+AB&Specify LL fault, A to B fault. Only use with \doxylink{
 \index{OlxAPIFault@{OlxAPIFault}!getResult@{getResult}}
 \index{getResult@{getResult}!OlxAPIFault@{OlxAPIFault}}
 \doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_fault_result}{Olx\+APIFault\+Result}} \texorpdfstring{$\ast$}{*} Olx\+APIFault\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_fault_result}{Olx\+APIFault\+Result}} \texorpdfstring{$\ast$}{*} Olx\+APIFault\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
 
 \Hypertarget{class_olx_a_p_i_fault_af5b363876ee72dbdee77e19063a5023c}\label{class_olx_a_p_i_fault_af5b363876ee72dbdee77e19063a5023c} 
 \index{OlxAPIFault@{OlxAPIFault}!runFault@{runFault}}
@@ -186,47 +240,23 @@ FLT\+\_\+\+LL\+\_\+\+AB&Specify LL fault, A to B fault. Only use with \doxylink{
 \doxysubsubsection{\texorpdfstring{runFault()}{runFault()}}
 {\footnotesize\ttfamily int Olx\+APIFault\+::run\+Fault (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{class_olx_a_p_i_fault_a6e1dfd8be2875c646555f9e52c25293d}\label{class_olx_a_p_i_fault_a6e1dfd8be2875c646555f9e52c25293d} 
-\index{OlxAPIFault@{OlxAPIFault}!setCloseInFault@{setCloseInFault}}
-\index{setCloseInFault@{setCloseInFault}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{setCloseInFault()}{setCloseInFault()}}
-{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Close\+In\+Fault (\begin{DoxyParamCaption}\item[{bool}]{with\+Outage }\end{DoxyParamCaption})}
-
-\Hypertarget{class_olx_a_p_i_fault_a3c88b34c6796cf65cf9fc17fdda33195}\label{class_olx_a_p_i_fault_a3c88b34c6796cf65cf9fc17fdda33195} 
-\index{OlxAPIFault@{OlxAPIFault}!setCloseInFaultWithEndOpen@{setCloseInFaultWithEndOpen}}
-\index{setCloseInFaultWithEndOpen@{setCloseInFaultWithEndOpen}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{setCloseInFaultWithEndOpen()}{setCloseInFaultWithEndOpen()}}
-{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Close\+In\+Fault\+With\+End\+Open (\begin{DoxyParamCaption}\item[{bool}]{with\+Outage }\end{DoxyParamCaption})}
-
-\Hypertarget{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c}\label{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c} 
-\index{OlxAPIFault@{OlxAPIFault}!setFaultConnection1LG@{setFaultConnection1LG}}
-\index{setFaultConnection1LG@{setFaultConnection1LG}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{setFaultConnection1LG()}{setFaultConnection1LG()}}
-{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Fault\+Connection1\+LG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}}}]{connection }\end{DoxyParamCaption})}
-
-\Hypertarget{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd}\label{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd} 
-\index{OlxAPIFault@{OlxAPIFault}!setFaultConnection2LG@{setFaultConnection2LG}}
-\index{setFaultConnection2LG@{setFaultConnection2LG}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{setFaultConnection2LG()}{setFaultConnection2LG()}}
-{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Fault\+Connection2\+LG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}}}]{connection }\end{DoxyParamCaption})}
-
-\Hypertarget{class_olx_a_p_i_fault_a88ca8dd7c245a94a6feec0920b28d716}\label{class_olx_a_p_i_fault_a88ca8dd7c245a94a6feec0920b28d716} 
-\index{OlxAPIFault@{OlxAPIFault}!setFaultConnection3LG@{setFaultConnection3LG}}
-\index{setFaultConnection3LG@{setFaultConnection3LG}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{setFaultConnection3LG()}{setFaultConnection3LG()}}
-{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Fault\+Connection3\+LG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}}}]{connection }\end{DoxyParamCaption})}
-
-\Hypertarget{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172}\label{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172} 
-\index{OlxAPIFault@{OlxAPIFault}!setFaultConnectionLL@{setFaultConnectionLL}}
-\index{setFaultConnectionLL@{setFaultConnectionLL}!OlxAPIFault@{OlxAPIFault}}
-\doxysubsubsection{\texorpdfstring{setFaultConnectionLL()}{setFaultConnectionLL()}}
-{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Fault\+Connection\+LL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}}}]{connection }\end{DoxyParamCaption})}
+\Hypertarget{class_olx_a_p_i_fault_ac934fa70710a47d0c48cfbdabae887a0}\label{class_olx_a_p_i_fault_ac934fa70710a47d0c48cfbdabae887a0} 
+\index{OlxAPIFault@{OlxAPIFault}!setFaultConnection@{setFaultConnection}}
+\index{setFaultConnection@{setFaultConnection}!OlxAPIFault@{OlxAPIFault}}
+\doxysubsubsection{\texorpdfstring{setFaultConnection()}{setFaultConnection()}}
+{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Fault\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}}}]{connection }\end{DoxyParamCaption})}
 
 \Hypertarget{class_olx_a_p_i_fault_ab1996229d969d5ff4c7a3750ac314fa8}\label{class_olx_a_p_i_fault_ab1996229d969d5ff4c7a3750ac314fa8} 
 \index{OlxAPIFault@{OlxAPIFault}!setFaultImpedance@{setFaultImpedance}}
 \index{setFaultImpedance@{setFaultImpedance}!OlxAPIFault@{OlxAPIFault}}
 \doxysubsubsection{\texorpdfstring{setFaultImpedance()}{setFaultImpedance()}}
 {\footnotesize\ttfamily void Olx\+APIFault\+::set\+Fault\+Impedance (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+\Hypertarget{class_olx_a_p_i_fault_a28b31c6d9a8bf1d8d2a1037854896eff}\label{class_olx_a_p_i_fault_a28b31c6d9a8bf1d8d2a1037854896eff} 
+\index{OlxAPIFault@{OlxAPIFault}!setFaultType@{setFaultType}}
+\index{setFaultType@{setFaultType}!OlxAPIFault@{OlxAPIFault}}
+\doxysubsubsection{\texorpdfstring{setFaultType()}{setFaultType()}}
+{\footnotesize\ttfamily void Olx\+APIFault\+::set\+Fault\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821}{Fault\+Type}}}]{type,  }\item[{double}]{int\+Pct = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 
@@ -297,31 +327,31 @@ Set both auto\+Seq\+From = 0 and auto\+Seq\+To = 0 to run a single point interme
 \doxysubsubsection{\texorpdfstring{closeInWOutage}{closeInWOutage}}
 {\footnotesize\ttfamily double Olx\+APIFault\+::close\+In\+WOutage}
 
-0 -\/ reset, 1 -\/ set \Hypertarget{class_olx_a_p_i_fault_a2ab9a4f97435c3c9b646d0446ed42a99}\label{class_olx_a_p_i_fault_a2ab9a4f97435c3c9b646d0446ed42a99} 
+0 -\/ reset, 1 -\/ set \Hypertarget{class_olx_a_p_i_fault_ac2871eec4dfcee03cded59ad269419e0}\label{class_olx_a_p_i_fault_ac2871eec4dfcee03cded59ad269419e0} 
 \index{OlxAPIFault@{OlxAPIFault}!flt1lg@{flt1lg}}
 \index{flt1lg@{flt1lg}!OlxAPIFault@{OlxAPIFault}}
 \doxysubsubsection{\texorpdfstring{flt1lg}{flt1lg}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} Olx\+APIFault\+::flt1lg}
+{\footnotesize\ttfamily int Olx\+APIFault\+::flt1lg}
 
-Fault connection flag. See \doxylink{class_olx_a_p_i_fault_a7fcbcf2191f41abbe5a28695ae58b77c}{set\+Fault\+Connection1\+LG()} \Hypertarget{class_olx_a_p_i_fault_ab754c372f785ab86286f2397aa721461}\label{class_olx_a_p_i_fault_ab754c372f785ab86286f2397aa721461} 
+Fault connection flag \Hypertarget{class_olx_a_p_i_fault_ad67870c83816a19fedd903168bd95b4e}\label{class_olx_a_p_i_fault_ad67870c83816a19fedd903168bd95b4e} 
 \index{OlxAPIFault@{OlxAPIFault}!flt2lg@{flt2lg}}
 \index{flt2lg@{flt2lg}!OlxAPIFault@{OlxAPIFault}}
 \doxysubsubsection{\texorpdfstring{flt2lg}{flt2lg}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} Olx\+APIFault\+::flt2lg}
+{\footnotesize\ttfamily int Olx\+APIFault\+::flt2lg}
 
-Fault connection flag. See \doxylink{class_olx_a_p_i_fault_ab1c5b2cfea7715c3413db59a1bc111cd}{set\+Fault\+Connection2\+LG()} \Hypertarget{class_olx_a_p_i_fault_af93bc4facdcfed4c6d0a0eabcee61feb}\label{class_olx_a_p_i_fault_af93bc4facdcfed4c6d0a0eabcee61feb} 
+Fault connection flag \Hypertarget{class_olx_a_p_i_fault_ab0a8099524f5c4177d1e68f16452ffc6}\label{class_olx_a_p_i_fault_ab0a8099524f5c4177d1e68f16452ffc6} 
 \index{OlxAPIFault@{OlxAPIFault}!flt3lg@{flt3lg}}
 \index{flt3lg@{flt3lg}!OlxAPIFault@{OlxAPIFault}}
 \doxysubsubsection{\texorpdfstring{flt3lg}{flt3lg}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} Olx\+APIFault\+::flt3lg}
+{\footnotesize\ttfamily int Olx\+APIFault\+::flt3lg}
 
-Fault connection flag. See \doxylink{class_olx_a_p_i_fault_a88ca8dd7c245a94a6feec0920b28d716}{set\+Fault\+Connection3\+LG()} \Hypertarget{class_olx_a_p_i_fault_ab531fb8c3cf9535f96be6d31899ecffa}\label{class_olx_a_p_i_fault_ab531fb8c3cf9535f96be6d31899ecffa} 
+Fault connection flag \Hypertarget{class_olx_a_p_i_fault_a6579fbf8390f5543e491b65a270f543f}\label{class_olx_a_p_i_fault_a6579fbf8390f5543e491b65a270f543f} 
 \index{OlxAPIFault@{OlxAPIFault}!fltll@{fltll}}
 \index{fltll@{fltll}!OlxAPIFault@{OlxAPIFault}}
 \doxysubsubsection{\texorpdfstring{fltll}{fltll}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6ab}{Fault\+Connection}} Olx\+APIFault\+::fltll}
+{\footnotesize\ttfamily int Olx\+APIFault\+::fltll}
 
-Fault connection flag. See \doxylink{class_olx_a_p_i_fault_a17f394a201a129e15eadad7b5ed1e172}{set\+Fault\+Connection\+LL()} \Hypertarget{class_olx_a_p_i_fault_a191eec99c3acf27010b8dc8dd8f8854e}\label{class_olx_a_p_i_fault_a191eec99c3acf27010b8dc8dd8f8854e} 
+Fault connection flag \Hypertarget{class_olx_a_p_i_fault_a191eec99c3acf27010b8dc8dd8f8854e}\label{class_olx_a_p_i_fault_a191eec99c3acf27010b8dc8dd8f8854e} 
 \index{OlxAPIFault@{OlxAPIFault}!intermediate@{intermediate}}
 \index{intermediate@{intermediate}!OlxAPIFault@{OlxAPIFault}}
 \doxysubsubsection{\texorpdfstring{intermediate}{intermediate}}

@@ -294,7 +294,72 @@ F11.\+4   &1274   &IWP 500   &0.\+01922   &0.\+01758   &0.\+10348   &0.\+03803  
 F11.\+5   &6766   &IWP 4/0   &0.\+00991   &0.\+00907   &0.\+05335   &0.\+01961   &0   &0.\+00035   &0   &0.\+00035   &0   &0.\+00035   &0   &0.\+00035    \\\cline{1-15}
 F11.\+6   &3304   &IWP 4/0   &0.\+01295   &0.\+01185   &0.\+06972   &0.\+02563   &0   &0.\+00046   &0   &0.\+00046   &0   &0.\+00046   &0   &0.\+00046   \\\cline{1-15}
 \end{longtabu}
-Back to top\hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{TODO}{TODO}}\label{index_autotoc_md18}
+
+
+Back to top\hypertarget{index_autotoc_md18}{}\doxysubsection{\texorpdfstring{Running Faults}{Running Faults}}\label{index_autotoc_md18}
+Running faults with this API is made a little easier, with the help of objects. Once the model has been loaded, find a node at which a fault simulation is desired. Then Create a \doxylink{class_olx_a_p_i_fault}{Olx\+APIFault} class and pass the \doxylink{class_olx_a_p_i_obj}{Olx\+APIObj} as the argument for the constructor. This will build the fault scenario instruction by instruction. See the following example.
+
+\texorpdfstring{$\ast$}{*}\+Currently Branches faults are not working as the parameter for running a line, xfmr, 3w-\/xfmr, series reactor require a branch handle. Which at the moment, are current non enumerable with v15.\+7.\hypertarget{index_autotoc_md19}{}\doxysubsubsection{\texorpdfstring{Bus Fault}{Bus Fault}}\label{index_autotoc_md19}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{OlxAPIBusObj*\ bus\ =\ model-\/>findBus(\textcolor{stringliteral}{"{}T1\_HS"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{class_olx_a_p_i_fault}{OlxAPIFault}}\ fault(\&bus);}
+\DoxyCodeLine{fault.setCloseIn(\textcolor{keyword}{false});\ \textcolor{comment}{//\ Set\ bus\ fault\ without\ outage,\ for\ bus\ objects\ a\ close-\/in\ is\ a\ bus\ fault.}}
+\DoxyCodeLine{fault.setFaultConnection1LG(OlxAPIFault::FaultConnection::FLT\_1LG\_A);\ \textcolor{comment}{//\ Set\ fault\ to\ 1LG\ fault\ on\ A-\/Phase/Ground}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ nFaults\ =\ fault.runFault();\ \textcolor{comment}{//\ Simulate\ fault,\ returns\ number\ of\ faults\ successfully\ simulated}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nFaults;\ i++)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_result}{OlxAPIFaultResult}}*\ result\ =\ fault.getResult(i);\ \textcolor{comment}{//\ If\ simulating\ more\ than\ one\ fault,\ you\ can\ get\ all\ results\ through\ this\ function}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}(result\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{comment}{//\ Check\ the\ fault\ result\ is\ valid}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ cout\ <<\ result-\/>\mbox{\hyperlink{class_olx_a_p_i_fault_result_a182d4ace485e9cc3071abf887e5744ad}{getDescription}}()\ <<\ endl;\ \textcolor{comment}{//\ Print\ fault\ description}}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Zero\ Sequence\ Voltage:\ "{}}\ <<\ result-\/>\mbox{\hyperlink{class_olx_a_p_i_fault_result_afac543d953da43638ef426ad8dcd6cc0}{getVoltageAt}}(bus)-\/>\mbox{\hyperlink{class_olx_a_p_i3_p_value_afb18f7d9fec702c1fe112267f3fbc289}{getZeroSeq}}()\ <<\ endl;\ \textcolor{comment}{//\ Print\ resultant\ voltage\ at\ faulted\ bus}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+Back to top\hypertarget{index_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{Branch Fault}{Branch Fault}}\label{index_autotoc_md20}
+In order to simulate a fault on any "{}branch"{} (i.\+e. line, xfmr, 3wxfmr, seriesreactors), the branch handle must be found first. Otherwise a fault will not be succesful. The following code gets the branch handle and then simulates a fault.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{...}
+\DoxyCodeLine{}
+\DoxyCodeLine{OlxAPILineObj*\ line\ =\ model-\/>findLine(\textcolor{stringliteral}{"{}L544P34"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ branchHandle\ =\ model-\/>findBranchHandleByDeviceHandle(line-\/>\mbox{\hyperlink{class_olx_a_p_i_obj_a4e9102ba216c462a8f67c822a664a537}{getHandle}}());}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(branchHandle\ ==\ -\/1)\ \textcolor{comment}{//\ Check\ for\ valid\ handle\ returned}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{OlxxAPIFault\ fault(branchHandle);}
+\DoxyCodeLine{fault.setFaultType(\mbox{\hyperlink{class_olx_a_p_i_fault_a1586ef3c728e26709ba56b12f0c81821a2d6fb4f6c5c6bfe18689e91a93d13e70}{OlxAPIFault::FLT\_INT\_EO}},\ 50);\ \textcolor{comment}{//\ Set\ intermediate\ fault\ with\ end\ open\ at\ 50\%\ (optional\ parameter)}}
+\DoxyCodeLine{fault.setFaultConnection(\mbox{\hyperlink{class_olx_a_p_i_fault_af8f8a7664fb38a3cddcfb4337253b6abab8da226bdccebd3758e43c51f181cb9c}{OlxAPIFault::FLT\_3LG}});\ \textcolor{comment}{//\ Set\ to\ 3LG\ fault}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ nFaults\ =\ fault.runFault();\ \textcolor{comment}{//\ Simulate\ fault,\ returns\ number\ of\ faults\ successfully\ simulated}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ nFaults;\ i++)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_fault_result}{OlxAPIFaultResult}}*\ result\ =\ fault.getResult(i);\ \textcolor{comment}{//\ If\ simulating\ more\ than\ one\ fault,\ you\ can\ get\ all\ results\ through\ this\ function}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}(result\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{comment}{//\ Check\ the\ fault\ result\ is\ valid}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ cout\ <<\ result-\/>\mbox{\hyperlink{class_olx_a_p_i_fault_result_a182d4ace485e9cc3071abf887e5744ad}{getDescription}}()\ <<\ endl;\ \textcolor{comment}{//\ Print\ fault\ description}}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Positive\ Seq\ Current:\ "{}}\ <<\ result-\/>\mbox{\hyperlink{class_olx_a_p_i_fault_result_a916e21a6f520a170384cd844d4836043}{getCurrentAt}}(line)-\/>\mbox{\hyperlink{class_olx_a_p_i3_p_value_a1da1f54191f9c0cc852c4a3c3d773ccb}{getPosSeq}}()\ <<\ endl;\ \textcolor{comment}{//\ Print\ resultant\ positive\ sequence\ current\ through\ faulted\ line}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+Back to top\hypertarget{index_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{TODO}{TODO}}\label{index_autotoc_md21}
 
 \begin{DoxyItemize}
 \item Implement the following equipment
@@ -314,6 +379,7 @@ Back to top\hypertarget{index_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{
 \item Implement fault capabilities
 \begin{DoxyItemize}
 \item Fault simulation capabilities with In-\/\+Service and OOS parameters
+\item Finish adding all fault scenarios
 \end{DoxyItemize}
 \item Implement protective devices
 \begin{DoxyItemize}

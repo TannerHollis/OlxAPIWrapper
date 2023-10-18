@@ -6,83 +6,90 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}olxapi/include/olxapi.h"{}}}
 \DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_bus_obj_8h}{OlxAPIBusObj.h}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_line_obj_8h}{OlxAPILineObj.h}}"{}}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_x_f_m_r_obj_8h}{OlxAPIXFMRObj.h}}"{}}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_x_f_m_r3_w_obj_8h}{OlxAPIXFMR3WObj.h}}"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_series_reactor_obj_8h}{OlxAPISeriesReactorObj.h}}"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_shunt_capacitor_obj_8h}{OlxAPIShuntCapacitorObj.h}}"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_generator_obj_8h}{OlxAPIGeneratorObj.h}}"{}}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_olx_a_p_i_model_obj}{OlxAPIModelObj}}}
-\DoxyCodeLine{00020\ \{}
-\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_model_obj}{OlxAPIModelObj}}(\textcolor{keywordtype}{string}\&\ filePath,\ \textcolor{keywordtype}{bool}\ readonly);}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5de949a39e547ccd38ad4d7ee955b65e}{\string~OlxAPIModelObj}}();}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf}{saveFile}}();\ \textcolor{comment}{//\ Save\ overwrite}}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf}{saveFile}}(\textcolor{keywordtype}{string}\&\ filePath);\ \textcolor{comment}{//\ Save\ as\ new\ file}}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a26f5af64a25cd3d30e7e57ce616380b8}{isOpened}}();}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_line_obj}{OlxAPILineObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aae8cc0a1b79764b36679f67e5fd79334}{getLine}}(\textcolor{keywordtype}{int}\ handle);}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a641b87ccdf99998c9bca7b2e9c2a7842}{findLineHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
-\DoxyCodeLine{00032\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a277e6d8e4be16e806e590f163cf7359c}{getLineHandles}}();}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_bus_obj}{OlxAPIBusObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a970ceaac65450aca4f4203410bbada9d}{getBus}}(\textcolor{keywordtype}{int}\ handle);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a9bd3711982b2d352ca5bf5313ee2a67a}{findBusHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
-\DoxyCodeLine{00036\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_abdac212869b032b82443f84e44857696}{getBusHandles}}();}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_x_f_m_r_obj}{OlxAPIXFMRObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5ab48a6404d002f85321749927f1acfa}{getXFMR}}(\textcolor{keywordtype}{int}\ handle);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a6ed406f3a70331532b17d901e2d50543}{findXFMRHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
-\DoxyCodeLine{00040\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a4d9347322674d607cc32baf09dc9361b}{getXFMRHandles}}();}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_x_f_m_r3_w_obj}{OlxAPIXFMR3WObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a1d5f6b9b8be75ddb965737a77b80e859}{get3WXFMR}}(\textcolor{keywordtype}{int}\ handle);}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a81354b804ca76b67914ab16493a1d7f4}{find3WXFMRHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
-\DoxyCodeLine{00044\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5bab1fdd0dd79375d20ea600accd22ab}{get3WXFMRHandles}}();}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_series_reactor_obj}{OlxAPISeriesReactorObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a8bd66ac9e38c2a12ff39d8d0dc4b806f}{getSeriesReactor}}(\textcolor{keywordtype}{int}\ handle);}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_ac8769081fe02a689ba5368cc3c943da5}{findSeriesReactorHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
-\DoxyCodeLine{00048\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_acafeee96831a883942a159fedeed6fb1}{getSeriesReactorHandles}}();}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_shunt_capacitor_obj}{OlxAPIShuntCapacitorObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa5c7bd8e46d42ea76bb0d3ad77ebf5ba}{getShuntCapacitor}}(\textcolor{keywordtype}{int}\ handle);}
-\DoxyCodeLine{00051\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa5de7b796443a0cf0e44afe559215266}{getShuntCapacitorHandles}}();}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj}{OlxAPIGeneratorObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a}{getGenerator}}(\textcolor{keywordtype}{int}\ handle);}
-\DoxyCodeLine{00054\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86219c7237e35c1b}{getGeneratorHandles}}();}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ openFile(\textcolor{keywordtype}{string}\&\ filePath,\ \textcolor{keywordtype}{bool}\ readonly);}
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ closeFile();}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ vector<int>\ getHandles(T*\ mapIn);}
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{int}\ findByName(T*\ mapIn,\ \textcolor{keywordtype}{string}\&\ name);}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ clearMap(T*\ mapIn);}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ loadMap(map<int,\ T*>*\ mapIn,\ \textcolor{keywordtype}{int}\ objCountToken,\ \textcolor{keywordtype}{int}\ objToken);}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_branch_obj_8h}{OlxAPIBranchObj.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_line_obj_8h}{OlxAPILineObj.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_x_f_m_r_obj_8h}{OlxAPIXFMRObj.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_x_f_m_r3_w_obj_8h}{OlxAPIXFMR3WObj.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_series_reactor_obj_8h}{OlxAPISeriesReactorObj.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_shunt_capacitor_obj_8h}{OlxAPIShuntCapacitorObj.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_olx_a_p_i_generator_obj_8h}{OlxAPIGeneratorObj.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_olx_a_p_i_model_obj}{OlxAPIModelObj}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_model_obj}{OlxAPIModelObj}}(\textcolor{keywordtype}{string}\&\ filePath,\ \textcolor{keywordtype}{bool}\ readonly);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5de949a39e547ccd38ad4d7ee955b65e}{\string~OlxAPIModelObj}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf}{saveFile}}();\ \textcolor{comment}{//\ Save\ overwrite}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a2aa64cf6cc36ebf3f5b26cb93d3ca5bf}{saveFile}}(\textcolor{keywordtype}{string}\&\ filePath);\ \textcolor{comment}{//\ Save\ as\ new\ file}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a26f5af64a25cd3d30e7e57ce616380b8}{isOpened}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_line_obj}{OlxAPILineObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aae8cc0a1b79764b36679f67e5fd79334}{getLine}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a641b87ccdf99998c9bca7b2e9c2a7842}{findLineHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
+\DoxyCodeLine{00033\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a277e6d8e4be16e806e590f163cf7359c}{getLineHandles}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_bus_obj}{OlxAPIBusObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a970ceaac65450aca4f4203410bbada9d}{getBus}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a9bd3711982b2d352ca5bf5313ee2a67a}{findBusHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
+\DoxyCodeLine{00037\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_abdac212869b032b82443f84e44857696}{getBusHandles}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_x_f_m_r_obj}{OlxAPIXFMRObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5ab48a6404d002f85321749927f1acfa}{getXFMR}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a6ed406f3a70331532b17d901e2d50543}{findXFMRHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
+\DoxyCodeLine{00041\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a4d9347322674d607cc32baf09dc9361b}{getXFMRHandles}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_x_f_m_r3_w_obj}{OlxAPIXFMR3WObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a1d5f6b9b8be75ddb965737a77b80e859}{get3WXFMR}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a81354b804ca76b67914ab16493a1d7f4}{find3WXFMRHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
+\DoxyCodeLine{00045\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a5bab1fdd0dd79375d20ea600accd22ab}{get3WXFMRHandles}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_series_reactor_obj}{OlxAPISeriesReactorObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a8bd66ac9e38c2a12ff39d8d0dc4b806f}{getSeriesReactor}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_ac8769081fe02a689ba5368cc3c943da5}{findSeriesReactorHandleByName}}(\textcolor{keywordtype}{string}\&\ name);\ \textcolor{comment}{//\ Returns\ first\ instance,\ not\ ideal}}
+\DoxyCodeLine{00049\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_acafeee96831a883942a159fedeed6fb1}{getSeriesReactorHandles}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_shunt_capacitor_obj}{OlxAPIShuntCapacitorObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa5c7bd8e46d42ea76bb0d3ad77ebf5ba}{getShuntCapacitor}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00052\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa5de7b796443a0cf0e44afe559215266}{getShuntCapacitorHandles}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_generator_obj}{OlxAPIGeneratorObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a1b0a25795b3cf1b08e4527294403af6a}{getGenerator}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00055\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_adad5bf2f0629bd0d86219c7237e35c1b}{getGeneratorHandles}}();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_olx_a_p_i_branch_obj}{OlxAPIBranchObj}}*\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_aa63061fc3b0b9a473a8b37269c66eb40}{getBranch}}(\textcolor{keywordtype}{int}\ handle);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a21a12bd51820f6e39a658029314047b0}{findBranchHandleByDeviceHandle}}(\textcolor{keywordtype}{int}\ devHandle);}
+\DoxyCodeLine{00059\ \ \ \ \ vector<int>\ \mbox{\hyperlink{class_olx_a_p_i_model_obj_a48492e90905af11e35517d1a6eca4139}{getBranchHandles}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ openFile(\textcolor{keywordtype}{string}\&\ filePath,\ \textcolor{keywordtype}{bool}\ readonly);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ closeFile();}
 \DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{string}\ filePath;}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ fileIsOpened;}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ map<int,\ OlxAPIBusObj*>\ busses;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ vector<int>\ getHandles(T*\ mapIn);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{int}\ findByName(T*\ mapIn,\ \textcolor{keywordtype}{string}\&\ name);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ clearMap(T*\ mapIn);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ loadMap(map<int,\ T*>*\ mapIn,\ \textcolor{keywordtype}{int}\ objCountToken,\ \textcolor{keywordtype}{int}\ objToken);}
 \DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \ \ \ \ map<int,\ OlxAPILineObj*>\ lines;}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ map<int,\ OlxAPIXFMRObj*>\ XFMRs;}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \ \ \ \ map<int,\ OlxAPIXFMR3WObj*>\ XFMRs3W;}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ map<int,\ OlxAPISeriesReactorObj*>\ seriesReactors;}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \ \ \ \ map<int,\ OlxAPIShuntCapacitorObj*>\ shuntCapacitors;}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ \ \ \ \ map<int,\ OlxAPIGeneratorObj*>\ generators;}
-\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{string}\ filePath;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ fileIsOpened;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ map<int,\ OlxAPIBusObj*>\ busses;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ map<int,\ OlxAPIBranchObj*>\ branches;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ map<int,\ OlxAPILineObj*>\ lines;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ map<int,\ OlxAPIXFMRObj*>\ XFMRs;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ map<int,\ OlxAPIXFMR3WObj*>\ XFMRs3W;}
 \DoxyCodeLine{00082\ }
-\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00083\ \ \ \ \ map<int,\ OlxAPISeriesReactorObj*>\ seriesReactors;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ map<int,\ OlxAPIShuntCapacitorObj*>\ shuntCapacitors;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ map<int,\ OlxAPIGeneratorObj*>\ generators;}
+\DoxyCodeLine{00088\ \};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
 
 \end{DoxyCode}

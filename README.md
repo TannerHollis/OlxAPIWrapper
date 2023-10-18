@@ -1,3 +1,5 @@
+
+
 # OlxAPIWrapper
 
 This project is a wrapper for ASPEN Oneliner's c API. Currently using OlxAPI v15.7 ([Latest version](https://github.com/aspeninc/TestBenchOlxAPI/tree/master)).
@@ -230,6 +232,72 @@ The CSV input file template is as follows
 |F11.4|1274|IWP 500|0.01922|0.01758|0.10348|0.03803|0|0.00069|0|0.00069|0|0.00069|0|0.00069|
 |F11.5|6766|IWP 4/0|0.00991|0.00907|0.05335|0.01961|0|0.00035|0|0.00035|0|0.00035|0|0.00035|
 |F11.6|3304|IWP 4/0|0.01295|0.01185|0.06972|0.02563|0|0.00046|0|0.00046|0|0.00046|0|0.00046|
+
+[Back to top](#table-of-contents)
+
+## Running Faults
+
+Running faults with this API is made a little easier, with the help of objects. Once the model has been loaded, find a node at which a fault simulation is desired. Then Create a OlxAPIFault class and pass the OlxAPIObj as the argument for the constructor. This will build the fault scenario instruction by instruction. See the following example.
+
+*Currently Branches faults are not working as the parameter for running a line, xfmr, 3w-xfmr, series reactor require a branch handle. Which at the moment, are current non enumerable with v15.7.
+
+### Bus Fault
+```cpp
+...
+
+OlxAPIBusObj* bus = model->findBus("T1_HS");
+
+OlxAPIFault fault(&bus);
+fault.setCloseIn(false); // Set bus fault without outage, for bus objects a close-in is a bus fault.
+fault.setFaultConnection1LG(OlxAPIFault::FaultConnection::FLT_1LG_A); // Set fault to 1LG fault on A-Phase/Ground
+int nFaults = fault.runFault(); // Simulate fault, returns number of faults successfully simulated
+
+for(int i = 0; i < nFaults; i++)
+{
+	OlxAPIFaultResult* result = fault.getResult(i); // If simulating more than one fault, you can get all results through this function
+	if(result == nullptr) // Check the fault result is valid
+		continue;
+	
+	cout << result->getDescription() << endl; // Print fault description
+	cout << "Zero Sequence Voltage: " << result->getVoltageAt(bus)->getZeroSeq() << endl; // Print resultant voltage at faulted bus
+}
+
+...
+```
+
+[Back to top](#table-of-contents)
+
+### Branch Fault
+
+In order to simulate a fault on any "branch" (i.e. line, xfmr, 3wxfmr, seriesreactors), the branch handle must be found first. Otherwise a fault will not be succesful. The following code gets the branch handle and then simulates a fault.
+
+```cpp
+...
+
+OlxAPILineObj* line = model->findLine("L544P34");
+
+int branchHandle = model->findBranchHandleByDeviceHandle(line->getHandle());
+if(branchHandle == -1) // Check for valid handle returned
+	return;
+	
+OlxxAPIFault fault(branchHandle);
+fault.setFaultType(OlxAPIFault::FLT_INT_EO, 50); // Set intermediate fault with end open at 50% (optional parameter)
+fault.setFaultConnection(OlxAPIFault::FLT_3LG); // Set to 3LG fault
+int nFaults = fault.runFault(); // Simulate fault, returns number of faults successfully simulated
+
+for(int i = 0; i < nFaults; i++)
+{
+	OlxAPIFaultResult* result = fault.getResult(i); // If simulating more than one fault, you can get all results through this function
+	if(result == nullptr) // Check the fault result is valid
+		continue;
+	
+	cout << result->getDescription() << endl; // Print fault description
+	cout << "Positive Seq Current: " << result->getCurrentAt(line)->getPosSeq() << endl; // Print resultant positive sequence current through faulted line
+}
+
+...
+```
+
 [Back to top](#table-of-contents)
 
 ### TODO
@@ -248,6 +316,7 @@ The CSV input file template is as follows
 	 - [ ] Breaker
  - Implement fault capabilities
 	- Fault simulation capabilities with In-Service and OOS parameters
+	- Finish adding all fault scenarios
  - Implement protective devices
 	 - Overcurrent (Phase/Ground)
 	 - Distance (Phase/Ground)

@@ -3,6 +3,7 @@
 #include "olxapi/include/olxapi.h"
 
 #include "OlxAPIBusObj.h"
+#include "OlxAPIBranchObj.h"
 #include "OlxAPILineObj.h"
 #include "OlxAPIXFMRObj.h"
 #include "OlxAPIXFMR3WObj.h"
@@ -53,6 +54,10 @@ public:
 	OlxAPIGeneratorObj* getGenerator(int handle);
 	vector<int> getGeneratorHandles();
 
+	OlxAPIBranchObj* getBranch(int handle);
+	int findBranchHandleByDeviceHandle(int devHandle);
+	vector<int> getBranchHandles();
+
 private:
 	void openFile(string& filePath, bool readonly);
 	void closeFile();
@@ -66,6 +71,8 @@ private:
 	bool fileIsOpened;
 
 	map<int, OlxAPIBusObj*> busses;
+
+	map<int, OlxAPIBranchObj*> branches;
 
 	map<int, OlxAPILineObj*> lines;
 

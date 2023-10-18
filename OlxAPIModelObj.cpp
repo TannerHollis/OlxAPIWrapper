@@ -13,6 +13,27 @@ OlxAPIModelObj::OlxAPIModelObj(string& filePath, bool readonly)
 		loadMap(&seriesReactors, SY_nNOseriescap, TC_SCAP);
 		loadMap(&shuntCapacitors, SY_nNOshuntUnit, TC_SHUNTUNIT);
 		loadMap(&generators, SY_nNOgen, TC_GENUNIT);
+
+		/*
+		*	TODO:
+		*		Remove this and load the branches traditionally like above.
+		*/
+		vector<int> busHandles = getBusHandles();
+		for (int i = 0; i < busHandles.size(); i++)
+		{
+			int handle = 0;
+			while (handle >= 0)
+			{
+				int ret = OlxAPIGetBusEquipment(busHandles[i], TC_BRANCH, &handle);
+				if (ret == 0)
+					break;
+				if (ret == -1)
+					break;
+				
+				cout << "Found Branch: " << handle << endl;
+				branches.insert({ handle, new OlxAPIBranchObj(handle) });
+			}
+		}
 	}
 }
 
@@ -137,6 +158,28 @@ OlxAPIGeneratorObj* OlxAPIModelObj::getGenerator(int handle)
 vector<int> OlxAPIModelObj::getGeneratorHandles()
 {
 	return getHandles(&generators);
+}
+
+OlxAPIBranchObj* OlxAPIModelObj::getBranch(int handle)
+{
+	return branches[handle];
+}
+
+int OlxAPIModelObj::findBranchHandleByDeviceHandle(int devHandle)
+{
+	map<int, OlxAPIBranchObj*>::iterator it = branches.begin();
+	while (it != branches.end())
+	{
+		if (it->second->getEquipmentHandle() == devHandle)
+			return it->first;
+		it++;
+	}
+	return -1;
+}
+
+vector<int> OlxAPIModelObj::getBranchHandles()
+{
+	return getHandles(&branches);
 }
 
 template <typename T> vector<int> OlxAPIModelObj::getHandles(T* mapIn)
